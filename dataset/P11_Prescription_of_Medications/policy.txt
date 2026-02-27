@@ -1,0 +1,4 @@
+This policy authorizes physicians to create and modify records in the Medication table (prescribe
+drugs). It is an operational capability policy: only qualified personnel (physicians) should have write
+permission in this critical table. Nurses (P10) only read or update administration, and pharmacists
+(P12) only dispense.

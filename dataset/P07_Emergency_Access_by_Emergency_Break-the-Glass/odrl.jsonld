@@ -1,0 +1,35 @@
+{
+"@context": [
+"http://www.w3.org/ns/odrl.jsonld",
+{
+"ex": "https://hospital-example.org/",
+"dbo": "http://dbpedia.org/ontology/",
+"vcard": "http://www.w3.org/2006/vcard/ns#",
+"ex:patientStatus": { "@type": "xsd:string" }
+}
+],
+"@type": "odrl:Set",
+"uid": "ex:policy/P07",
+"permission": [{
+"@type": "odrl:Permission",
+"assigner": {
+"@type": ["odrl:Party", "dbo:Hospital"],
+"uid": "ex:authority",
+"vcard:fn": "Hospital"
+},
+"assignee": {
+"@type": ["odrl:PartyCollection", "vcard:Group", "dbo:Physician"],
+"uid": "ex:groups/er-staff",
+"vcard:fn": "ER Staff"
+},
+"action": "odrl:read",
+"target": "ex:systems/db/tables/Historial_Clinico",
+"constraint": [{
+"@type": "odrl:Constraint",
+"leftOperand": "ex:patientStatus",
+"operator": "odrl:isAnyOf",
+"rightOperand": ["CRITICO", "EMERGENCIA"]
+}]
+}]
+20
+}

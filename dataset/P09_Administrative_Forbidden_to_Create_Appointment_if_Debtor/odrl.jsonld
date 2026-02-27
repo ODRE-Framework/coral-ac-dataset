@@ -1,0 +1,38 @@
+{
+"@context": [
+"http://www.w3.org/ns/odrl.jsonld",
+{
+"ex": "https://hospital-example.org/",
+"dbo": "http://dbpedia.org/ontology/",
+"vcard": "http://www.w3.org/2006/vcard/ns#",
+"ex:financialStatus": { "@type": "xsd:string" }
+}
+],
+"@type": "odrl:Set",
+"uid": "ex:policy/P09",
+"prohibition": [{
+"@type": "odrl:Prohibition",
+"assigner": {
+"@type": ["odrl:Party", "dbo:Hospital"],
+"uid": "ex:authority",
+"vcard:fn": "Hospital"
+},
+"assignee": {
+"@type": ["odrl:PartyCollection", "vcard:Group"],
+"uid": "ex:groups/admin-staff"
+},
+"action": "odrl:modify",
+"target": "ex:systems/db/tables/Citas",
+"constraint": [{
+"@type": "odrl:Constraint",
+"leftOperand": "ex:financialStatus",
+"operator": "odrl:eq",
+"rightOperand": "DEUDOR"
+}]
+}]
+}
+Design Observation (Limitation): Currently, the policy evaluates the action on the
+Citas table, but the debt condition depends on the Facturación table. In a real-world
+implementation, the evaluator requires a subquery to link the patient with their financial
+status, which is a limitation in this flat JSON-LD model.
+25

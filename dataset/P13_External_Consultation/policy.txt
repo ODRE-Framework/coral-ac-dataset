@@ -1,0 +1,3 @@
+Sometimes it is necessary to refer a patient to an external specialist for a second opinion. This
+policy grants temporary access to the patient’s record to the external physician, conditioned on the
+existence of an active and valid referral.

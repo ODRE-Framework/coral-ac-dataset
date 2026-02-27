@@ -1,0 +1,3 @@
+Researchers can access clinical data for statistical and scientific analysis, but only if said data has
+been previously anonymized. This policy protects patient identity while allowing secondary use of
+data under strict privacy conditions.

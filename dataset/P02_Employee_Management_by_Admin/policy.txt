@@ -1,0 +1,3 @@
+System administrators have full control over employee records. This policy allows them to create,
+modify, and delete records in the Employees table. It is a “superuser” policy for human resources
+management within the technical system.

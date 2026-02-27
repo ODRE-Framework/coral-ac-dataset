@@ -1,0 +1,4 @@
+This policy grants global read access to the patients table to all medical staff. In a hospital
+environment, it is crucial that any physician can consult a patient’s basic file (identification, contact)
+to initiate care, regardless of whether they are the assigned physician or not. This base rule has no
+additional constraints.

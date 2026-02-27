@@ -1,0 +1,18 @@
+{
+"@context": [
+35
+"http://www.w3.org/ns/odrl.jsonld",
+"https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/
+formal-semantics/ontology/evaluation_request.json",
+{ "ex": "https://hospital-example.org/" }
+],
+"@type": "EvaluationRequest",
+"@id": "ex:request/P12-2",
+"evaluatedAction": "odrl:read",
+"evaluatedParty": "ex:id/staff/pharmacist/PH-1",
+"evaluatedTarget": "ex:systems/db/tables/Medicacion",
+"requestParameters": {
+"value": "ENTREGADO",
+"describesFeature": "ex:medStatus"
+}
+}

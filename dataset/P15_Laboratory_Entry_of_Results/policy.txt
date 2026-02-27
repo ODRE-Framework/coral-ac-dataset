@@ -1,0 +1,4 @@
+Laboratory technicians generate data (analysis results) that must be stored in the system. They
+have permission to create new result records, but for privacy and data minimization reasons, they
+do not have permission to read the patient’s full clinical history—only the results they generate
+themselves or the test orders.

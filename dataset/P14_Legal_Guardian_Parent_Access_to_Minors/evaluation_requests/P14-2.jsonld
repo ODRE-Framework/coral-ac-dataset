@@ -1,0 +1,27 @@
+{
+"@context": [
+"http://www.w3.org/ns/odrl.jsonld",
+"https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/
+formal-semantics/ontology/evaluation_request.json",
+{ "ex": "https://hospital-example.org/" }
+],
+"@type": "EvaluationRequest",
+"@id": "ex:request/P14-2",
+"evaluatedAction": "odrl:read",
+"evaluatedParty": "ex:id/family/FAM-1",
+"evaluatedTarget": "ex:systems/db/tables/Historial_Clinico",
+"requestParameters": [
+{
+"value": 19,
+"describesFeature": "ex:patientAge"
+},
+{
+"value": "ex:id/patient/PAT-123",
+"describesFeature": "ex:resourcePatientId"
+},
+{
+"value": "ex:id/patient/PAT-123",
+"describesFeature": "ex:subjectWardList"
+}
+]
+}

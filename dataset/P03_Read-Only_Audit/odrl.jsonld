@@ -1,0 +1,48 @@
+{
+"@context": [
+"http://www.w3.org/ns/odrl.jsonld",
+{
+"ex": "https://hospital-example.org/",
+"dbo": "http://dbpedia.org/ontology/",
+"vcard": "http://www.w3.org/2006/vcard/ns#"
+}
+],
+"@type": "odrl:Set",
+7
+"uid": "ex:policy/P03",
+"permission": [{
+"@type": "odrl:Permission",
+"assigner": {
+"@type": ["odrl:Party", "dbo:Hospital"],
+"uid": "ex:authority",
+"vcard:fn": "Hospital"
+},
+"assignee": {
+"@type": ["odrl:PartyCollection", "vcard:Group"],
+"uid": "ex:groups/auditors",
+"vcard:fn": "Auditors Group"
+},
+"action": "odrl:read",
+"target": [
+"ex:systems/db/tables/Historial_Clinico",
+"ex:systems/db/tables/Facturacion"
+]
+}],
+"prohibition": [{
+"@type": "odrl:Prohibition",
+"assigner": {
+"@type": ["odrl:Party", "dbo:Hospital"],
+"uid": "ex:authority",
+"vcard:fn": "Hospital"
+},
+"assignee": {
+"@type": ["odrl:PartyCollection", "vcard:Group"],
+"uid": "ex:groups/auditors"
+},
+"action": ["odrl:modify", "odrl:delete"],
+"target": [
+"ex:systems/db/tables/Historial_Clinico",
+"ex:systems/db/tables/Facturacion"
+]
+}]
+}

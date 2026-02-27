@@ -1,0 +1,35 @@
+{
+"@context": [
+"http://www.w3.org/ns/odrl.jsonld",
+{
+"ex": "https://hospital-example.org/",
+"dbo": "http://dbpedia.org/ontology/",
+"vcard": "http://www.w3.org/2006/vcard/ns#",
+"ex:isAnonymized": { "@type": "xsd:boolean" }
+}
+],
+"@type": "odrl:Set",
+"uid": "ex:policy/P08",
+"permission": [{
+"@type": "odrl:Permission",
+"assigner": {
+22
+"@type": ["odrl:Party", "dbo:Hospital"],
+"uid": "ex:authority",
+"vcard:fn": "Hospital"
+},
+"assignee": {
+"@type": ["odrl:PartyCollection", "vcard:Group"],
+"uid": "ex:groups/researchers",
+"vcard:fn": "Research Team"
+},
+"action": "odrl:read",
+"target": "ex:systems/db/tables/Historial_Clinico",
+"constraint": [{
+"@type": "odrl:Constraint",
+"leftOperand": "ex:isAnonymized",
+"operator": "odrl:eq",
+"rightOperand": true
+}]
+}]
+}

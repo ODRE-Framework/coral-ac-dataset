@@ -1,0 +1,239 @@
+{
+  "dataset_id": "hospital-odrl-rls-evaluation-dataset",
+  "title": "Hospital Access Control Policies: ODRL–RLS Aligned Dataset with Evaluation Requests",
+  "description": "Curated dataset of 15 hospital access control policies. For each policy, the dataset includes (i) the PostgreSQL Row-Level Security (RLS) implementation, (ii) the corresponding ODRL policy in JSON-LD, (iii) natural language description, and (iv) a set of EvaluationRequest JSON-LD documents used to test enforcement/evaluation behavior. When explicitly provided in the source, a state-of-world file is included to capture non-empty contextual states associated with test cases.",
+  "source_document": {
+    "filename": "THEORETICAL_WORK_EN.pdf",
+    "local_path": "/mnt/data/THEORETICAL_WORK_EN.pdf"
+  },
+  "created_at": "2026-02-27T19:48:52.576845+00:00",
+  "num_policies": 15,
+  "policy_folders_naming": "PXX_<Title_with_underscores>/",
+  "per_policy_files": {
+    "rls.sql": "PostgreSQL Row-Level Security policy (SQL).",
+    "odrl.jsonld": "ODRL policy in JSON-LD.",
+    "policy.txt": "Natural language explanation of the policy.",
+    "evaluation_requests/": "Directory containing one EvaluationRequest JSON-LD per test case.",
+    "evaluation_requests_index.json": "Mapping from case identifier (e.g., P01-1) to file path under evaluation_requests/.",
+    "state_of_world.json": "Optional. Mapping from case identifier to a non-empty contextual state label, when defined in the source."
+  },
+  "policies": [
+    {
+      "policy_id": "P01",
+      "title": "Global Reading of Patients",
+      "path": "P01_Global_Reading_of_Patients/",
+      "files": [
+        "evaluation_requests_index.json",
+        "odrl.jsonld",
+        "policy.txt",
+        "rls.sql",
+        "evaluation_requests/"
+      ],
+      "evaluation_requests_count": 2,
+      "has_state_of_world": false
+    },
+    {
+      "policy_id": "P02",
+      "title": "Employee Management by Admin",
+      "path": "P02_Employee_Management_by_Admin/",
+      "files": [
+        "evaluation_requests_index.json",
+        "odrl.jsonld",
+        "policy.txt",
+        "rls.sql",
+        "evaluation_requests/"
+      ],
+      "evaluation_requests_count": 4,
+      "has_state_of_world": false
+    },
+    {
+      "policy_id": "P03",
+      "title": "Read-Only Audit",
+      "path": "P03_Read-Only_Audit/",
+      "files": [
+        "evaluation_requests_index.json",
+        "odrl.jsonld",
+        "policy.txt",
+        "rls.sql",
+        "evaluation_requests/"
+      ],
+      "evaluation_requests_count": 6,
+      "has_state_of_world": false
+    },
+    {
+      "policy_id": "P04",
+      "title": "Patient Access to Own Record",
+      "path": "P04_Patient_Access_to_Own_Record/",
+      "files": [
+        "evaluation_requests_index.json",
+        "odrl.jsonld",
+        "policy.txt",
+        "rls.sql",
+        "evaluation_requests/"
+      ],
+      "evaluation_requests_count": 2,
+      "has_state_of_world": false
+    },
+    {
+      "policy_id": "P05",
+      "title": "Assigned Physician Can WriteEdit Notes",
+      "path": "P05_Assigned_Physician_Can_WriteEdit_Notes/",
+      "files": [
+        "evaluation_requests_index.json",
+        "odrl.jsonld",
+        "policy.txt",
+        "rls.sql",
+        "evaluation_requests/"
+      ],
+      "evaluation_requests_count": 2,
+      "has_state_of_world": false
+    },
+    {
+      "policy_id": "P06",
+      "title": "Department Head Reading by Ward Membership",
+      "path": "P06_Department_Head_Reading_by_Ward_Membership/",
+      "files": [
+        "evaluation_requests_index.json",
+        "odrl.jsonld",
+        "policy.txt",
+        "rls.sql",
+        "evaluation_requests/"
+      ],
+      "evaluation_requests_count": 2,
+      "has_state_of_world": false
+    },
+    {
+      "policy_id": "P07",
+      "title": "Emergency Access by Emergency Break-the-Glass",
+      "path": "P07_Emergency_Access_by_Emergency_Break-the-Glass/",
+      "files": [
+        "evaluation_requests_index.json",
+        "odrl.jsonld",
+        "policy.txt",
+        "rls.sql",
+        "state_of_world.json",
+        "evaluation_requests/"
+      ],
+      "evaluation_requests_count": 2,
+      "has_state_of_world": true
+    },
+    {
+      "policy_id": "P08",
+      "title": "Research Anonymized Data Only",
+      "path": "P08_Research_Anonymized_Data_Only/",
+      "files": [
+        "evaluation_requests_index.json",
+        "odrl.jsonld",
+        "policy.txt",
+        "rls.sql",
+        "state_of_world.json",
+        "evaluation_requests/"
+      ],
+      "evaluation_requests_count": 2,
+      "has_state_of_world": true
+    },
+    {
+      "policy_id": "P09",
+      "title": "Administrative Forbidden to Create Appointment if Debtor",
+      "path": "P09_Administrative_Forbidden_to_Create_Appointment_if_Debtor/",
+      "files": [
+        "evaluation_requests_index.json",
+        "odrl.jsonld",
+        "policy.txt",
+        "rls.sql",
+        "state_of_world.json",
+        "evaluation_requests/"
+      ],
+      "evaluation_requests_count": 2,
+      "has_state_of_world": true
+    },
+    {
+      "policy_id": "P10",
+      "title": "Nursing Access During Shift Window",
+      "path": "P10_Nursing_Access_During_Shift_Window/",
+      "files": [
+        "evaluation_requests_index.json",
+        "odrl.jsonld",
+        "policy.txt",
+        "rls.sql",
+        "state_of_world.json",
+        "evaluation_requests/"
+      ],
+      "evaluation_requests_count": 4,
+      "has_state_of_world": true
+    },
+    {
+      "policy_id": "P11",
+      "title": "Prescription of Medications",
+      "path": "P11_Prescription_of_Medications/",
+      "files": [
+        "evaluation_requests_index.json",
+        "odrl.jsonld",
+        "policy.txt",
+        "rls.sql",
+        "evaluation_requests/"
+      ],
+      "evaluation_requests_count": 4,
+      "has_state_of_world": false
+    },
+    {
+      "policy_id": "P12",
+      "title": "Pharmaceutical Dispensing",
+      "path": "P12_Pharmaceutical_Dispensing/",
+      "files": [
+        "evaluation_requests_index.json",
+        "odrl.jsonld",
+        "policy.txt",
+        "rls.sql",
+        "state_of_world.json",
+        "evaluation_requests/"
+      ],
+      "evaluation_requests_count": 4,
+      "has_state_of_world": true
+    },
+    {
+      "policy_id": "P13",
+      "title": "External Consultation",
+      "path": "P13_External_Consultation/",
+      "files": [
+        "evaluation_requests_index.json",
+        "odrl.jsonld",
+        "policy.txt",
+        "rls.sql",
+        "state_of_world.json",
+        "evaluation_requests/"
+      ],
+      "evaluation_requests_count": 2,
+      "has_state_of_world": true
+    },
+    {
+      "policy_id": "P14",
+      "title": "Legal Guardian Parent Access to Minors",
+      "path": "P14_Legal_Guardian_Parent_Access_to_Minors/",
+      "files": [
+        "evaluation_requests_index.json",
+        "odrl.jsonld",
+        "policy.txt",
+        "rls.sql",
+        "state_of_world.json",
+        "evaluation_requests/"
+      ],
+      "evaluation_requests_count": 2,
+      "has_state_of_world": true
+    },
+    {
+      "policy_id": "P15",
+      "title": "Laboratory Entry of Results",
+      "path": "P15_Laboratory_Entry_of_Results/",
+      "files": [
+        "evaluation_requests_index.json",
+        "odrl.jsonld",
+        "policy.txt",
+        "rls.sql",
+        "evaluation_requests/"
+      ],
+      "evaluation_requests_count": 2,
+      "has_state_of_world": false
+    }
+  ]
+}

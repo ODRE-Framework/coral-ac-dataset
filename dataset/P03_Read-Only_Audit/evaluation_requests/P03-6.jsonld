@@ -1,0 +1,14 @@
+{
+"@context": [
+"http://www.w3.org/ns/odrl.jsonld",
+"https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/
+formal-semantics/ontology/evaluation_request.json",
+10
+{ "ex": "https://hospital-example.org/" }
+],
+"@type": "EvaluationRequest",
+"@id": "ex:request/P03-6",
+"evaluatedAction": "odrl:delete",
+"evaluatedParty": "ex:id/staff/physician/DOC-1",
+"evaluatedTarget": "ex:systems/db/tables/Facturacion"
+}

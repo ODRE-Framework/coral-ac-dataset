@@ -1,0 +1,4 @@
+Nurses need access to patients’ medication to administer it, but only during their working hours.
+This temporal policy restricts access (reading and recording administration) exclusively to the time
+interval defined by the nurse’s shift, improving security and reducing the risk of access outside
+regular hours.

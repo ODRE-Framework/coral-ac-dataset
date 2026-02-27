@@ -1,0 +1,5 @@
+Inlife-or-deathsituations,privacyyieldstoimmediatemedicalnecessity.Thispolicyallowsemergency
+physicians to access records of patients marked with status “CRITICAL” or “EMERGENCY,” even
+if they are not their assigned patients. This is a “break-the-glass” mechanism conditioned by the
+patient’s status.
+19
