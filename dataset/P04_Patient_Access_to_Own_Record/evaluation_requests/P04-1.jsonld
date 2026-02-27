@@ -1,24 +1,24 @@
 {
-"@context": [
-"http://www.w3.org/ns/odrl.jsonld",
-"https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/
-formal-semantics/ontology/evaluation_request.json",
-{ "ex": "https://hospital-example.org/" }
-12
-],
-"@type": "EvaluationRequest",
-"@id": "ex:request/P04-1",
-"evaluatedAction": "odrl:read",
-"evaluatedParty": "ex:id/patient/PAT-123",
-"evaluatedTarget": "ex:systems/db/tables/Historial_Clinico",
-"requestParameters": [
-{
-"value": "ex:id/patient/PAT-123",
-"describesFeature": "ex:subjectId"
-},
-{
-"value": "ex:id/patient/PAT-123",
-"describesFeature": "ex:resourcePatientId"
-}
-]
+  "@context": [
+    "http://www.w3.org/ns/odrl.jsonld",
+    "https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/ formal-semantics/ontology/evaluation_request.json",
+    {
+      "ex": "https://hospital-example.org/"
+    }
+  ],
+  "@type": "EvaluationRequest",
+  "@id": "ex:request/P04-1",
+  "evaluatedAction": "odrl:read",
+  "evaluatedParty": "ex:id/patient/PAT-123",
+  "evaluatedTarget": "ex:systems/db/tables/Historial_Clinico",
+  "requestParameters": [
+    {
+      "value": "ex:id/patient/PAT-123",
+      "describesFeature": "ex:subjectId"
+    },
+    {
+      "value": "ex:id/patient/PAT-123",
+      "describesFeature": "ex:resourcePatientId"
+    }
+  ]
 }

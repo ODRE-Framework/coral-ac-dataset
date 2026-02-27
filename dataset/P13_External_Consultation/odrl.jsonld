@@ -1,49 +1,67 @@
 {
-"@context": [
-"http://www.w3.org/ns/odrl.jsonld",
-{
-"ex": "https://hospital-example.org/",
-"dbo": "http://dbpedia.org/ontology/",
-"vcard": "http://www.w3.org/2006/vcard/ns#",
-"ex:referralTargetId": { "@type": "@id" },
-"ex:subjectId": { "@type": "@id" },
-37
-"ex:referralExpiry": { "@type": "xsd:dateTime" },
-"ex:currentTime": { "@type": "xsd:dateTime" }
-}
-],
-"@type": "odrl:Set",
-"uid": "ex:policy/P13",
-"permission": [{
-"@type": "odrl:Permission",
-"assigner": {
-"@type": ["odrl:Party", "dbo:Hospital"],
-"uid": "ex:authority",
-"vcard:fn": "Hospital"
-},
-"assignee": {
-"@type": ["odrl:PartyCollection", "vcard:Group", "dbo:Physician"],
-"uid": "ex:groups/medical-staff",
-"vcard:fn": "External Specialist"
-},
-"action": "odrl:read",
-"target": "ex:systems/db/tables/Historial_Clinico",
-"constraint": [{
-"@type": "odrl:LogicalConstraint",
-"and": [
-{
-"@type": "odrl:Constraint",
-"leftOperand": "ex:subjectId",
-"operator": "odrl:eq",
-"rightOperand": "ex:referralTargetId"
-},
-{
-"@type": "odrl:Constraint",
-"leftOperand": "ex:currentTime",
-"operator": "odrl:lt",
-"rightOperand": "ex:referralExpiry"
-}
-]
-}]
-}]
+  "@context": [
+    "http://www.w3.org/ns/odrl.jsonld",
+    {
+      "ex": "https://hospital-example.org/",
+      "dbo": "http://dbpedia.org/ontology/",
+      "vcard": "http://www.w3.org/2006/vcard/ns#",
+      "ex:referralTargetId": {
+        "@type": "@id"
+      },
+      "ex:subjectId": {
+        "@type": "@id"
+      },
+      "ex:referralExpiry": {
+        "@type": "xsd:dateTime"
+      },
+      "ex:currentTime": {
+        "@type": "xsd:dateTime"
+      }
+    }
+  ],
+  "@type": "odrl:Set",
+  "uid": "ex:policy/P13",
+  "permission": [
+    {
+      "@type": "odrl:Permission",
+      "assigner": {
+        "@type": [
+          "odrl:Party",
+          "dbo:Hospital"
+        ],
+        "uid": "ex:authority",
+        "vcard:fn": "Hospital"
+      },
+      "assignee": {
+        "@type": [
+          "odrl:PartyCollection",
+          "vcard:Group",
+          "dbo:Physician"
+        ],
+        "uid": "ex:groups/medical-staff",
+        "vcard:fn": "External Specialist"
+      },
+      "action": "odrl:read",
+      "target": "ex:systems/db/tables/Historial_Clinico",
+      "constraint": [
+        {
+          "@type": "odrl:LogicalConstraint",
+          "and": [
+            {
+              "@type": "odrl:Constraint",
+              "leftOperand": "ex:subjectId",
+              "operator": "odrl:eq",
+              "rightOperand": "ex:referralTargetId"
+            },
+            {
+              "@type": "odrl:Constraint",
+              "leftOperand": "ex:currentTime",
+              "operator": "odrl:lt",
+              "rightOperand": "ex:referralExpiry"
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

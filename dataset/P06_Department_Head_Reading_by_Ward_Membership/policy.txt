@@ -1,3 +1,1 @@
-The head of a medical department needs to supervise all patients admitted to their area, regardless
-of which individual physician is treating them. This policy grants read access based on the match of
-the “Department” attribute between the head (user) and the patient (resource).
+The head of a medical department needs to supervise all patients admitted to their area, regardless of which individual physician is treating them. This policy grants read access based on the match of the “Department” attribute between the head (user) and the patient (resource).

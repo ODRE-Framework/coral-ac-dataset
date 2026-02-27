@@ -1,4 +1,1 @@
-Thehospitalpharmacistisresponsiblefordispensingprescribedmedication.Theyhavereadaccessto
-view prescriptions and limited update permission to change the medication status from “PENDING”
-33
-to “DISPENSED.” They cannot alter the dosage or the drug prescribed.
+Thehospitalpharmacistisresponsiblefordispensingprescribedmedication.Theyhavereadaccessto view prescriptions and limited update permission to change the medication status from “PENDING” to “DISPENSED.” They cannot alter the dosage or the drug prescribed.

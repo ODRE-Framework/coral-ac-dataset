@@ -1,4 +1,1 @@
-Physicians can only modify or add notes to the medical records of patients they are assigned to.
-This policy does not limit reading (covered by P01), but writing. It prevents physicians not involved
-in a patient’s treatment from altering their record, maintaining responsibility and traceability of
-changes.
+Physicians can only modify or add notes to the medical records of patients they are assigned to. This policy does not limit reading (covered by P01), but writing. It prevents physicians not involved in a patient’s treatment from altering their record, maintaining responsibility and traceability of changes.

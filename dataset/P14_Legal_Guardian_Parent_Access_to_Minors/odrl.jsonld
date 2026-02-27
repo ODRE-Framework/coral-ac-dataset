@@ -1,52 +1,64 @@
 {
-"@context": [
-"http://www.w3.org/ns/odrl.jsonld",
-{
-"ex": "https://hospital-example.org/",
-"dbo": "http://dbpedia.org/ontology/",
-"vcard": "http://www.w3.org/2006/vcard/ns#",
-"ex:patientAge": { "@type": "xsd:integer" },
-"ex:resourcePatientId": { "@type": "@id" },
-"ex:subjectWardList": { "@type": "@id" }
+  "@context": [
+    "http://www.w3.org/ns/odrl.jsonld",
+    {
+      "ex": "https://hospital-example.org/",
+      "dbo": "http://dbpedia.org/ontology/",
+      "vcard": "http://www.w3.org/2006/vcard/ns#",
+      "ex:patientAge": {
+        "@type": "xsd:integer"
+      },
+      "ex:resourcePatientId": {
+        "@type": "@id"
+      },
+      "ex:subjectWardList": {
+        "@type": "@id"
+      }
+    }
+  ],
+  "@type": "odrl:Set",
+  "uid": "ex:policy/P14",
+  "permission": [
+    {
+      "@type": "odrl:Permission",
+      "assigner": {
+        "@type": [
+          "odrl:Party",
+          "dbo:Hospital"
+        ],
+        "uid": "ex:authority",
+        "vcard:fn": "Hospital"
+      },
+      "assignee": {
+        "@type": [
+          "odrl:PartyCollection",
+          "vcard:Group",
+          "dbo:Person"
+        ],
+        "uid": "ex:groups/family",
+        "vcard:fn": "Legal Guardian"
+      },
+      "action": "odrl:read",
+      "target": "ex:systems/db/tables/Historial_Clinico",
+      "constraint": [
+        {
+          "@type": "odrl:LogicalConstraint",
+          "and": [
+            {
+              "@type": "odrl:Constraint",
+              "leftOperand": "ex:patientAge",
+              "operator": "odrl:lt",
+              "rightOperand": 18
+            },
+            {
+              "@type": "odrl:Constraint",
+              "leftOperand": "ex:resourcePatientId",
+              "operator": "odrl:isPartOf",
+              "rightOperand": "ex:subjectWardList"
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }
-],
-"@type": "odrl:Set",
-"uid": "ex:policy/P14",
-"permission": [{
-"@type": "odrl:Permission",
-"assigner": {
-"@type": ["odrl:Party", "dbo:Hospital"],
-"uid": "ex:authority",
-"vcard:fn": "Hospital"
-},
-"assignee": {
-"@type": ["odrl:PartyCollection", "vcard:Group", "dbo:Person"],
-"uid": "ex:groups/family",
-"vcard:fn": "Legal Guardian"
-},
-"action": "odrl:read",
-"target": "ex:systems/db/tables/Historial_Clinico",
-"constraint": [{
-"@type": "odrl:LogicalConstraint",
-"and": [
-{
-"@type": "odrl:Constraint",
-"leftOperand": "ex:patientAge",
-"operator": "odrl:lt",
-"rightOperand": 18
-},
-41
-{
-"@type": "odrl:Constraint",
-"leftOperand": "ex:resourcePatientId",
-"operator": "odrl:isPartOf",
-"rightOperand": "ex:subjectWardList"
-}
-]
-}]
-}]
-}
-DesignObservation(Improvement):Currently,itisassumedthatex:subjectWardList
-contains the pre-calculated list of the user’s wards. A more robust implementation
-would require a dynamic subquery verifying the guardianship relationship in real-time
-to prevent a guardian from accessing minors not under their specific care.

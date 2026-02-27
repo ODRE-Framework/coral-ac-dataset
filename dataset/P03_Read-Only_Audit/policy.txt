@@ -1,3 +1,1 @@
-This policy defines the audit profile. Auditors must have unrestricted read access to medical records
-and billing to perform their control tasks, but are explicitly prohibited from any modification actions.
-This separation of duties ensures data integrity during audits.
+This policy defines the audit profile. Auditors must have unrestricted read access to medical records and billing to perform their control tasks, but are explicitly prohibited from any modification actions. This separation of duties ensures data integrity during audits.

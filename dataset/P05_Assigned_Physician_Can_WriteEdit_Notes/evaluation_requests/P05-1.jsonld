@@ -1,24 +1,24 @@
 {
-"@context": [
-"http://www.w3.org/ns/odrl.jsonld",
-"https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/
-formal-semantics/ontology/evaluation_request.json",
-{ "ex": "https://hospital-example.org/" }
-],
-"@type": "EvaluationRequest",
-"@id": "ex:request/P05-1",
-"evaluatedAction": "odrl:modify",
-"evaluatedParty": "ex:id/staff/physician/DOC-1",
-"evaluatedTarget": "ex:systems/db/tables/Historial_Clinico",
-"requestParameters": [
-15
-{
-"value": "ex:id/staff/physician/DOC-1",
-"describesFeature": "ex:subjectId"
-},
-{
-"value": "ex:id/staff/physician/DOC-1",
-"describesFeature": "ex:resourceAssignedDoctorId"
-}
-]
+  "@context": [
+    "http://www.w3.org/ns/odrl.jsonld",
+    "https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/ formal-semantics/ontology/evaluation_request.json",
+    {
+      "ex": "https://hospital-example.org/"
+    }
+  ],
+  "@type": "EvaluationRequest",
+  "@id": "ex:request/P05-1",
+  "evaluatedAction": "odrl:modify",
+  "evaluatedParty": "ex:id/staff/physician/DOC-1",
+  "evaluatedTarget": "ex:systems/db/tables/Historial_Clinico",
+  "requestParameters": [
+    {
+      "value": "ex:id/staff/physician/DOC-1",
+      "describesFeature": "ex:subjectId"
+    },
+    {
+      "value": "ex:id/staff/physician/DOC-1",
+      "describesFeature": "ex:resourceAssignedDoctorId"
+    }
+  ]
 }

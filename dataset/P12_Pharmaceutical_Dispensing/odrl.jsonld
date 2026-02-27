@@ -1,39 +1,50 @@
 {
-"@context": [
-"http://www.w3.org/ns/odrl.jsonld",
-{
-"ex": "https://hospital-example.org/",
-"dbo": "http://dbpedia.org/ontology/",
-"vcard": "http://www.w3.org/2006/vcard/ns#",
-"ex:medStatus": { "@type": "xsd:string" }
+  "@context": [
+    "http://www.w3.org/ns/odrl.jsonld",
+    {
+      "ex": "https://hospital-example.org/",
+      "dbo": "http://dbpedia.org/ontology/",
+      "vcard": "http://www.w3.org/2006/vcard/ns#",
+      "ex:medStatus": {
+        "@type": "xsd:string"
+      }
+    }
+  ],
+  "@type": "odrl:Set",
+  "uid": "ex:policy/P12",
+  "permission": [
+    {
+      "@type": "odrl:Permission",
+      "assigner": {
+        "@type": [
+          "odrl:Party",
+          "dbo:Hospital"
+        ],
+        "uid": "ex:authority",
+        "vcard:fn": "Hospital"
+      },
+      "assignee": {
+        "@type": [
+          "odrl:PartyCollection",
+          "vcard:Group",
+          "dbo:Pharmacist"
+        ],
+        "uid": "ex:groups/pharmacy-staff",
+        "vcard:fn": "Pharmacy Staff"
+      },
+      "action": [
+        "odrl:read",
+        "odrl:modify"
+      ],
+      "target": "ex:systems/db/tables/Medicacion",
+      "constraint": [
+        {
+          "@type": "odrl:Constraint",
+          "leftOperand": "ex:medStatus",
+          "operator": "odrl:eq",
+          "rightOperand": "PENDIENTE"
+        }
+      ]
+    }
+  ]
 }
-],
-"@type": "odrl:Set",
-"uid": "ex:policy/P12",
-"permission": [{
-"@type": "odrl:Permission",
-"assigner": {
-"@type": ["odrl:Party", "dbo:Hospital"],
-"uid": "ex:authority",
-"vcard:fn": "Hospital"
-},
-"assignee": {
-"@type": ["odrl:PartyCollection", "vcard:Group", "dbo:Pharmacist"],
-"uid": "ex:groups/pharmacy-staff",
-"vcard:fn": "Pharmacy Staff"
-},
-"action": ["odrl:read", "odrl:modify"],
-"target": "ex:systems/db/tables/Medicacion",
-"constraint": [{
-"@type": "odrl:Constraint",
-"leftOperand": "ex:medStatus",
-"operator": "odrl:eq",
-"rightOperand": "PENDIENTE"
-}]
-}]
-}
-Design Observation (Limitation): The policy assumes the pharmacist can modify
-34
-any “PENDING” medication. A future improvement would include verifying the specific
-relationship between the patient and the medication to ensure only what is prescribed
-for the current treatment is accessed.
