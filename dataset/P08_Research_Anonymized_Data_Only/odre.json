@@ -1,0 +1,37 @@
+{
+  "@context": [
+    "http://www.w3.org/ns/odrl.jsonld",
+    "https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json",
+    {
+      "ex:isAnonymized": {
+        "@type": "xsd:boolean"
+      }
+    }
+  ],
+  "@type": "odrl:Set",
+  "uid": "ex:5b5bf495-f6c4-4511-b94f-87410e55d947",
+  "rdfs:label" : "Policy 08",
+  "permission": [
+    {
+      "@type": "odrl:Permission",
+      "assigner": {
+        "@type": [
+          "odrl:Party",
+          "sch:Hospital"
+        ],
+        "uid": "ex:hopital-organization",
+        "rdfs:description" : "A specific hospital that owns this policy"
+      },
+      "assignee": {
+        "@type": [
+          "odrl:PartyCollection",
+          "coral:HospitalResearchMember"
+        ],
+        "uid": "db:EmployeeRecords/{{provided_id}}?status='HOSPITAL_RESEACH_MEMBER'",
+        "rdfs:description": "Any person who is part of the hospital research team"
+      },
+      "action": "read",
+      "target": "db:ClinicalRecords?isAnonymized='True'&records"
+    }
+  ]
+}
