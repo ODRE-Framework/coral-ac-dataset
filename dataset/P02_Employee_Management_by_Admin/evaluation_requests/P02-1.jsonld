@@ -8,5 +8,5 @@
   "@id": "ex:request/P01-1",
   "evaluatedAction": "odrl:modify",
   "evaluatedParty": "ex:id/staff/admin/ADM-1",
-  "evaluatedTarget": "db:PatientsRegistry"
+  "evaluatedTarget": "db:EmployeeRecords"
 }
