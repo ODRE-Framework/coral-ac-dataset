@@ -5,7 +5,7 @@
      "https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json",
     { "@context" : { "member" : { "@id" : "odrl:member", "@type" : "@id" } }}
   ],
-  "@id" : "ex:StateP02-1",
+  "@id" : "ex:StateP02-2",
   "@type" : "SotW",
   "context" :  {
     "@id" : "ex:groups/admin",
