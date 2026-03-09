@@ -1,0 +1,27 @@
+{
+  "@context" : [
+    "http://www.w3.org/ns/odrl.jsonld",
+    "https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/formal-semantics/ontology/stow.json",
+     "https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json",
+    { "@context" : { "member" : { "@id" : "odrl:member", "@type" : "@id" } }}
+  ],
+  "@id" : "ex:StateP02-1",
+  "@type" : "SotW",
+  "context" :  {
+    "@id" : "ex:groups/admin",
+    "@type" : "odrl:PartyCollection",
+    "rdfs:label" : "Administrators Staff",
+    "member" : [ {
+      "@id" : "ex:id/staff/admin/administrator1",
+      "@type" : ["odrl:Party", "coral:SystemAdministrator"],
+      "odrl:partOf" : {"@id" : "ex:groups/admin"},
+      "rdfs:label" : "Daphne Wahlert"
+    },{
+      "@id" : "ex:id/staff/admin/administrator2",
+      "@type" : ["odrl:Party", "sch:SystemAdministrator"],
+      "odrl:partOf" : {"@id" : "ex:groups/admin"},
+      "rdfs:label" : "Nathaniel Waples"
+    }
+   ] 
+  }
+}
