@@ -1,0 +1,64 @@
+{
+  "@context": [
+    "http://www.w3.org/ns/odrl.jsonld",
+     "https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"
+  ],
+  "@type": "odrl:Set",
+  "uid": "ex:b8d0be91-121b-4c7a-acf9-24aa4e863f05",
+  "rdfs:label" : "Policy 03",
+  "permission": [
+    {
+      "@type": "odrl:Permission",
+      "assigner": {
+        "@type": [
+          "odrl:Party",
+          "sch:Hospital"
+        ],
+        "uid": "ex:hopital-organization",
+        "rdfs:description" : "A specific hospital that owns this policy"
+      },
+      "assignee": {
+        "@type": [
+          "odrl:PartyCollection",
+          "coral:Auditor"
+        ],
+         "uid": "db:EmployeeRecords/{{provided_id}}?status='AUDITOR'",
+        "rdfs:description" : "Anyone who belongs to the auditors group"
+      },
+      "action": "read",
+      "target": [
+        "db:ClinicalRecords",
+        "db:BillingInformation"
+      ]
+    }
+  ],
+  "prohibition": [
+    {
+      "@type": "odrl:Prohibition",
+      "assigner": {
+        "@type": [
+          "odrl:Party",
+          "sch:Hospital"
+        ],
+        "uid": "ex:hopital-organization",
+        "rdfs:description" : "A specific hospital that owns this policy"
+      },
+      "assignee": {
+        "@type": [
+          "odrl:PartyCollection",
+          "coral:Auditor"
+        ],
+        "uid": "db:EmployeeRecords/{{provided_id}}?status='AUDITOR'",
+        "rdfs:description" : "Anyone who belongs to the auditors group"
+      },
+      "action": [
+        "modify",
+        "delete"
+      ],
+      "target": [
+        "db:ClinicalRecords",
+        "db:BillingInformation"
+      ]
+    }
+  ]
+}
