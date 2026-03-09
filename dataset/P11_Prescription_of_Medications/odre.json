@@ -1,0 +1,35 @@
+{
+  "@context": [
+    "http://www.w3.org/ns/odrl.jsonld",
+    "https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"
+  ],
+  "@type": "odrl:Set",
+  "uid": "ex:9c8669d7-4403-4cda-8594-6060c9b75c34",
+  "rdfs:label" : "Policy 11",
+  "permission": [
+    {
+      "@type": "odrl:Permission",
+      "assigner": {
+        "@type": [
+          "odrl:Party",
+          "sch:Hospital"
+        ],
+        "uid": "ex:hopital-organization",
+        "rdfs:description" : "A specific hospital that owns this policy"
+      },
+      "assignee": {
+        "@type": [
+          "odrl:PartyCollection",
+          "sch:Physician"
+        ],
+        "uid": "db:EmployeeRecords/{{provided_id}}?status='PHYSICIAN'",
+        "rdfs:description" : "Anyone who belongs to the medical staff"
+      },
+      "action": [
+        "use",
+        "modify"
+      ],
+      "target": "db:MedicationPrescriptions"
+    }
+  ]
+}
