@@ -56,8 +56,8 @@
         "delete"
       ],
       "target": [
-        "ex:ClinicalRecords",
-        "ex:BillingInformation"
+        "db:ClinicalRecords",
+        "db:BillingInformation"
       ]
     }
   ]
