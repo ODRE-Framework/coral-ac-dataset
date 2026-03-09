@@ -23,7 +23,7 @@
           "odrl:PartyCollection",
           "coral:NurseStaff"
         ],
-        "uid": "ex:groups/nursing-staff",
+        "uid": "db:db:NursingShifts?nurse_id={{providedId}}",
         "rdfs:description" : "Anyone who belongs to the nursing staff"
       },
       "action": [
