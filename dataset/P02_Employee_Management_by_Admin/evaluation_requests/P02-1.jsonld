@@ -7,6 +7,6 @@
   "@type": "EvaluationRequest",
   "@id": "ex:request/P01-1",
   "evaluatedAction": "odrl:modify",
-  "evaluatedParty": "ex:id/staff/admin/ADM-1",
+  "evaluatedParty": "ex:id/staff/admin/administrator1",
   "evaluatedTarget": "db:EmployeeRecords"
 }
