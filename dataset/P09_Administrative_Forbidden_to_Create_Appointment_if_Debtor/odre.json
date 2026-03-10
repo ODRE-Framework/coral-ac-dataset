@@ -1,0 +1,46 @@
+{
+  "@context": [
+    "http://www.w3.org/ns/odrl.jsonld",
+    "https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json",
+    {
+      "ex:financialStatus": {
+        "@type": "xsd:string"
+      }
+    }
+  ],
+  "@type": "odrl:Set",
+  "uid": "ex:008509f7-41d1-401c-937e-6ae7a1ff369a",
+  "rdfs:label" : "Policy 09",
+  "prohibition": [
+    {
+      "@type": "odrl:Prohibition",
+      "assigner": {
+        "@type": [
+          "odrl:Party",
+          "sch:Hospital"
+        ],
+        "uid": "ex:hopital-organization",
+        "rdfs:description" : "A specific hospital that owns this policy"
+      },
+      "assignee": {
+        "@type": [
+          "odrl:PartyCollection",
+          "coral:AdministrativeMember"
+        ],
+        "uid": "ex:groups/admin-staff",
+        "uid": "db:EmployeeRecords/{{provided_id}}?status='ADMINISTRATIVE_MEMBER'",
+        "rdfs:description" : "Anyone who belongs to the administrative staff"
+      },
+      "action": "modify",
+      "target": "db:AppointmentScheduling",
+      "constraint": [
+        {
+          "@type": "odrl:Constraint",
+          "leftOperand": "db:BillingInformation/{{patient_id}}?financial_status",
+          "operator": "odrl:eq",
+          "rightOperand": "DEBTOR"
+        }
+      ]
+    }
+  ]
+}
