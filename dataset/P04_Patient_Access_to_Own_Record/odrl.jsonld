@@ -38,7 +38,7 @@
       "constraint": [
         {
           "@type": "odrl:Constraint",
-          "leftOperand": "ex:request/P14/param",
+          "leftOperand": "ex:request/P04/param",
           "operator": "odrl:eq",
           "rightOperand": "db:ClinicalRecords?patient_id"
         }
