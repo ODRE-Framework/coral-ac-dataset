@@ -38,9 +38,9 @@
       "constraint": [
         {
           "@type": "odrl:Constraint",
-          "leftOperand": "ex:subjectId",
+          "leftOperand": "ex:request/P14/param",
           "operator": "odrl:eq",
-          "rightOperand": "ex:resourcePatientId"
+          "rightOperand": "db:ClinicalRecords?patient_id"
         }
       ]
     }
