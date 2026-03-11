@@ -19,7 +19,7 @@
   ],
   "@type": "odrl:Set",
   "uid": "ex:3bd86d6b-7786-4228-8609-a96ef9251f7a",
-  "rdfs:label" : "Policy 13",
+  "rdfs:label": "Policy 13",
   "permission": [
     {
       "@type": "odrl:Permission",
@@ -29,7 +29,7 @@
           "sch:Hospital"
         ],
         "uid": "ex:hopital-organization",
-        "rdfs:description" : "A specific hospital that owns this policy"
+        "rdfs:description": "A specific hospital that owns this policy"
       },
       "assignee": {
         "@type": [
@@ -40,24 +40,17 @@
         "vcard:fn": "Anyone who is a specialist physician"
       },
       "action": "read",
-      "target": "db:ClinicalRecords",
+      "target": "db:ClinicalRecords/324145?record_id='AB12'",
+      "rdfs:label": "The target specifies the patient (324145) and the specific clinical record (AB12) that can be accessed by the specialist",
       "constraint": [
         {
-          "@type": "odrl:LogicalConstraint",
-          "and": [
-            {
-              "@type": "odrl:Constraint",
-              "leftOperand": "ex:subjectId",
-              "operator": "odrl:eq",
-              "rightOperand": "ex:referralTargetId"
-            },
-            {
-              "@type": "odrl:Constraint",
-              "leftOperand": "dateTime",
-              "operator": "odrl:lt",
-              "rightOperand": "ex:referralExpiry"
-            }
-          ]
+          "@type": "odrl:Constraint",
+          "leftOperand": "dateTime",
+          "operator": "odrl:lt",
+          "rightOperand": {
+            "@value": "2026-05-04T13:51:59",
+            "@type": "xsd:datetime"
+          }
         }
       ]
     }
