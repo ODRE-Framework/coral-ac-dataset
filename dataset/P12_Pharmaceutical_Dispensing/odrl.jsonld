@@ -34,7 +34,12 @@
       "constraint": [
         {
           "@type": "odrl:Constraint",
-          "leftOperand": { "@id" : "ex:request/P12/param1", "@type" : "sotw:RequestParameter"},
+          "leftOperand": "ex:request/P12/param-identity",
+          "operator": "odrl:eq",
+          "rightOperand": "db:MedicationPrescriptions?patient_id"
+        }, {
+          "@type": "odrl:Constraint",
+          "leftOperand": "db:MedicationPrescriptions?status",
           "operator": "odrl:eq",
           "rightOperand": "PENDING"
         }
