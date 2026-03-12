@@ -36,11 +36,16 @@
       "action": "read",
       "target": "db:ClinicalRecords",
       "constraint": [
-        {
+       {
           "@type": "odrl:Constraint",
-          "leftOperand": "ex:subjectDepartmentId",
+          "leftOperand": "ex:request/P06/param-identity",
+          "operator": "odrl:isAnyOf",
+          "rightOperand": "db:ClinicalRecords?patient_id"
+        },{
+          "@type": "odrl:Constraint",
+          "leftOperand": "ex:request/P06/param-department",
           "operator": "odrl:eq",
-          "rightOperand": "ex:resourceDepartmentId"
+          "rightOperand": "db:ClinicalRecords?department"
         }
       ]
     }
