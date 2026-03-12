@@ -13,7 +13,7 @@
     {
       "@type" : "RequestParameter",
       "@id" : "ex:request/P14/param-legal-guardian",
-      "value": "ex:request/P14-1",
+      "value": "ex:id/family/familiar1",
       "rdfs:label" : "Legal guarding identity, in this case is the same URI as the party"
     },
     {
