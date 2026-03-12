@@ -31,16 +31,11 @@
         {
           "@type": "odrl:Constraint",
           "leftOperand": "ex:request/P09/param-identity",
-          "operator": "odrl:isAnyOf",
-          "rightOperand": "db:AppointmentScheduling?patient_id"
-        },{
-          "@type": "odrl:Constraint",
-          "leftOperand": "db:AppointmentScheduling?status",
           "operator": "odrl:eq",
-          "rightOperand": "PENDING"
+          "rightOperand": "db:BillingInformation?patient_id"
         },{
           "@type": "odrl:Constraint",
-          "leftOperand": "ex:request/P09/param-new-status",
+          "leftOperand": "db:BillingInformation?status",
           "operator": "odrl:eq",
           "rightOperand": "DEBTOR"
         }
