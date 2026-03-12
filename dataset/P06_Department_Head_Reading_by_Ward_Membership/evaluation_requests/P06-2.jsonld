@@ -1,24 +1,27 @@
 {
   "@context": [
     "http://www.w3.org/ns/odrl.jsonld",
-    "https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/ formal-semantics/ontology/evaluation_request.json",
-    {
-      "ex": "https://hospital-example.org/"
-    }
+    "https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/formal-semantics/ontology/evaluation_request.json",
+    "https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"
   ],
   "@type": "EvaluationRequest",
   "@id": "ex:request/P06-2",
   "evaluatedAction": "odrl:read",
-  "evaluatedParty": "ex:id/staff/medical-director/HEAD-1",
-  "evaluatedTarget": "ex:systems/db/tables/Historial_Clinico",
+  "evaluatedParty": "ex:id/staff/medical-director/head-cardiology1",
+  "evaluatedTarget": "db:ClinicalRecords",
   "requestParameters": [
     {
-      "value": "ex:department/CARDIOLOGY",
-      "describesFeature": "ex:subjectDepartmentId"
+      "@type" : "RequestParameter",
+      "@id" : "ex:request/P06/param-identity",
+      "value": "33512354C",
+      "rdfs:label" : "Patient identity card number",
+      "describesFeature": "sch:DigitalDocument"
     },
     {
-      "value": "ex:department/ONCOLOGY",
-      "describesFeature": "ex:resourceDepartmentId"
+      "@type" : "RequestParameter",
+      "@id" : "ex:request/P06/param-department",
+      "value": "ONCOLOGY",
+      "rdfs:label" : "Department to which 'ex:id/staff/medical-director/head-cardiology1' does not belong or the patient is not assigned"
     }
   ]
 }
