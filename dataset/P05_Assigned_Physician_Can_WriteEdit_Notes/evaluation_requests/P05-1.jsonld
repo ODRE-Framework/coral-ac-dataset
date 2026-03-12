@@ -1,24 +1,25 @@
 {
   "@context": [
     "http://www.w3.org/ns/odrl.jsonld",
-    "https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/ formal-semantics/ontology/evaluation_request.json",
-    {
-      "ex": "https://hospital-example.org/"
-    }
+    "https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/formal-semantics/ontology/evaluation_request.json",
+    "https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"
   ],
   "@type": "EvaluationRequest",
   "@id": "ex:request/P05-1",
   "evaluatedAction": "odrl:modify",
-  "evaluatedParty": "ex:id/staff/physician/DOC-1",
-  "evaluatedTarget": "ex:systems/db/tables/Historial_Clinico",
-  "requestParameters": [
-    {
-      "value": "ex:id/staff/physician/DOC-1",
-      "describesFeature": "ex:subjectId"
-    },
-    {
-      "value": "ex:id/staff/physician/DOC-1",
-      "describesFeature": "ex:resourceAssignedDoctorId"
+  "evaluatedParty": "ex:id/staff/physician/doctor1",
+  "evaluatedTarget": "db:ClinicalRecords",
+  "requestParameters": [{
+      "@type" : "RequestParameter",
+      "@id" : "ex:request/P05/param-physician-identity",
+      "value": "ex:id/staff/physician/doctor1",
+      "rdfs:label" : "Doctor URI identification"
+    },{
+      "@type" : "RequestParameter",
+      "@id" : "ex:request/P05/param-patient-identity",
+      "value": "33512354C",
+      "rdfs:label" : "Personal identity card number",
+      "describesFeature": "sch:DigitalDocument"
     }
-  ]
+   ]
 }
