@@ -1,15 +1,7 @@
 {
   "@context": [
     "http://www.w3.org/ns/odrl.jsonld",
-    "https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json",
-    {
-      "ex:subjectDepartmentId": {
-        "@type": "@id"
-      },
-      "ex:resourceDepartmentId": {
-        "@type": "@id"
-      }
-    }
+    "https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"
   ],
   "@type": "odrl:Set",
   "uid": "ex:69b21f5e-b719-4b82-9600-cce78d31243c",
