@@ -31,12 +31,12 @@
         {
           "@type": "odrl:Constraint",
           "leftOperand": "ex:request/P04/param-identity",
-          "operator": "odrl:eq",
+          "operator": "odrl:isAnyOf",
           "rightOperand": "db:ClinicalRecords?patient_id"
         },{
           "@type": "odrl:Constraint",
           "leftOperand": "ex:request/P04/param-record",
-          "operator": "odrl:eq",
+          "operator": "odrl:isAnyOf",
           "rightOperand": "db:ClinicalRecords?record_id"
         }
       ]
