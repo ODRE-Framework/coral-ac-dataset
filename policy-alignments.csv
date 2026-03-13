@@ -1,0 +1,1423 @@
+Folder,GlobalID,NL,RLS,ODRL,ODRE
+P01_Global_Reading_of_Patients,ex:57d3ec9f-3f32-433c-86b2-4b81fcb09540,"This policy grants global read access to the patients table to all medical staff. In a hospital environment, it is crucial that any physician can consult a patient’s basic file (identification, contact) to initiate care, regardless of whether they are the assigned physician or not. This base rule has no additional constraints.","CREATE POLICY shysician_reads_all_patients ON Patients
+FOR SELECT
+TO physician
+USING (true);
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""odrl:Set"",
+  ""uid"": ""ex:57d3ec9f-3f32-433c-86b2-4b81fcb09540"",
+  ""rdfs:label"" : ""Policy 01"",
+  ""permission"": [
+    {
+      ""@type"": ""odrl:Permission"",
+      ""assigner"": {
+        ""@type"": [
+          ""odrl:Party"",
+          ""sch:Hospital""
+        ],
+        ""uid"": ""ex:hopital-organization"",
+        ""rdfs:description"" : ""A specific hospital that owns this policy""
+      },
+      ""assignee"": {
+        ""@type"": [
+          ""odrl:PartyCollection"",
+          ""sch:Physician""
+        ],
+        ""uid"": ""ex:groups/medical-staff"",
+        ""rdfs:description"" : ""Anyone who belongs to the medical staff""
+      },
+      ""action"": ""read"",
+      ""target"": ""db:PatientsRegistry""
+    }
+  ]
+}","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""odrl:Set"",
+  ""uid"": ""ex:57d3ec9f-3f32-433c-86b2-4b81fcb09540"",
+  ""rdfs:label"" : ""Policy 01"",
+  ""permission"": [
+    {
+      ""@type"": ""odrl:Permission"",
+      ""assigner"": {
+        ""@type"": [
+          ""odrl:Party"",
+          ""sch:Hospital""
+        ],
+        ""uid"": ""ex:hopital-organization"",
+        ""rdfs:description"" : ""A specific hospital that owns this policy""
+      },
+      ""assignee"": {
+        ""@type"": [
+          ""odrl:PartyCollection"",
+          ""sch:Physician""
+        ],
+        ""uid"": ""db:EmployeeRecords/{{provided_id}}?status='PHYSICIAN'"",
+        ""rdfs:description"" : ""Anyone who belongs to the medical staff""
+      },
+      ""action"": ""read"",
+      ""target"": ""db:PatientsRegistry""
+    }
+  ]
+}
+"
+P02_Employee_Management_by_Admin,ex:c2b7030f-ee5f-43db-b6c2-fd17a673147e,"System administrators have full control over employee records. This policy allows them to create, modify, and delete records in the Employees table. It is a “superuser” policy for human resources management within the technical system.","CREATE POLICY admin_full_access_empleados ON Empleados
+FOR ALL
+TO admin
+USING (true)
+WITH CHECK (true);
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""odrl:Set"",
+  ""uid"": ""ex:c2b7030f-ee5f-43db-b6c2-fd17a673147e"",
+  ""rdfs:label"" : ""Policy 02"",
+  ""permission"": [
+    {
+      ""@type"": ""odrl:Permission"",
+      ""assigner"": {
+        ""@type"": [
+          ""odrl:Party"",
+          ""sch:Hospital""
+        ],
+        ""uid"": ""ex:hopital-organization"",
+        ""rdfs:description"" : ""A specific hospital that owns this policy""
+      },
+      ""assignee"": {
+        ""@type"": [
+          ""odrl:PartyCollection"",
+          ""coral:SystemAdministrator""
+        ],
+        ""uid"": ""ex:groups/admin"",
+        ""rdfs:description"": ""Anyone who belongs to the system administrators group""
+      },
+      ""action"": [
+        ""modify"",
+        ""delete""
+      ],
+      ""target"": ""db:EmployeeRecords""
+    }
+  ]
+}","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""odrl:Set"",
+  ""uid"": ""ex:c2b7030f-ee5f-43db-b6c2-fd17a673147e"",
+  ""rdfs:label"" : ""Policy 02"",
+  ""permission"": [
+    {
+      ""@type"": ""odrl:Permission"",
+      ""assigner"": {
+        ""@type"": [
+          ""odrl:Party"",
+          ""sch:Hospital""
+        ],
+        ""uid"": ""ex:hopital-organization"",
+        ""rdfs:description"" : ""A specific hospital that owns this policy""
+      },
+      ""assignee"": {
+        ""@type"": [
+          ""odrl:PartyCollection"",
+          ""coral:SystemAdministrator""
+        ],
+        ""uid"": ""db:EmployeeRecords/{{provided_id}}?status='AMINISTRATOR'"",
+        ""rdfs:description"": ""Anyone who belongs to the system administrators group""
+      },
+      ""action"": [
+        ""modify"",
+        ""delete""
+      ],
+      ""target"": ""db:EmployeeRecords""
+    }
+  ]
+}
+"
+P03_Read-Only_Audit,ex:b8d0be91-121b-4c7a-acf9-24aa4e863f05,"This policy defines the audit profile. Auditors must have unrestricted read access to medical records and billing to perform their control tasks, but are explicitly prohibited from any modification actions. This separation of duties ensures data integrity during audits.","CREATE POLICY auditor_read_only_historial ON Historial_Clinico
+FOR SELECT
+TO auditor
+USING (true);
+
+CREATE POLICY auditor_read_only_facturacion ON Facturacion
+FOR SELECT
+TO auditor
+USING (true);
+
+CREATE POLICY auditor_no_write ON Historial_Clinico
+FOR UPDATE, DELETE, INSERT
+TO auditor
+USING (false);
+
+CREATE POLICY auditor_no_write_fact ON Facturacion
+FOR UPDATE, DELETE, INSERT
+TO auditor
+USING (false);
+
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+     ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""odrl:Set"",
+  ""uid"": ""ex:b8d0be91-121b-4c7a-acf9-24aa4e863f05"",
+  ""rdfs:label"" : ""Policy 03"",
+  ""permission"": [
+    {
+      ""@type"": ""odrl:Permission"",
+      ""assigner"": {
+        ""@type"": [
+          ""odrl:Party"",
+          ""sch:Hospital""
+        ],
+        ""uid"": ""ex:hopital-organization"",
+        ""rdfs:description"" : ""A specific hospital that owns this policy""
+      },
+      ""assignee"": {
+        ""@type"": [
+          ""odrl:PartyCollection"",
+          ""coral:Auditor""
+        ],
+        ""uid"": ""ex:groups/auditors"",
+        ""rdfs:description"" : ""Anyone who belongs to the auditors group""
+      },
+      ""action"": ""read"",
+      ""target"": [
+        ""db:ClinicalRecords"",
+        ""db:BillingInformation""
+      ]
+    }
+  ],
+  ""prohibition"": [
+    {
+      ""@type"": ""odrl:Prohibition"",
+      ""assigner"": {
+        ""@type"": [
+          ""odrl:Party"",
+          ""sch:Hospital""
+        ],
+        ""uid"": ""ex:hopital-organization"",
+        ""rdfs:description"" : ""A specific hospital that owns this policy""
+      },
+      ""assignee"": {
+        ""@type"": [
+          ""odrl:PartyCollection"",
+          ""coral:Auditor""
+        ],
+        ""uid"": ""ex:groups/auditors"",
+        ""rdfs:description"" : ""Anyone who belongs to the auditors group""
+      },
+      ""action"": [
+        ""modify"",
+        ""delete""
+      ],
+      ""target"": [
+        ""db:ClinicalRecords"",
+        ""db:BillingInformation""
+      ]
+    }
+  ]
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+     ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""odrl:Set"",
+  ""uid"": ""ex:b8d0be91-121b-4c7a-acf9-24aa4e863f05"",
+  ""rdfs:label"" : ""Policy 03"",
+  ""permission"": [
+    {
+      ""@type"": ""odrl:Permission"",
+      ""assigner"": {
+        ""@type"": [
+          ""odrl:Party"",
+          ""sch:Hospital""
+        ],
+        ""uid"": ""ex:hopital-organization"",
+        ""rdfs:description"" : ""A specific hospital that owns this policy""
+      },
+      ""assignee"": {
+        ""@type"": [
+          ""odrl:PartyCollection"",
+          ""coral:Auditor""
+        ],
+         ""uid"": ""db:EmployeeRecords/{{provided_id}}?status='AUDITOR'"",
+        ""rdfs:description"" : ""Anyone who belongs to the auditors group""
+      },
+      ""action"": ""read"",
+      ""target"": [
+        ""db:ClinicalRecords"",
+        ""db:BillingInformation""
+      ]
+    }
+  ],
+  ""prohibition"": [
+    {
+      ""@type"": ""odrl:Prohibition"",
+      ""assigner"": {
+        ""@type"": [
+          ""odrl:Party"",
+          ""sch:Hospital""
+        ],
+        ""uid"": ""ex:hopital-organization"",
+        ""rdfs:description"" : ""A specific hospital that owns this policy""
+      },
+      ""assignee"": {
+        ""@type"": [
+          ""odrl:PartyCollection"",
+          ""coral:Auditor""
+        ],
+        ""uid"": ""db:EmployeeRecords/{{provided_id}}?status='AUDITOR'"",
+        ""rdfs:description"" : ""Anyone who belongs to the auditors group""
+      },
+      ""action"": [
+        ""modify"",
+        ""delete""
+      ],
+      ""target"": [
+        ""db:ClinicalRecords"",
+        ""db:BillingInformation""
+      ]
+    }
+  ]
+}
+"
+P04_Patient_Access_to_Own_Record,ex:dc851af8-9798-4221-b79b-e0cbf6216d81,"This policy ensures that each patient has exclusive read access to their own medical record. It is based on an identity constraint: the ID of the user requesting access (Assignee) must match the patient ID associated with the resource (Target). This protects the privacy of medical data, ensuring that a patient cannot see others’ records.","CREATE POLICY paciente_own_records ON Historial_Clinico
+FOR SELECT
+TO paciente
+USING (patient_id = current_user_id());
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""odrl:Set"",
+  ""uid"": ""ex:dc851af8-9798-4221-b79b-e0cbf6216d81"",
+  ""rdfs:label"" : ""Policy 04"",
+  ""permission"": [
+    {
+      ""@type"": ""odrl:Permission"",
+      ""assigner"": {
+        ""@type"": [
+          ""odrl:Party"",
+          ""sch:Hospital""
+        ],
+        ""uid"": ""ex:hopital-organization"",
+        ""rdfs:description"" : ""A specific hospital that owns this policy""
+      },
+      ""assignee"": {
+        ""@type"": [
+          ""odrl:PartyCollection"",
+          ""sch:Patient""
+        ],
+        ""uid"": ""ex:groups/patients"",
+        ""rdfs:description"": ""Anyone who is a patient of the hospital""
+      },
+      ""action"": ""read"",
+      ""target"": ""db:ClinicalRecords"",
+      ""constraint"": [
+        {
+          ""@type"": ""odrl:Constraint"",
+          ""leftOperand"": ""ex:request/P04/param-identity"",
+          ""operator"": ""odrl:isAnyOf"",
+          ""rightOperand"": ""db:ClinicalRecords?patient_id""
+        },{
+          ""@type"": ""odrl:Constraint"",
+          ""leftOperand"": ""ex:request/P04/param-record"",
+          ""operator"": ""odrl:isAnyOf"",
+          ""rightOperand"": ""db:ClinicalRecords?record_id""
+        }
+      ]
+    }
+  ]
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""odrl:Set"",
+  ""uid"": ""ex:dc851af8-9798-4221-b79b-e0cbf6216d81"",
+  ""rdfs:label"": ""Policy 04"",
+  ""permission"": [
+    {
+      ""@type"": ""odrl:Permission"",
+      ""assigner"": {
+        ""@type"": [
+          ""odrl:Party"",
+          ""sch:Hospital""
+        ],
+        ""uid"": ""ex:hopital-organization"",
+        ""rdfs:description"": ""A specific hospital that owns this policy""
+      },
+      ""assignee"": {
+        ""@type"": [
+          ""odrl:PartyCollection"",
+          ""sch:Patient""
+        ],
+        ""uid"": ""db:PatientsRegistry?patient_id={{provided_id}}"",
+        ""rdfs:description"": ""Anyone who is a patient of the hospital""
+      },
+      ""action"": ""read"",
+      ""target"": ""db:ClinicalRecords?patient_id={{provided_id}}&record_id={{record_id}}""
+    }
+  ]
+}
+"
+P05_Assigned_Physician_Can_WriteEdit_Notes,ex:e29c824e-7e51-417a-b8a2-f1b2b6cfd1c9,"Physicians can only modify or add notes to the medical records of patients they are assigned to. This policy does not limit reading (covered by P01), but writing. It prevents physicians not involved in a patient’s treatment from altering their record, maintaining responsibility and traceability of changes.","CREATE POLICY medico_write_own_assigned ON Historial_Clinico
+FOR UPDATE
+TO medico
+USING (assigned_doctor_id = current_user_id())
+WITH CHECK (assigned_doctor_id = current_user_id());
+
+CREATE POLICY medico_insert_own_assigned ON Historial_Clinico
+FOR INSERT
+TO medico
+WITH CHECK (assigned_doctor_id = current_user_id());
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""odrl:Set"",
+  ""uid"": ""ex:e29c824e-7e51-417a-b8a2-f1b2b6cfd1c9"",
+  ""rdfs:label"" : ""Policy 05"",
+  ""permission"": [
+    {
+      ""@type"": ""odrl:Permission"",
+      ""assigner"": {
+        ""@type"": [
+          ""odrl:Party"",
+          ""sch:Hospital""
+        ],
+        ""uid"": ""ex:hopital-organization"",
+        ""rdfs:description"" : ""A specific hospital that owns this policy""
+      },
+      ""assignee"": {
+        ""@type"": [
+          ""odrl:PartyCollection"",
+          ""sch:Physician""
+        ],
+        ""uid"": ""ex:groups/medical-staff"",
+        ""rdfs:description"" : ""Anyone who belongs to the medical staff""
+      },
+      ""action"": ""modify"",
+      ""target"": ""db:ClinicalRecords"",
+      ""constraint"": [
+        {
+          ""@type"": ""odrl:Constraint"",
+          ""leftOperand"": ""ex:request/P05/param-physician-identity"",
+          ""operator"": ""odrl:isAnyOf"",
+          ""rightOperand"": ""db:ClinicalRecords?patient_id""
+        },{
+          ""@type"": ""odrl:Constraint"",
+          ""leftOperand"": ""ex:request/P05/param-patient-identity"",
+          ""operator"": ""odrl:isAnyOf"",
+          ""rightOperand"": ""db:ClinicalRecords?patient_id""
+        }
+      ]
+    }
+  ]
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"",
+    {
+      ""ex:subjectId"": {
+        ""@type"": ""@id""
+      },
+      ""ex:resourceAssignedDoctorId"": {
+        ""@type"": ""@id""
+      }
+    }
+  ],
+  ""@type"": ""odrl:Set"",
+  ""uid"": ""ex:e29c824e-7e51-417a-b8a2-f1b2b6cfd1c9"",
+  ""rdfs:label"" : ""Policy 05"",
+  ""permission"": [
+    {
+      ""@type"": ""odrl:Permission"",
+      ""assigner"": {
+        ""@type"": [
+          ""odrl:Party"",
+          ""sch:Hospital""
+        ],
+        ""uid"": ""ex:hopital-organization"",
+        ""rdfs:description"" : ""A specific hospital that owns this policy""
+      },
+      ""assignee"": {
+        ""@type"": [
+          ""odrl:PartyCollection"",
+          ""sch:Physician""
+        ],
+        ""uid"": ""db:EmployeeRecords/{{provided_id}}?status='PHYSICIAN'"",
+        ""rdfs:description"" : ""Anyone who belongs to the medical staff""
+      },
+      ""action"": ""modify"",
+      ""target"": ""db:ClinicalRecords?physician_id={{provided_id}}""
+    }
+  ]
+}
+"
+P06_Department_Head_Reading_by_Ward_Membership,ex:69b21f5e-b719-4b82-9600-cce78d31243c,"The head of a medical department needs to supervise all patients admitted to their area, regardless of which individual physician is treating them. This policy grants read access based on the match of the “Department” attribute between the head (user) and the patient (resource).
+","CREATE POLICY jefe_read_department_patients ON Historial_Clinico
+FOR SELECT
+TO jefe_departamento
+USING (
+	patient_id IN (
+		SELECT id FROM Pacientes
+		WHERE department_id = current_user_department()
+	)
+);
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""odrl:Set"",
+  ""uid"": ""ex:69b21f5e-b719-4b82-9600-cce78d31243c"",
+  ""rdfs:label"" : ""Policy 06"",
+  ""permission"": [
+    {
+      ""@type"": ""odrl:Permission"",
+      ""assigner"": {
+        ""@type"": [
+          ""odrl:Party"",
+          ""sch:Hospital""
+        ],
+        ""uid"": ""ex:hopital-organization"",
+        ""rdfs:description"" : ""A specific hospital that owns this policy""
+      },
+      ""assignee"": {
+        ""@type"": [
+          ""odrl:PartyCollection"",
+          ""sch:DepartmentPhysicianHead""
+        ],
+        ""uid"": ""ex:groups/medical-head-staff"",
+        ""rdfs:description"" : ""Anyone who has the category head of the department in the hospital regardless their area""
+      },
+      ""action"": ""read"",
+      ""target"": ""db:ClinicalRecords"",
+      ""constraint"": [
+       {
+          ""@type"": ""odrl:Constraint"",
+          ""leftOperand"": ""ex:request/P06/param-identity"",
+          ""operator"": ""odrl:isAnyOf"",
+          ""rightOperand"": ""db:ClinicalRecords?patient_id""
+        },{
+          ""@type"": ""odrl:Constraint"",
+          ""leftOperand"": ""ex:request/P06/param-department"",
+          ""operator"": ""odrl:eq"",
+          ""rightOperand"": ""db:ClinicalRecords?department""
+        }
+      ]
+    }
+  ]
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""odrl:Set"",
+  ""uid"": ""ex:69b21f5e-b719-4b82-9600-cce78d31243c"",
+  ""rdfs:label"" : ""Policy 06"",
+  ""permission"": [
+    {
+      ""@type"": ""odrl:Permission"",
+      ""assigner"": {
+        ""@type"": [
+          ""odrl:Party"",
+          ""sch:Hospital""
+        ],
+        ""uid"": ""ex:hopital-organization"",
+        ""rdfs:description"" : ""A specific hospital that owns this policy""
+      },
+      ""assignee"": {
+        ""@type"": [
+          ""odrl:PartyCollection"",
+          ""sch:DepartmentPhysicianHead""
+        ],
+        ""db:EmployeeRecords/{{provided_id}}?status='PHYSICIAN'&department={{head_physician_department}}&department_head='True'"",
+        ""rdfs:description"" : ""Anyone who has the category head of the department in the hospital regardless their area""
+      },
+      ""action"": ""read"",
+      ""target"": ""db:ClinicalRecords?patient_id={{patient_id}}&department={{head_physician_department}}""
+  ]
+}
+"
+P07_Emergency_Access_by_Emergency_Break-the-Glass,ex:90782d9b-ebfa-4515-8473-ddb51ecbc3c1,"In life-or-death situations, privacy yields to immediate medical necessity.This policy allows emergency physicians to access records of patients marked with status “CRITICAL” or “EMERGENCY” even if they are not their assigned patients. This is a “break-the-glass” mechanism conditioned by the patient’s status.","CREATE POLICY urgencias_emergency_access ON Historial_Clinico
+FOR SELECT
+TO medico_urgencias
+USING (
+	patient_id IN (
+		SELECT id FROM Pacientes
+		WHERE status IN ('CRITICO', 'EMERGENCIA')
+	)
+);
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"",
+    {
+      ""ex:patientStatus"": {
+        ""@type"": ""xsd:string""
+      }
+    }
+  ],
+  ""@type"": ""odrl:Set"",
+  ""uid"": ""ex:90782d9b-ebfa-4515-8473-ddb51ecbc3c1"",
+  ""rdfs:label"" : ""Policy 07"",
+  ""permission"": [
+    {
+      ""@type"": ""odrl:Permission"",
+      ""assigner"": {
+        ""@type"": [
+          ""odrl:Party"",
+          ""sch:Hospital""
+        ],
+        ""uid"": ""ex:hopital-organization"",
+        ""rdfs:description"" : ""A specific hospital that owns this policy""
+      },
+      ""assignee"": {
+        ""@type"": [
+          ""odrl:PartyCollection"",
+          ""coral:EmergencyPhysician""
+        ],
+        ""uid"": ""ex:groups/er-staff"",
+        ""rdfs:description"" : ""Anyone who belongs to the medical emergency physician team""
+      },
+      ""action"": ""read"",
+      ""target"": ""db:ClinicalRecords?patient_status='CRITIC'|patient_status='EMERGENCY'""
+    }
+  ]
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"",
+    {
+      ""ex:patientStatus"": {
+        ""@type"": ""xsd:string""
+      }
+    }
+  ],
+  ""@type"": ""odrl:Set"",
+  ""uid"": ""ex:90782d9b-ebfa-4515-8473-ddb51ecbc3c1"",
+  ""rdfs:label"" : ""Policy 07"",
+  ""permission"": [
+    {
+      ""@type"": ""odrl:Permission"",
+      ""assigner"": {
+        ""@type"": [
+          ""odrl:Party"",
+          ""sch:Hospital""
+        ],
+        ""uid"": ""ex:hopital-organization"",
+        ""rdfs:description"" : ""A specific hospital that owns this policy""
+      },
+      ""assignee"": {
+        ""@type"": [
+          ""odrl:PartyCollection"",
+          ""coral:EmergencyPhysician""
+        ],
+        ""uid"": ""db:EmployeeRecords/{{provided_id}}?status='EMERGENCY_PHYSICIAN'"",
+        ""rdfs:description"" : ""Anyone who belongs to the medical emergency physician team""
+      },
+      ""action"": ""read"",
+      ""target"": ""db:ClinicalRecords?patient_status='CRITIC'|patient_status='EMERGENCY'""
+    }
+  ]
+}
+"
+P08_Research_Anonymized_Data_Only,ex:5b5bf495-f6c4-4511-b94f-87410e55d947,"Researchers can access clinical data for statistical and scientific analysis, but only if said data has been previously anonymized. This policy protects patient identity while allowing secondary use of data under strict privacy conditions.","CREATE POLICY investigador_anonymized_only ON Historial_Clinico
+FOR SELECT
+TO investigador
+USING (is_anonymized = true);
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"",
+    {
+      ""ex:isAnonymized"": {
+        ""@type"": ""xsd:boolean""
+      }
+    }
+  ],
+  ""@type"": ""odrl:Set"",
+  ""uid"": ""ex:5b5bf495-f6c4-4511-b94f-87410e55d947"",
+  ""rdfs:label"" : ""Policy 08"",
+  ""permission"": [
+    {
+      ""@type"": ""odrl:Permission"",
+      ""assigner"": {
+        ""@type"": [
+          ""odrl:Party"",
+          ""sch:Hospital""
+        ],
+        ""uid"": ""ex:hopital-organization"",
+        ""rdfs:description"" : ""A specific hospital that owns this policy""
+      },
+      ""assignee"": {
+        ""@type"": [
+          ""odrl:PartyCollection"",
+          ""coral:HospitalResearchMember""
+        ],
+        ""uid"": ""ex:groups/researchers"",
+        ""rdfs:description"": ""Any person who is part of the hospital research team""
+      },
+      ""action"": ""read"",
+      ""target"": ""db:ClinicalRecords?isAnonymized='True'&records""
+    }
+  ]
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"",
+    {
+      ""ex:isAnonymized"": {
+        ""@type"": ""xsd:boolean""
+      }
+    }
+  ],
+  ""@type"": ""odrl:Set"",
+  ""uid"": ""ex:5b5bf495-f6c4-4511-b94f-87410e55d947"",
+  ""rdfs:label"" : ""Policy 08"",
+  ""permission"": [
+    {
+      ""@type"": ""odrl:Permission"",
+      ""assigner"": {
+        ""@type"": [
+          ""odrl:Party"",
+          ""sch:Hospital""
+        ],
+        ""uid"": ""ex:hopital-organization"",
+        ""rdfs:description"" : ""A specific hospital that owns this policy""
+      },
+      ""assignee"": {
+        ""@type"": [
+          ""odrl:PartyCollection"",
+          ""coral:HospitalResearchMember""
+        ],
+        ""uid"": ""db:EmployeeRecords/{{provided_id}}?status='HOSPITAL_RESEACH_MEMBER'"",
+        ""rdfs:description"": ""Any person who is part of the hospital research team""
+      },
+      ""action"": ""read"",
+      ""target"": ""db:ClinicalRecords?isAnonymized='True'&records""
+    }
+  ]
+}
+"
+P09_Administrative_Forbidden_to_Create_Appointment_if_Debtor,ex:008509f7-41d1-401c-937e-6ae7a1ff369a,"This is a financial business policy. Administrative staff are explicitly prohibited from scheduling new appointments for patients who have outstanding debts to the hospital. The system checks the financial status (DEBTOR) before allowing the insertion of a new appointment.
+","CREATE POLICY admin_no_create_cita_deudor ON Citas
+FOR INSERT
+TO administrativo
+WITH CHECK (
+	patient_id NOT IN (
+		SELECT patient_id FROM Facturacion
+		WHERE financial_status = 'DEUDOR'
+	)
+);
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""odrl:Set"",
+  ""uid"": ""ex:008509f7-41d1-401c-937e-6ae7a1ff369a"",
+  ""rdfs:label"" : ""Policy 09"",
+  ""prohibition"": [
+    {
+      ""@type"": ""odrl:Prohibition"",
+      ""assigner"": {
+        ""@type"": [
+          ""odrl:Party"",
+          ""sch:Hospital""
+        ],
+        ""uid"": ""ex:hopital-organization"",
+        ""rdfs:description"" : ""A specific hospital that owns this policy""
+      },
+      ""assignee"": {
+        ""@type"": [
+          ""odrl:PartyCollection"",
+          ""coral:AdministrativeMember""
+        ],
+        ""uid"": ""ex:groups/admin-staff"",
+        ""rdfs:description"" : ""Anyone who belongs to the administrative staff""
+      },
+      ""action"": ""modify"",
+      ""target"": ""db:AppointmentScheduling"",
+      ""constraint"": [
+        {
+          ""@type"": ""odrl:Constraint"",
+          ""leftOperand"": ""ex:request/P09/param-identity"",
+          ""operator"": ""odrl:eq"",
+          ""rightOperand"": ""db:BillingInformation?patient_id""
+        },{
+          ""@type"": ""odrl:Constraint"",
+          ""leftOperand"": ""db:BillingInformation?status"",
+          ""operator"": ""odrl:eq"",
+          ""rightOperand"": ""DEBTOR""
+        }
+      ]
+    }
+  ]
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""odrl:Set"",
+  ""uid"": ""ex:008509f7-41d1-401c-937e-6ae7a1ff369a"",
+  ""rdfs:label"" : ""Policy 09"",
+  ""prohibition"": [
+    {
+      ""@type"": ""odrl:Prohibition"",
+      ""assigner"": {
+        ""@type"": [
+          ""odrl:Party"",
+          ""sch:Hospital""
+        ],
+        ""uid"": ""ex:hopital-organization"",
+        ""rdfs:description"" : ""A specific hospital that owns this policy""
+      },
+      ""assignee"": {
+        ""@type"": [
+          ""odrl:PartyCollection"",
+          ""coral:AdministrativeMember""
+        ],
+        ""uid"": ""db:EmployeeRecords/{{provided_id}}?status='ADMINISTRATIVE_MEMBER'"",
+        ""rdfs:description"" : ""Anyone who belongs to the administrative staff""
+      },
+      ""action"": ""modify"",
+      ""target"": ""db:AppointmentScheduling"",
+      ""constraint"": [
+        {
+          ""@type"": ""odrl:Constraint"",
+          ""leftOperand"": ""db:BillingInformation?patient_id={{patient_id}}&status"",
+          ""operator"": ""odrl:eq"",
+          ""rightOperand"": ""DEBTOR""
+        }
+      ]
+    }
+  ]
+}
+"
+P10_Nursing_Access_During_Shift_Window,ex:85bc6a9b-1cce-4398-8dd0-859af7390fbb,"Nurses need access to patients’ medication to administer it, but only during their working hours. This temporal policy restricts access (reading and recording administration) exclusively to the time interval defined by the nurse’s shift, improving security and reducing the risk of access outside regular hours.
+","CREATE POLICY enfermero_shift_access ON Medicacion
+FOR SELECT, UPDATE
+TO enfermero
+USING (
+CURRENT_TIME >= (
+SELECT shift_start FROM Empleados
+WHERE id = current_user_id()
+)
+AND
+CURRENT_TIME <= (
+SELECT shift_end FROM Empleados
+WHERE id = current_user_id()
+)
+);
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"",
+    {
+     
+      ""ex:subjectShiftStart"": {
+        ""@type"": ""xsd:time""
+      },
+      ""ex:subjectShiftEnd"": {
+        ""@type"": ""xsd:time""
+      }
+    }
+  ],
+  ""@type"": ""odrl:Set"",
+  ""uid"": ""ex:85bc6a9b-1cce-4398-8dd0-859af7390fbb"",
+  ""rdfs:label"" : ""Policy 10"",
+  ""permission"": [
+    {
+      ""@type"": ""odrl:Permission"",
+      ""assigner"": {
+        ""@type"": [
+          ""odrl:Party"",
+          ""sch:Hospital""
+        ],
+        ""uid"": ""ex:hopital-organization"",
+        ""rdfs:description"" : ""A specific hospital that owns this policy""
+      },
+      ""assignee"": {
+        ""@type"": [
+          ""odrl:PartyCollection"",
+          ""coral:NurseStaff""
+        ],
+        ""uid"": ""ex:groups/nursing-staff"",
+        ""rdfs:description"" : ""Anyone who belongs to the nursing staff""
+      },
+      ""action"": [
+        ""read"",
+        ""modify""
+      ],
+      ""target"": ""db:MedicationPrescriptions"",
+      ""constraint"": [
+        {
+          ""@type"": ""odrl:LogicalConstraint"",
+          ""and"": [
+            {
+              ""@type"": ""odrl:Constraint"",
+              ""leftOperand"": ""dateTime"",
+              ""operator"": ""odrl:gteq"",
+              ""rightOperand"": ""ex:subjectShiftStart""
+            },
+            {
+              ""@type"": ""odrl:Constraint"",
+              ""leftOperand"": ""dateTime"",
+              ""operator"": ""odrl:lteq"",
+              ""rightOperand"": ""ex:subjectShiftEnd""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/odre-time/refs/heads/main/OnToology/Ontology/ontology.ttl/context/context.jsonld""
+  ],
+  ""@type"": ""odrl:Set"",
+  ""uid"": ""ex:85bc6a9b-1cce-4398-8dd0-859af7390fbb"",
+  ""rdfs:label"" : ""Policy 10"",
+  ""permission"": [
+    {
+      ""@type"": ""odrl:Permission"",
+      ""assigner"": {
+        ""@type"": [
+          ""odrl:Party"",
+          ""sch:Hospital""
+        ],
+        ""uid"": ""ex:hopital-organization"",
+        ""rdfs:description"" : ""A specific hospital that owns this policy""
+      },
+      ""assignee"": {
+        ""@type"": [
+          ""odrl:PartyCollection"",
+          ""coral:NurseStaff""
+        ],
+        ""uid"": ""db:NursingShifts?nurse_id={{providedId}}"",
+        ""rdfs:description"" : ""Anyone who belongs to the nursing staff""
+      },
+      ""action"": [
+        ""read"",
+        ""modify""
+      ],
+      ""target"": ""db:MedicationPrescriptions"",
+      ""constraint"": [
+            {
+              ""leftOperand"": ""time"",
+              ""operator"": ""odrl:gteq"",
+              ""rightOperand"": ""db:NursingShifts?nurse_id={{providedId}}&shift_start""
+            },{
+              ""leftOperand"": ""time"",
+              ""operator"": ""odrl:lteq"",
+              ""rightOperand"": ""db:NursingShifts?nurse_id={{providedId}}&shift_ends""
+            }
+      ]
+    }
+  ]
+}
+"
+P11_Prescription_of_Medications,ex:9c8669d7-4403-4cda-8594-6060c9b75c34,"This policy authorizes physicians to create and modify records in the Medication table (prescribe drugs). It is an operational capability policy: only qualified personnel (physicians) should have write permission in this critical table. Nurses (P10) only read or update administration, and pharmacists (P12) only dispense.
+","CREATE POLICY medico_prescribe_meds ON Medicacion
+FOR INSERT, UPDATE
+TO medico
+WITH CHECK (true); -- Assigned patient restriction applies in P05
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""odrl:Set"",
+  ""uid"": ""ex:9c8669d7-4403-4cda-8594-6060c9b75c34"",
+  ""rdfs:label"" : ""Policy 11"",
+  ""permission"": [
+    {
+      ""@type"": ""odrl:Permission"",
+      ""assigner"": {
+        ""@type"": [
+          ""odrl:Party"",
+          ""sch:Hospital""
+        ],
+        ""uid"": ""ex:hopital-organization"",
+        ""rdfs:description"" : ""A specific hospital that owns this policy""
+      },
+      ""assignee"": {
+        ""@type"": [
+          ""odrl:PartyCollection"",
+          ""sch:Physician""
+        ],
+        ""uid"": ""ex:groups/medical-staff"",
+        ""rdfs:description"" : ""Anyone who belongs to the medical staff""
+      },
+      ""action"": [
+        ""use"",
+        ""modify""
+      ],
+      ""target"": ""db:MedicationPrescriptions""
+    }
+  ]
+}","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""odrl:Set"",
+  ""uid"": ""ex:9c8669d7-4403-4cda-8594-6060c9b75c34"",
+  ""rdfs:label"" : ""Policy 11"",
+  ""permission"": [
+    {
+      ""@type"": ""odrl:Permission"",
+      ""assigner"": {
+        ""@type"": [
+          ""odrl:Party"",
+          ""sch:Hospital""
+        ],
+        ""uid"": ""ex:hopital-organization"",
+        ""rdfs:description"" : ""A specific hospital that owns this policy""
+      },
+      ""assignee"": {
+        ""@type"": [
+          ""odrl:PartyCollection"",
+          ""sch:Physician""
+        ],
+        ""uid"": ""db:EmployeeRecords/{{provided_id}}?status='PHYSICIAN'"",
+        ""rdfs:description"" : ""Anyone who belongs to the medical staff""
+      },
+      ""action"": [
+        ""use"",
+        ""modify""
+      ],
+      ""target"": ""db:MedicationPrescriptions""
+    }
+  ]
+}
+"
+P12_Pharmaceutical_Dispensing,ex:c325c669-d899-408f-967f-2678dc2d377d,"The hospital pharmacist is responsible for dispensing prescribed medication.They have read access to view prescriptions and limited update permission to change the medication status from “PENDING” to “DISPENSED.” They cannot alter the dosage or the drug prescribed.
+","CREATE POLICY pharma_dispense ON Medicacion
+FOR SELECT, UPDATE
+TO farmaceutico
+USING (status = 'PENDIENTE')
+WITH CHECK (status = 'DISPENSADO');
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/formal-semantics/ontology/evaluation_request.json""
+  ],
+  ""@type"": ""odrl:Set"",
+  ""uid"": ""ex:c325c669-d899-408f-967f-2678dc2d377d"",
+  ""rdfs:label"" : ""Policy 12"",
+  ""permission"": [
+    {
+      ""@type"": ""odrl:Permission"",
+      ""assigner"": {
+        ""@type"": [
+          ""odrl:Party"",
+          ""sch:Hospital""
+        ],
+        ""uid"": ""ex:hopital-organization"",
+        ""rdfs:description"" : ""A specific hospital that owns this policy""
+      },
+      ""assignee"": {
+        ""@type"": [
+          ""odrl:PartyCollection"",
+          ""coral:Pharmacist""
+        ],
+        ""uid"": ""ex:groups/pharmacy-staff"",
+        ""rdfs:description"" : ""Anyone who belongs to the pharmacy staff""
+      },
+      ""action"": [
+        ""read"",
+        ""modify""
+      ],
+      ""target"": ""db:MedicationPrescriptions"",
+      ""constraint"": [
+        {
+          ""@type"": ""odrl:Constraint"",
+          ""leftOperand"": ""ex:request/P12/param-identity"",
+          ""operator"": ""odrl:eq"",
+          ""rightOperand"": ""db:MedicationPrescriptions?patient_id""
+        }, {
+          ""@type"": ""odrl:Constraint"",
+          ""leftOperand"": ""db:MedicationPrescriptions?status"",
+          ""operator"": ""odrl:eq"",
+          ""rightOperand"": ""PENDING""
+        }
+      ]
+    }
+  ]
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/formal-semantics/ontology/evaluation_request.json""
+  ],
+  ""@type"": ""odrl:Set"",
+  ""uid"": ""ex:c325c669-d899-408f-967f-2678dc2d377d"",
+  ""rdfs:label"" : ""Policy 12"",
+  ""permission"": [
+    {
+      ""@type"": ""odrl:Permission"",
+      ""assigner"": {
+        ""@type"": [
+          ""odrl:Party"",
+          ""sch:Hospital""
+        ],
+        ""uid"": ""ex:hopital-organization"",
+        ""rdfs:description"" : ""A specific hospital that owns this policy""
+      },
+      ""assignee"": {
+        ""@type"": [
+          ""odrl:PartyCollection"",
+          ""coral:Pharmacist""
+        ],
+        ""uid"": ""db:EmployeeRecords/{{provided_id}}?status='PHARMACIST'"",
+        ""rdfs:description"" : ""Anyone who belongs to the pharmacy staff""
+      },
+      ""action"": [
+        ""read"",
+        ""modify""
+      ],
+      ""target"": ""db:MedicationPrescriptions?patient_id={{provided_patient_id}}&status=PENDING"",
+      ""constraint"": [
+        {
+          ""@type"": ""odrl:Constraint"",
+          ""leftOperand"": ""{{new_status}}"",
+          ""operator"": ""odrl:eq"",
+          ""rightOperand"": ""DISPENSED""
+        }
+      ]
+    }
+  ]
+}
+"
+P13_External_Consultation,ex:3bd86d6b-7786-4228-8609-a96ef9251f7a,"Sometimes it is necessary to refer a patient to an external specialist for a second opinion. This policy grants temporary access to the patient’s record to the external physician, conditioned on the existence of an active and valid referral.","CREATE POLICY external_consult_access ON Historial_Clinico
+FOR SELECT
+TO medico_externo
+USING (
+id IN (
+SELECT patient_id FROM Derivaciones
+WHERE target_doctor_id = current_user_id()
+AND expiry_date > NOW()
+)
+);
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"",
+    {
+      ""ex:referralTargetId"": {
+        ""@type"": ""@id""
+      },
+      ""ex:subjectId"": {
+        ""@type"": ""@id""
+      },
+      ""ex:referralExpiry"": {
+        ""@type"": ""xsd:dateTime""
+      },
+      ""ex:currentTime"": {
+        ""@type"": ""xsd:dateTime""
+      }
+    }
+  ],
+  ""@type"": ""odrl:Set"",
+  ""uid"": ""ex:3bd86d6b-7786-4228-8609-a96ef9251f7a"",
+  ""rdfs:label"": ""Policy 13"",
+  ""permission"": [
+    {
+      ""@type"": ""odrl:Permission"",
+      ""assigner"": {
+        ""@type"": [
+          ""odrl:Party"",
+          ""sch:Hospital""
+        ],
+        ""uid"": ""ex:hopital-organization"",
+        ""rdfs:description"": ""A specific hospital that owns this policy""
+      },
+      ""assignee"": {
+        ""@type"": [
+          ""odrl:PartyCollection"",
+          ""coral:SpecialistPhysician""
+        ],
+        ""uid"": ""ex:groups/medical-staff"",
+        ""vcard:fn"": ""Anyone who is a specialist physician""
+      },
+      ""action"": ""read"",
+      ""target"": ""db:ClinicalRecords/324145?record_id='AB12'"",
+      ""rdfs:label"": ""The target specifies the patient (324145) and the specific clinical record (AB12) that can be accessed by the specialist"",
+      ""constraint"": [
+        {
+          ""@type"": ""odrl:Constraint"",
+          ""leftOperand"": ""dateTime"",
+          ""operator"": ""odrl:lt"",
+          ""rightOperand"": {
+            ""@value"": ""2026-05-04T13:51:59"",
+            ""@type"": ""xsd:datetime""
+          }
+        }
+      ]
+    }
+  ]
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"",
+    {
+      ""ex:referralTargetId"": {
+        ""@type"": ""@id""
+      },
+      ""ex:subjectId"": {
+        ""@type"": ""@id""
+      },
+      ""ex:referralExpiry"": {
+        ""@type"": ""xsd:dateTime""
+      },
+      ""ex:currentTime"": {
+        ""@type"": ""xsd:dateTime""
+      }
+    }
+  ],
+  ""@type"": ""odrl:Set"",
+  ""uid"": ""ex:3bd86d6b-7786-4228-8609-a96ef9251f7a"",
+  ""rdfs:label"": ""Policy 13"",
+  ""permission"": [
+    {
+      ""@type"": ""odrl:Permission"",
+      ""assigner"": {
+        ""@type"": [
+          ""odrl:Party"",
+          ""sch:Hospital""
+        ],
+        ""uid"": ""ex:hopital-organization"",
+        ""rdfs:description"": ""A specific hospital that owns this policy""
+      },
+      ""assignee"": {
+        ""@type"": [
+          ""odrl:PartyCollection"",
+          ""coral:SpecialistPhysician""
+        ],
+         ""uid"": ""db:EmployeeRecords/{{provided_id}}?status='SPECIALIST_PHYSICIAN'"",
+        ""vcard:fn"": ""Anyone who is a specialist physician""
+      },
+      ""action"": ""read"",
+      ""target"": ""db:ClinicalRecords/324145?record_id='AB12'"",
+      ""rdfs:label"": ""The target specifies the patient (324145) and the specific clinical record (AB12) that can be accessed by the specialist"",
+      ""constraint"": [
+        {
+          ""@type"": ""odrl:Constraint"",
+          ""leftOperand"": ""{{get_time()}}"",
+          ""operator"": ""odrl:lt"",
+          ""rightOperand"": {
+            ""@value"": ""{{compute_expiration_day('2026-05-01T13:51:59', '5D')}}"",
+            ""@type"": ""xsd:datetime""
+          }
+        }
+      ]
+    }
+  ]
+}
+"
+P14_Legal_Guardian_Parent_Access_to_Minors,ex:b98654ad-1a2a-4f74-9820-f4b260614b71,"Legal guardians or parents have the right to access the medical history of patients under their care, provided they are minors. Once the patient reaches 18 years of age, this policy automatically ceases to apply to protect the adult’s privacy.","CREATE POLICY guardian_read_minor ON Historial_Clinico
+FOR SELECT
+TO familiar
+40
+USING (
+patient_id IN (
+SELECT id FROM Pacientes
+WHERE guardian_id = current_user_id()
+AND age < 18
+)
+);
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""odrl:Set"",
+  ""uid"": ""ex:b98654ad-1a2a-4f74-9820-f4b260614b71"",
+  ""rdfs:label"" : ""Policy 14"",
+  ""permission"": [
+    {
+      ""@type"": ""odrl:Permission"",
+      ""assigner"": {
+        ""@type"": [
+          ""odrl:Party"",
+          ""sch:Hospital""
+        ],
+        ""uid"": ""ex:hopital-organization"",
+        ""rdfs:description"" : ""A specific hospital that owns this policy""
+      },
+      ""assignee"": {
+        ""@type"": [
+          ""odrl:PartyCollection"",
+          ""coral:LegalGuardian""
+        ],
+        ""uid"": ""ex:groups/family"",
+        ""rdfs:description"" : ""One of the legal guardians of an underage patient""
+      },
+      ""action"": ""read"",
+      ""target"": ""db:ClinicalRecords"",
+      ""constraint"": [
+        {
+          ""@type"": ""odrl:LogicalConstraint"",
+          ""and"": [
+            {
+              ""@type"": ""odrl:Constraint"",
+              ""leftOperand"": ""db:ClinicalRecords?age"",
+              ""operator"": ""odrl:lt"",
+              ""rightOperand"": 18
+            },
+            {
+              ""@type"": ""odrl:Constraint"",
+              ""leftOperand"": ""ex:request/P14/param-legal-guardian"",
+              ""operator"": ""odrl:isPartOf"",
+              ""rightOperand"": ""db:ClinicalRecords?legal_guardian""
+            },{
+              ""@type"": ""odrl:Constraint"",
+              ""leftOperand"": ""ex:request/P14/param-underage_patient"",
+              ""operator"": ""odrl:eq"",
+              ""rightOperand"": ""db:ClinicalRecords?patient_id""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""odrl:Set"",
+  ""uid"": ""ex:b98654ad-1a2a-4f74-9820-f4b260614b71"",
+  ""rdfs:label"" : ""Policy 14"",
+  ""permission"": [
+    {
+      ""@type"": ""odrl:Permission"",
+      ""assigner"": {
+        ""@type"": [
+          ""odrl:Party"",
+          ""sch:Hospital""
+        ],
+        ""uid"": ""ex:hopital-organization"",
+        ""rdfs:description"" : ""A specific hospital that owns this policy""
+      },
+      ""assignee"": {
+        ""@type"": [
+          ""odrl:PartyCollection"",
+          ""coral:LegalGuardian""
+        ],
+        ""uid"": ""db:ClinicalRecords?patient_id={{patient_id}}&legal_guardian={{requester_id}}"",
+        ""rdfs:description"" : ""One of the legal guardians of an underage patient""
+      },
+      ""action"": ""read"",
+      ""target"": ""db:ClinicalRecords?patient_id={{patient_id}}"",
+      ""constraint"": [
+            {
+              ""@type"": ""odrl:Constraint"",
+              ""leftOperand"": ""db:ClinicalRecords?patient_id={{patient_id}}&age"",
+              ""operator"": ""odrl:lt"",
+              ""rightOperand"": 18
+            }
+      ]
+    }
+  ]
+}
+"
+P15_Laboratory_Entry_of_Results,ex:531d8717-6655-4be0-8ce5-a689d33e2f84,"Laboratory technicians generate data (analysis results) that must be stored in the system. They have permission to create new result records, but for privacy and data minimization reasons, they do not have permission to read the patient’s full clinical history—only the results they generate themselves or the test orders.
+","CREATE POLICY lab_insert_results ON Resultados_Pruebas
+FOR INSERT
+TO tecnico_lab
+WITH CHECK (true);
+-- Policy to allow reading only their own inserted
+-- results or open orders can be added separately
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""odrl:Set"",
+  ""uid"": ""ex:531d8717-6655-4be0-8ce5-a689d33e2f84"",
+  ""rdfs:label"" : ""Policy 15"",
+  ""permission"": [
+    {
+      ""@type"": ""odrl:Permission"",
+      ""assigner"": {
+        ""@type"": [
+          ""odrl:Party"",
+          ""sch:Hospital""
+        ],
+        ""uid"": ""ex:hopital-organization"",
+        ""rdfs:description"" : ""A specific hospital that owns this policy""
+      },
+      ""assignee"": {
+        ""@type"": [
+          ""odrl:PartyCollection"",
+          ""coral:LaboratoryTechnician""
+        ],
+        ""uid"": ""ex:groups/lab-staff"",
+        ""rdfs:description"" : ""Anyone who belongs to the laboratory technical staff""
+      },
+      ""action"": ""modify"",
+      ""target"": ""db:LaboratoryTestResults""
+    }
+  ]
+}","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""odrl:Set"",
+  ""uid"": ""ex:531d8717-6655-4be0-8ce5-a689d33e2f84"",
+  ""rdfs:label"" : ""Policy 15"",
+  ""permission"": [
+    {
+      ""@type"": ""odrl:Permission"",
+      ""assigner"": {
+        ""@type"": [
+          ""odrl:Party"",
+          ""sch:Hospital""
+        ],
+        ""uid"": ""ex:hopital-organization"",
+        ""rdfs:description"" : ""A specific hospital that owns this policy""
+      },
+      ""assignee"": {
+        ""@type"": [
+          ""odrl:PartyCollection"",
+          ""coral:LaboratoryTechnician""
+        ],
+        ""uid"": ""db:EmployeeRecords/{{provided_id}}?status='LABORATORY_TECHNICIAN'"",
+        ""rdfs:description"" : ""Anyone who belongs to the laboratory technical staff""
+      },
+      ""action"": ""modify"",
+      ""target"": ""db:LaboratoryTestResults""
+    }
+  ]
+}
+"

@@ -22,7 +22,7 @@
           "odrl:PartyCollection",
           "coral:LaboratoryTechnician"
         ],
-        "uid": "ex:groups/lab-staff"
+        "uid": "ex:groups/lab-staff",
         "rdfs:description" : "Anyone who belongs to the laboratory technical staff"
       },
       "action": "modify",

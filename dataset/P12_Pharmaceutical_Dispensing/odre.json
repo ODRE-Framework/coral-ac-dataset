@@ -1,0 +1,44 @@
+{
+  "@context": [
+    "http://www.w3.org/ns/odrl.jsonld",
+    "https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json",
+    "https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/formal-semantics/ontology/evaluation_request.json"
+  ],
+  "@type": "odrl:Set",
+  "uid": "ex:c325c669-d899-408f-967f-2678dc2d377d",
+  "rdfs:label" : "Policy 12",
+  "permission": [
+    {
+      "@type": "odrl:Permission",
+      "assigner": {
+        "@type": [
+          "odrl:Party",
+          "sch:Hospital"
+        ],
+        "uid": "ex:hopital-organization",
+        "rdfs:description" : "A specific hospital that owns this policy"
+      },
+      "assignee": {
+        "@type": [
+          "odrl:PartyCollection",
+          "coral:Pharmacist"
+        ],
+        "uid": "db:EmployeeRecords/{{provided_id}}?status='PHARMACIST'",
+        "rdfs:description" : "Anyone who belongs to the pharmacy staff"
+      },
+      "action": [
+        "read",
+        "modify"
+      ],
+      "target": "db:MedicationPrescriptions?patient_id={{provided_patient_id}}&status=PENDING",
+      "constraint": [
+        {
+          "@type": "odrl:Constraint",
+          "leftOperand": "{{new_status}}",
+          "operator": "odrl:eq",
+          "rightOperand": "DISPENSED"
+        }
+      ]
+    }
+  ]
+}

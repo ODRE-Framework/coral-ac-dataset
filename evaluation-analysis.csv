@@ -1,0 +1,3754 @@
+Folder,GlobalID,SoW,EvRequest,ODRL
+P01_Global_Reading_of_Patients,ex:57d3ec9f-3f32-433c-86b2-4b81fcb09540,"{
+  ""@context"" : [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/formal-semantics/ontology/stow.json"",
+     ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"",
+    { ""@context"" : { ""member"" : { ""@id"" : ""odrl:member"", ""@type"" : ""@id"" } }}
+  ],
+  ""@id"" : ""ex:StateP01-1"",
+  ""@type"" : ""SotW"",
+  ""context"" :  {
+    ""@id"" : ""ex:groups/medical-staff"",
+    ""@type"" : ""odrl:PartyCollection"",
+    ""rdfs:label"" : ""Medical Staff"",
+    ""member"" : [ {
+      ""@id"" : ""ex:id/staff/physician/doctor1"",
+      ""@type"" : [""odrl:Party"", ""sch:Physician""],
+      ""odrl:partOf"" : {""@id"" : ""ex:groups/medical-staff""},
+      ""rdfs:label"" : ""Dr. Roberto Cheu""
+    },{
+      ""@id"" : ""ex:id/staff/physician/doctor2"",
+      ""@type"" : [""odrl:Party"", ""sch:Physician""],
+      ""odrl:partOf"" : {""@id"" : ""ex:groups/medical-staff""},
+      ""rdfs:label"" : ""Dr. Karina Gessel""
+    }
+   ] 
+  }
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/formal-semantics/ontology/evaluation_request.json"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""EvaluationRequest"",
+  ""@id"": ""ex:request/P01-1"",
+  ""evaluatedAction"": ""odrl:read"",
+  ""evaluatedParty"": ""ex:id/staff/physician/doctor2"",
+  ""evaluatedTarget"": ""db:PatientsRegistry""
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""odrl:Set"",
+  ""uid"": ""ex:57d3ec9f-3f32-433c-86b2-4b81fcb09540"",
+  ""rdfs:label"" : ""Policy 01"",
+  ""permission"": [
+    {
+      ""@type"": ""odrl:Permission"",
+      ""assigner"": {
+        ""@type"": [
+          ""odrl:Party"",
+          ""sch:Hospital""
+        ],
+        ""uid"": ""ex:hopital-organization"",
+        ""rdfs:description"" : ""A specific hospital that owns this policy""
+      },
+      ""assignee"": {
+        ""@type"": [
+          ""odrl:PartyCollection"",
+          ""sch:Physician""
+        ],
+        ""uid"": ""ex:groups/medical-staff"",
+        ""rdfs:description"" : ""Anyone who belongs to the medical staff""
+      },
+      ""action"": ""read"",
+      ""target"": ""db:PatientsRegistry""
+    }
+  ]
+}"
+P01_Global_Reading_of_Patients,ex:57d3ec9f-3f32-433c-86b2-4b81fcb09540,"{
+  ""@context"" : [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/formal-semantics/ontology/stow.json"",
+     ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"",
+    { ""@context"" : { ""member"" : { ""@id"" : ""odrl:member"", ""@type"" : ""@id"" } }}
+  ],
+  ""@id"" : ""ex:StateP01-2"",
+  ""@type"" : ""SotW"",
+  ""context"" :  {
+    ""@id"" : ""ex:groups/medical-staff"",
+    ""@type"" : ""odrl:PartyCollection"",
+    ""rdfs:label"" : ""Medical Staff"",
+    ""member"" : [ {
+      ""@id"" : ""ex:id/staff/physician/doctor1"",
+      ""@type"" : [""odrl:Party"", ""sch:Physician""],
+      ""odrl:partOf"" : {""@id"" : ""ex:groups/medical-staff""},
+      ""rdfs:label"" : ""Dr. Roberto Cheu""
+    },{
+      ""@id"" : ""ex:id/staff/physician/doctor2"",
+      ""@type"" : [""odrl:Party"", ""sch:Physician""],
+      ""odrl:partOf"" : {""@id"" : ""ex:groups/medical-staff""},
+      ""rdfs:label"" : ""Dr. Karina Gessel""
+    }
+   ] 
+  }
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/formal-semantics/ontology/evaluation_request.json"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""EvaluationRequest"",
+  ""@id"": ""ex:request/P01-2"",
+  ""evaluatedAction"": ""odrl:read"",
+  ""evaluatedParty"": ""ex:id/staff/admin/administrative1"",
+  ""evaluatedTarget"": ""db:PatientsRegistry""
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""odrl:Set"",
+  ""uid"": ""ex:57d3ec9f-3f32-433c-86b2-4b81fcb09540"",
+  ""rdfs:label"" : ""Policy 01"",
+  ""permission"": [
+    {
+      ""@type"": ""odrl:Permission"",
+      ""assigner"": {
+        ""@type"": [
+          ""odrl:Party"",
+          ""sch:Hospital""
+        ],
+        ""uid"": ""ex:hopital-organization"",
+        ""rdfs:description"" : ""A specific hospital that owns this policy""
+      },
+      ""assignee"": {
+        ""@type"": [
+          ""odrl:PartyCollection"",
+          ""sch:Physician""
+        ],
+        ""uid"": ""ex:groups/medical-staff"",
+        ""rdfs:description"" : ""Anyone who belongs to the medical staff""
+      },
+      ""action"": ""read"",
+      ""target"": ""db:PatientsRegistry""
+    }
+  ]
+}"
+P02_Employee_Management_by_Admin,ex:c2b7030f-ee5f-43db-b6c2-fd17a673147e,"{
+  ""@context"" : [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/formal-semantics/ontology/stow.json"",
+     ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"",
+    { ""@context"" : { ""member"" : { ""@id"" : ""odrl:member"", ""@type"" : ""@id"" } }}
+  ],
+  ""@id"" : ""ex:StateP02-4"",
+  ""@type"" : ""SotW"",
+  ""context"" :  {
+    ""@id"" : ""ex:groups/admin"",
+    ""@type"" : ""odrl:PartyCollection"",
+    ""rdfs:label"" : ""Administrators Staff"",
+    ""member"" : [ {
+      ""@id"" : ""ex:id/staff/admin/administrator1"",
+      ""@type"" : [""odrl:Party"", ""coral:SystemAdministrator""],
+      ""odrl:partOf"" : {""@id"" : ""ex:groups/admin""},
+      ""rdfs:label"" : ""Daphne Wahlert""
+    },{
+      ""@id"" : ""ex:id/staff/admin/administrator2"",
+      ""@type"" : [""odrl:Party"", ""sch:SystemAdministrator""],
+      ""odrl:partOf"" : {""@id"" : ""ex:groups/admin""},
+      ""rdfs:label"" : ""Nathaniel Waples""
+    }
+   ] 
+  }
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/ formal-semantics/ontology/evaluation_request.json"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""EvaluationRequest"",
+  ""@id"": ""ex:request/P02-4"",
+  ""evaluatedAction"": ""odrl:delete"",
+  ""evaluatedParty"": ""ex:id/staff/nurse/nurse1"",
+  ""evaluatedTarget"": ""db:EmployeeRecords""
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""odrl:Set"",
+  ""uid"": ""ex:c2b7030f-ee5f-43db-b6c2-fd17a673147e"",
+  ""rdfs:label"" : ""Policy 02"",
+  ""permission"": [
+    {
+      ""@type"": ""odrl:Permission"",
+      ""assigner"": {
+        ""@type"": [
+          ""odrl:Party"",
+          ""sch:Hospital""
+        ],
+        ""uid"": ""ex:hopital-organization"",
+        ""rdfs:description"" : ""A specific hospital that owns this policy""
+      },
+      ""assignee"": {
+        ""@type"": [
+          ""odrl:PartyCollection"",
+          ""coral:SystemAdministrator""
+        ],
+        ""uid"": ""ex:groups/admin"",
+        ""rdfs:description"": ""Anyone who belongs to the system administrators group""
+      },
+      ""action"": [
+        ""modify"",
+        ""delete""
+      ],
+      ""target"": ""db:EmployeeRecords""
+    }
+  ]
+}"
+P02_Employee_Management_by_Admin,ex:c2b7030f-ee5f-43db-b6c2-fd17a673147e,"{
+  ""@context"" : [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/formal-semantics/ontology/stow.json"",
+     ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"",
+    { ""@context"" : { ""member"" : { ""@id"" : ""odrl:member"", ""@type"" : ""@id"" } }}
+  ],
+  ""@id"" : ""ex:StateP02-2"",
+  ""@type"" : ""SotW"",
+  ""context"" :  {
+    ""@id"" : ""ex:groups/admin"",
+    ""@type"" : ""odrl:PartyCollection"",
+    ""rdfs:label"" : ""Administrators Staff"",
+    ""member"" : [ {
+      ""@id"" : ""ex:id/staff/admin/administrator1"",
+      ""@type"" : [""odrl:Party"", ""coral:SystemAdministrator""],
+      ""odrl:partOf"" : {""@id"" : ""ex:groups/admin""},
+      ""rdfs:label"" : ""Daphne Wahlert""
+    },{
+      ""@id"" : ""ex:id/staff/admin/administrator2"",
+      ""@type"" : [""odrl:Party"", ""sch:SystemAdministrator""],
+      ""odrl:partOf"" : {""@id"" : ""ex:groups/admin""},
+      ""rdfs:label"" : ""Nathaniel Waples""
+    }
+   ] 
+  }
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/formal-semantics/ontology/evaluation_request.json"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""EvaluationRequest"",
+  ""@id"": ""ex:request/P02-2"",
+  ""evaluatedAction"": ""odrl:modify"",
+  ""evaluatedParty"": ""ex:id/staff/nurse/nurse1"",
+  ""evaluatedTarget"": ""db:EmployeeRecords""
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""odrl:Set"",
+  ""uid"": ""ex:c2b7030f-ee5f-43db-b6c2-fd17a673147e"",
+  ""rdfs:label"" : ""Policy 02"",
+  ""permission"": [
+    {
+      ""@type"": ""odrl:Permission"",
+      ""assigner"": {
+        ""@type"": [
+          ""odrl:Party"",
+          ""sch:Hospital""
+        ],
+        ""uid"": ""ex:hopital-organization"",
+        ""rdfs:description"" : ""A specific hospital that owns this policy""
+      },
+      ""assignee"": {
+        ""@type"": [
+          ""odrl:PartyCollection"",
+          ""coral:SystemAdministrator""
+        ],
+        ""uid"": ""ex:groups/admin"",
+        ""rdfs:description"": ""Anyone who belongs to the system administrators group""
+      },
+      ""action"": [
+        ""modify"",
+        ""delete""
+      ],
+      ""target"": ""db:EmployeeRecords""
+    }
+  ]
+}"
+P02_Employee_Management_by_Admin,ex:c2b7030f-ee5f-43db-b6c2-fd17a673147e,"{
+  ""@context"" : [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/formal-semantics/ontology/stow.json"",
+     ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"",
+    { ""@context"" : { ""member"" : { ""@id"" : ""odrl:member"", ""@type"" : ""@id"" } }}
+  ],
+  ""@id"" : ""ex:StateP02-3"",
+  ""@type"" : ""SotW"",
+  ""context"" :  {
+    ""@id"" : ""ex:groups/admin"",
+    ""@type"" : ""odrl:PartyCollection"",
+    ""rdfs:label"" : ""Administrators Staff"",
+    ""member"" : [ {
+      ""@id"" : ""ex:id/staff/admin/administrator1"",
+      ""@type"" : [""odrl:Party"", ""coral:SystemAdministrator""],
+      ""odrl:partOf"" : {""@id"" : ""ex:groups/admin""},
+      ""rdfs:label"" : ""Daphne Wahlert""
+    },{
+      ""@id"" : ""ex:id/staff/admin/administrator2"",
+      ""@type"" : [""odrl:Party"", ""sch:SystemAdministrator""],
+      ""odrl:partOf"" : {""@id"" : ""ex:groups/admin""},
+      ""rdfs:label"" : ""Nathaniel Waples""
+    }
+   ] 
+  }
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/ formal-semantics/ontology/evaluation_request.json"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""EvaluationRequest"",
+  ""@id"": ""ex:request/P02-3"",
+  ""evaluatedAction"": ""odrl:delete"",
+  ""evaluatedParty"": ""ex:id/staff/admin/administrator1"",
+  ""evaluatedTarget"": ""db:EmployeeRecords""
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""odrl:Set"",
+  ""uid"": ""ex:c2b7030f-ee5f-43db-b6c2-fd17a673147e"",
+  ""rdfs:label"" : ""Policy 02"",
+  ""permission"": [
+    {
+      ""@type"": ""odrl:Permission"",
+      ""assigner"": {
+        ""@type"": [
+          ""odrl:Party"",
+          ""sch:Hospital""
+        ],
+        ""uid"": ""ex:hopital-organization"",
+        ""rdfs:description"" : ""A specific hospital that owns this policy""
+      },
+      ""assignee"": {
+        ""@type"": [
+          ""odrl:PartyCollection"",
+          ""coral:SystemAdministrator""
+        ],
+        ""uid"": ""ex:groups/admin"",
+        ""rdfs:description"": ""Anyone who belongs to the system administrators group""
+      },
+      ""action"": [
+        ""modify"",
+        ""delete""
+      ],
+      ""target"": ""db:EmployeeRecords""
+    }
+  ]
+}"
+P02_Employee_Management_by_Admin,ex:c2b7030f-ee5f-43db-b6c2-fd17a673147e,"{
+  ""@context"" : [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/formal-semantics/ontology/stow.json"",
+     ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"",
+    { ""@context"" : { ""member"" : { ""@id"" : ""odrl:member"", ""@type"" : ""@id"" } }}
+  ],
+  ""@id"" : ""ex:StateP02-1"",
+  ""@type"" : ""SotW"",
+  ""context"" :  {
+    ""@id"" : ""ex:groups/admin"",
+    ""@type"" : ""odrl:PartyCollection"",
+    ""rdfs:label"" : ""Administrators Staff"",
+    ""member"" : [ {
+      ""@id"" : ""ex:id/staff/admin/administrator1"",
+      ""@type"" : [""odrl:Party"", ""coral:SystemAdministrator""],
+      ""odrl:partOf"" : {""@id"" : ""ex:groups/admin""},
+      ""rdfs:label"" : ""Daphne Wahlert""
+    },{
+      ""@id"" : ""ex:id/staff/admin/administrator2"",
+      ""@type"" : [""odrl:Party"", ""sch:SystemAdministrator""],
+      ""odrl:partOf"" : {""@id"" : ""ex:groups/admin""},
+      ""rdfs:label"" : ""Nathaniel Waples""
+    }
+   ] 
+  }
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/formal-semantics/ontology/evaluation_request.json"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""EvaluationRequest"",
+  ""@id"": ""ex:request/P01-1"",
+  ""evaluatedAction"": ""odrl:modify"",
+  ""evaluatedParty"": ""ex:id/staff/admin/administrator1"",
+  ""evaluatedTarget"": ""db:EmployeeRecords""
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""odrl:Set"",
+  ""uid"": ""ex:c2b7030f-ee5f-43db-b6c2-fd17a673147e"",
+  ""rdfs:label"" : ""Policy 02"",
+  ""permission"": [
+    {
+      ""@type"": ""odrl:Permission"",
+      ""assigner"": {
+        ""@type"": [
+          ""odrl:Party"",
+          ""sch:Hospital""
+        ],
+        ""uid"": ""ex:hopital-organization"",
+        ""rdfs:description"" : ""A specific hospital that owns this policy""
+      },
+      ""assignee"": {
+        ""@type"": [
+          ""odrl:PartyCollection"",
+          ""coral:SystemAdministrator""
+        ],
+        ""uid"": ""ex:groups/admin"",
+        ""rdfs:description"": ""Anyone who belongs to the system administrators group""
+      },
+      ""action"": [
+        ""modify"",
+        ""delete""
+      ],
+      ""target"": ""db:EmployeeRecords""
+    }
+  ]
+}"
+P03_Read-Only_Audit,ex:b8d0be91-121b-4c7a-acf9-24aa4e863f05,"{
+  ""@context"" : [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/formal-semantics/ontology/stow.json"",
+     ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"",
+    { ""@context"" : { ""member"" : { ""@id"" : ""odrl:member"", ""@type"" : ""@id"" } }}
+  ],
+  ""@id"" : ""ex:StateP03-4"",
+  ""@type"" : ""SotW"",
+  ""context"" :  {
+    ""@id"" : ""ex:groups/auditors"",
+    ""@type"" : ""odrl:PartyCollection"",
+    ""rdfs:label"" : ""Auditors crew"",
+    ""member"" : [ {
+      ""@id"" : ""ex:id/staff/auditor/auditor1"",
+      ""@type"" : [""odrl:Party"", ""coral:Auditor""],
+      ""odrl:partOf"" : {""@id"" : ""ex:groups/auditors""},
+      ""rdfs:label"" : ""Kyra Aina""
+    },{
+      ""@id"" : ""ex:id/staff/auditor/auditor2"",
+      ""@type"" : [""odrl:Party"", ""coral:Auditor""],
+      ""odrl:partOf"" : {""@id"" : ""ex:groups/auditors""},
+      ""rdfs:label"" : ""Caiden Bultema""
+    }
+   ] 
+  }
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/formal-semantics/ontology/evaluation_request.json"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""EvaluationRequest"",
+  ""@id"": ""ex:request/P03-4"",
+  ""evaluatedAction"": ""odrl:modify"",
+  ""evaluatedParty"": ""ex:id/staff/physician/doctor1"",
+  ""evaluatedTarget"": ""db:BillingInformation""
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+     ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""odrl:Set"",
+  ""uid"": ""ex:b8d0be91-121b-4c7a-acf9-24aa4e863f05"",
+  ""rdfs:label"" : ""Policy 03"",
+  ""permission"": [
+    {
+      ""@type"": ""odrl:Permission"",
+      ""assigner"": {
+        ""@type"": [
+          ""odrl:Party"",
+          ""sch:Hospital""
+        ],
+        ""uid"": ""ex:hopital-organization"",
+        ""rdfs:description"" : ""A specific hospital that owns this policy""
+      },
+      ""assignee"": {
+        ""@type"": [
+          ""odrl:PartyCollection"",
+          ""coral:Auditor""
+        ],
+        ""uid"": ""ex:groups/auditors"",
+        ""rdfs:description"" : ""Anyone who belongs to the auditors group""
+      },
+      ""action"": ""read"",
+      ""target"": [
+        ""db:ClinicalRecords"",
+        ""db:BillingInformation""
+      ]
+    }
+  ],
+  ""prohibition"": [
+    {
+      ""@type"": ""odrl:Prohibition"",
+      ""assigner"": {
+        ""@type"": [
+          ""odrl:Party"",
+          ""sch:Hospital""
+        ],
+        ""uid"": ""ex:hopital-organization"",
+        ""rdfs:description"" : ""A specific hospital that owns this policy""
+      },
+      ""assignee"": {
+        ""@type"": [
+          ""odrl:PartyCollection"",
+          ""coral:Auditor""
+        ],
+        ""uid"": ""ex:groups/auditors"",
+        ""rdfs:description"" : ""Anyone who belongs to the auditors group""
+      },
+      ""action"": [
+        ""modify"",
+        ""delete""
+      ],
+      ""target"": [
+        ""db:ClinicalRecords"",
+        ""db:BillingInformation""
+      ]
+    }
+  ]
+}
+"
+P03_Read-Only_Audit,ex:b8d0be91-121b-4c7a-acf9-24aa4e863f05,"{
+  ""@context"" : [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/formal-semantics/ontology/stow.json"",
+     ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"",
+    { ""@context"" : { ""member"" : { ""@id"" : ""odrl:member"", ""@type"" : ""@id"" } }}
+  ],
+  ""@id"" : ""ex:StateP03-6"",
+  ""@type"" : ""SotW"",
+  ""context"" :  {
+    ""@id"" : ""ex:groups/auditors"",
+    ""@type"" : ""odrl:PartyCollection"",
+    ""rdfs:label"" : ""Auditors crew"",
+    ""member"" : [ {
+      ""@id"" : ""ex:id/staff/auditor/auditor1"",
+      ""@type"" : [""odrl:Party"", ""coral:Auditor""],
+      ""odrl:partOf"" : {""@id"" : ""ex:groups/auditors""},
+      ""rdfs:label"" : ""Kyra Aina""
+    },{
+      ""@id"" : ""ex:id/staff/auditor/auditor2"",
+      ""@type"" : [""odrl:Party"", ""coral:Auditor""],
+      ""odrl:partOf"" : {""@id"" : ""ex:groups/auditors""},
+      ""rdfs:label"" : ""Caiden Bultema""
+    }
+   ] 
+  }
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/ formal-semantics/ontology/evaluation_request.json"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""EvaluationRequest"",
+  ""@id"": ""ex:request/P03-6"",
+  ""evaluatedAction"": ""odrl:delete"",
+  ""evaluatedParty"": ""ex:id/staff/physician/doctor1"",
+  ""evaluatedTarget"": ""db:BillingInformation""
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+     ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""odrl:Set"",
+  ""uid"": ""ex:b8d0be91-121b-4c7a-acf9-24aa4e863f05"",
+  ""rdfs:label"" : ""Policy 03"",
+  ""permission"": [
+    {
+      ""@type"": ""odrl:Permission"",
+      ""assigner"": {
+        ""@type"": [
+          ""odrl:Party"",
+          ""sch:Hospital""
+        ],
+        ""uid"": ""ex:hopital-organization"",
+        ""rdfs:description"" : ""A specific hospital that owns this policy""
+      },
+      ""assignee"": {
+        ""@type"": [
+          ""odrl:PartyCollection"",
+          ""coral:Auditor""
+        ],
+        ""uid"": ""ex:groups/auditors"",
+        ""rdfs:description"" : ""Anyone who belongs to the auditors group""
+      },
+      ""action"": ""read"",
+      ""target"": [
+        ""db:ClinicalRecords"",
+        ""db:BillingInformation""
+      ]
+    }
+  ],
+  ""prohibition"": [
+    {
+      ""@type"": ""odrl:Prohibition"",
+      ""assigner"": {
+        ""@type"": [
+          ""odrl:Party"",
+          ""sch:Hospital""
+        ],
+        ""uid"": ""ex:hopital-organization"",
+        ""rdfs:description"" : ""A specific hospital that owns this policy""
+      },
+      ""assignee"": {
+        ""@type"": [
+          ""odrl:PartyCollection"",
+          ""coral:Auditor""
+        ],
+        ""uid"": ""ex:groups/auditors"",
+        ""rdfs:description"" : ""Anyone who belongs to the auditors group""
+      },
+      ""action"": [
+        ""modify"",
+        ""delete""
+      ],
+      ""target"": [
+        ""db:ClinicalRecords"",
+        ""db:BillingInformation""
+      ]
+    }
+  ]
+}
+"
+P03_Read-Only_Audit,ex:b8d0be91-121b-4c7a-acf9-24aa4e863f05,"{
+  ""@context"" : [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/formal-semantics/ontology/stow.json"",
+     ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"",
+    { ""@context"" : { ""member"" : { ""@id"" : ""odrl:member"", ""@type"" : ""@id"" } }}
+  ],
+  ""@id"" : ""ex:StateP03-2"",
+  ""@type"" : ""SotW"",
+  ""context"" :  {
+    ""@id"" : ""ex:groups/auditors"",
+    ""@type"" : ""odrl:PartyCollection"",
+    ""rdfs:label"" : ""Auditors crew"",
+    ""member"" : [ {
+      ""@id"" : ""ex:id/staff/auditor/auditor1"",
+      ""@type"" : [""odrl:Party"", ""coral:Auditor""],
+      ""odrl:partOf"" : {""@id"" : ""ex:groups/auditors""},
+      ""rdfs:label"" : ""Kyra Aina""
+    },{
+      ""@id"" : ""ex:id/staff/auditor/auditor2"",
+      ""@type"" : [""odrl:Party"", ""coral:Auditor""],
+      ""odrl:partOf"" : {""@id"" : ""ex:groups/auditors""},
+      ""rdfs:label"" : ""Caiden Bultema""
+    }
+   ] 
+  }
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/ formal-semantics/ontology/evaluation_request.json"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""EvaluationRequest"",
+  ""@id"": ""ex:request/P03-2"",
+  ""evaluatedAction"": ""odrl:read"",
+  ""evaluatedParty"": ""ex:id/staff/physician/doctor1"",
+  ""evaluatedTarget"": ""db:ClinicalRecords""
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+     ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""odrl:Set"",
+  ""uid"": ""ex:b8d0be91-121b-4c7a-acf9-24aa4e863f05"",
+  ""rdfs:label"" : ""Policy 03"",
+  ""permission"": [
+    {
+      ""@type"": ""odrl:Permission"",
+      ""assigner"": {
+        ""@type"": [
+          ""odrl:Party"",
+          ""sch:Hospital""
+        ],
+        ""uid"": ""ex:hopital-organization"",
+        ""rdfs:description"" : ""A specific hospital that owns this policy""
+      },
+      ""assignee"": {
+        ""@type"": [
+          ""odrl:PartyCollection"",
+          ""coral:Auditor""
+        ],
+        ""uid"": ""ex:groups/auditors"",
+        ""rdfs:description"" : ""Anyone who belongs to the auditors group""
+      },
+      ""action"": ""read"",
+      ""target"": [
+        ""db:ClinicalRecords"",
+        ""db:BillingInformation""
+      ]
+    }
+  ],
+  ""prohibition"": [
+    {
+      ""@type"": ""odrl:Prohibition"",
+      ""assigner"": {
+        ""@type"": [
+          ""odrl:Party"",
+          ""sch:Hospital""
+        ],
+        ""uid"": ""ex:hopital-organization"",
+        ""rdfs:description"" : ""A specific hospital that owns this policy""
+      },
+      ""assignee"": {
+        ""@type"": [
+          ""odrl:PartyCollection"",
+          ""coral:Auditor""
+        ],
+        ""uid"": ""ex:groups/auditors"",
+        ""rdfs:description"" : ""Anyone who belongs to the auditors group""
+      },
+      ""action"": [
+        ""modify"",
+        ""delete""
+      ],
+      ""target"": [
+        ""db:ClinicalRecords"",
+        ""db:BillingInformation""
+      ]
+    }
+  ]
+}
+"
+P03_Read-Only_Audit,ex:b8d0be91-121b-4c7a-acf9-24aa4e863f05,"{
+  ""@context"" : [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/formal-semantics/ontology/stow.json"",
+     ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"",
+    { ""@context"" : { ""member"" : { ""@id"" : ""odrl:member"", ""@type"" : ""@id"" } }}
+  ],
+  ""@id"" : ""ex:StateP03-5"",
+  ""@type"" : ""SotW"",
+  ""context"" :  {
+    ""@id"" : ""ex:groups/auditors"",
+    ""@type"" : ""odrl:PartyCollection"",
+    ""rdfs:label"" : ""Auditors crew"",
+    ""member"" : [ {
+      ""@id"" : ""ex:id/staff/auditor/auditor1"",
+      ""@type"" : [""odrl:Party"", ""coral:Auditor""],
+      ""odrl:partOf"" : {""@id"" : ""ex:groups/auditors""},
+      ""rdfs:label"" : ""Kyra Aina""
+    },{
+      ""@id"" : ""ex:id/staff/auditor/auditor2"",
+      ""@type"" : [""odrl:Party"", ""coral:Auditor""],
+      ""odrl:partOf"" : {""@id"" : ""ex:groups/auditors""},
+      ""rdfs:label"" : ""Caiden Bultema""
+    }
+   ] 
+  }
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/ formal-semantics/ontology/evaluation_request.json"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""EvaluationRequest"",
+  ""@id"": ""ex:request/P03-5"",
+  ""evaluatedAction"": ""odrl:delete"",
+  ""evaluatedParty"": ""ex:id/staff/auditor/auditor1"",
+  ""evaluatedTarget"": ""db:BillingInformation""
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+     ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""odrl:Set"",
+  ""uid"": ""ex:b8d0be91-121b-4c7a-acf9-24aa4e863f05"",
+  ""rdfs:label"" : ""Policy 03"",
+  ""permission"": [
+    {
+      ""@type"": ""odrl:Permission"",
+      ""assigner"": {
+        ""@type"": [
+          ""odrl:Party"",
+          ""sch:Hospital""
+        ],
+        ""uid"": ""ex:hopital-organization"",
+        ""rdfs:description"" : ""A specific hospital that owns this policy""
+      },
+      ""assignee"": {
+        ""@type"": [
+          ""odrl:PartyCollection"",
+          ""coral:Auditor""
+        ],
+        ""uid"": ""ex:groups/auditors"",
+        ""rdfs:description"" : ""Anyone who belongs to the auditors group""
+      },
+      ""action"": ""read"",
+      ""target"": [
+        ""db:ClinicalRecords"",
+        ""db:BillingInformation""
+      ]
+    }
+  ],
+  ""prohibition"": [
+    {
+      ""@type"": ""odrl:Prohibition"",
+      ""assigner"": {
+        ""@type"": [
+          ""odrl:Party"",
+          ""sch:Hospital""
+        ],
+        ""uid"": ""ex:hopital-organization"",
+        ""rdfs:description"" : ""A specific hospital that owns this policy""
+      },
+      ""assignee"": {
+        ""@type"": [
+          ""odrl:PartyCollection"",
+          ""coral:Auditor""
+        ],
+        ""uid"": ""ex:groups/auditors"",
+        ""rdfs:description"" : ""Anyone who belongs to the auditors group""
+      },
+      ""action"": [
+        ""modify"",
+        ""delete""
+      ],
+      ""target"": [
+        ""db:ClinicalRecords"",
+        ""db:BillingInformation""
+      ]
+    }
+  ]
+}
+"
+P03_Read-Only_Audit,ex:b8d0be91-121b-4c7a-acf9-24aa4e863f05,"{
+  ""@context"" : [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/formal-semantics/ontology/stow.json"",
+     ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"",
+    { ""@context"" : { ""member"" : { ""@id"" : ""odrl:member"", ""@type"" : ""@id"" } }}
+  ],
+  ""@id"" : ""ex:StateP03-3"",
+  ""@type"" : ""SotW"",
+  ""context"" :  {
+    ""@id"" : ""ex:groups/auditors"",
+    ""@type"" : ""odrl:PartyCollection"",
+    ""rdfs:label"" : ""Auditors crew"",
+    ""member"" : [ {
+      ""@id"" : ""ex:id/staff/auditor/auditor1"",
+      ""@type"" : [""odrl:Party"", ""coral:Auditor""],
+      ""odrl:partOf"" : {""@id"" : ""ex:groups/auditors""},
+      ""rdfs:label"" : ""Kyra Aina""
+    },{
+      ""@id"" : ""ex:id/staff/auditor/auditor2"",
+      ""@type"" : [""odrl:Party"", ""coral:Auditor""],
+      ""odrl:partOf"" : {""@id"" : ""ex:groups/auditors""},
+      ""rdfs:label"" : ""Caiden Bultema""
+    }
+   ] 
+  }
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/ formal-semantics/ontology/evaluation_request.json"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""EvaluationRequest"",
+  ""@id"": ""ex:request/P03-3"",
+  ""evaluatedAction"": ""odrl:modify"",
+  ""evaluatedParty"": ""ex:id/staff/auditor/auditor1"",
+  ""evaluatedTarget"": ""db:BillingInformation""
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+     ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""odrl:Set"",
+  ""uid"": ""ex:b8d0be91-121b-4c7a-acf9-24aa4e863f05"",
+  ""rdfs:label"" : ""Policy 03"",
+  ""permission"": [
+    {
+      ""@type"": ""odrl:Permission"",
+      ""assigner"": {
+        ""@type"": [
+          ""odrl:Party"",
+          ""sch:Hospital""
+        ],
+        ""uid"": ""ex:hopital-organization"",
+        ""rdfs:description"" : ""A specific hospital that owns this policy""
+      },
+      ""assignee"": {
+        ""@type"": [
+          ""odrl:PartyCollection"",
+          ""coral:Auditor""
+        ],
+        ""uid"": ""ex:groups/auditors"",
+        ""rdfs:description"" : ""Anyone who belongs to the auditors group""
+      },
+      ""action"": ""read"",
+      ""target"": [
+        ""db:ClinicalRecords"",
+        ""db:BillingInformation""
+      ]
+    }
+  ],
+  ""prohibition"": [
+    {
+      ""@type"": ""odrl:Prohibition"",
+      ""assigner"": {
+        ""@type"": [
+          ""odrl:Party"",
+          ""sch:Hospital""
+        ],
+        ""uid"": ""ex:hopital-organization"",
+        ""rdfs:description"" : ""A specific hospital that owns this policy""
+      },
+      ""assignee"": {
+        ""@type"": [
+          ""odrl:PartyCollection"",
+          ""coral:Auditor""
+        ],
+        ""uid"": ""ex:groups/auditors"",
+        ""rdfs:description"" : ""Anyone who belongs to the auditors group""
+      },
+      ""action"": [
+        ""modify"",
+        ""delete""
+      ],
+      ""target"": [
+        ""db:ClinicalRecords"",
+        ""db:BillingInformation""
+      ]
+    }
+  ]
+}
+"
+P03_Read-Only_Audit,ex:b8d0be91-121b-4c7a-acf9-24aa4e863f05,"{
+  ""@context"" : [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/formal-semantics/ontology/stow.json"",
+     ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"",
+    { ""@context"" : { ""member"" : { ""@id"" : ""odrl:member"", ""@type"" : ""@id"" } }}
+  ],
+  ""@id"" : ""ex:StateP03-1"",
+  ""@type"" : ""SotW"",
+  ""context"" :  {
+    ""@id"" : ""ex:groups/auditors"",
+    ""@type"" : ""odrl:PartyCollection"",
+    ""rdfs:label"" : ""Auditors crew"",
+    ""member"" : [ {
+      ""@id"" : ""ex:id/staff/auditor/auditor1"",
+      ""@type"" : [""odrl:Party"", ""coral:Auditor""],
+      ""odrl:partOf"" : {""@id"" : ""ex:groups/auditors""},
+      ""rdfs:label"" : ""Kyra Aina""
+    },{
+      ""@id"" : ""ex:id/staff/auditor/auditor2"",
+      ""@type"" : [""odrl:Party"", ""coral:Auditor""],
+      ""odrl:partOf"" : {""@id"" : ""ex:groups/auditors""},
+      ""rdfs:label"" : ""Caiden Bultema""
+    }
+   ] 
+  }
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/ formal-semantics/ontology/evaluation_request.json"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""EvaluationRequest"",
+  ""@id"": ""ex:request/P03-1"",
+  ""evaluatedAction"": ""odrl:read"",
+  ""evaluatedParty"": ""ex:id/staff/auditor/auditor1"",
+  ""evaluatedTarget"": ""db:ClinicalRecords""
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+     ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""odrl:Set"",
+  ""uid"": ""ex:b8d0be91-121b-4c7a-acf9-24aa4e863f05"",
+  ""rdfs:label"" : ""Policy 03"",
+  ""permission"": [
+    {
+      ""@type"": ""odrl:Permission"",
+      ""assigner"": {
+        ""@type"": [
+          ""odrl:Party"",
+          ""sch:Hospital""
+        ],
+        ""uid"": ""ex:hopital-organization"",
+        ""rdfs:description"" : ""A specific hospital that owns this policy""
+      },
+      ""assignee"": {
+        ""@type"": [
+          ""odrl:PartyCollection"",
+          ""coral:Auditor""
+        ],
+        ""uid"": ""ex:groups/auditors"",
+        ""rdfs:description"" : ""Anyone who belongs to the auditors group""
+      },
+      ""action"": ""read"",
+      ""target"": [
+        ""db:ClinicalRecords"",
+        ""db:BillingInformation""
+      ]
+    }
+  ],
+  ""prohibition"": [
+    {
+      ""@type"": ""odrl:Prohibition"",
+      ""assigner"": {
+        ""@type"": [
+          ""odrl:Party"",
+          ""sch:Hospital""
+        ],
+        ""uid"": ""ex:hopital-organization"",
+        ""rdfs:description"" : ""A specific hospital that owns this policy""
+      },
+      ""assignee"": {
+        ""@type"": [
+          ""odrl:PartyCollection"",
+          ""coral:Auditor""
+        ],
+        ""uid"": ""ex:groups/auditors"",
+        ""rdfs:description"" : ""Anyone who belongs to the auditors group""
+      },
+      ""action"": [
+        ""modify"",
+        ""delete""
+      ],
+      ""target"": [
+        ""db:ClinicalRecords"",
+        ""db:BillingInformation""
+      ]
+    }
+  ]
+}
+"
+P04_Patient_Access_to_Own_Record,ex:dc851af8-9798-4221-b79b-e0cbf6216d81,"{
+  ""@context"" : [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/formal-semantics/ontology/stow.json"",
+     ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"",
+    { ""@context"" : { ""member"" : { ""@id"" : ""odrl:member"", ""@type"" : ""@id"" } }}
+  ],
+  ""@id"" : ""ex:StateP04-2"",
+  ""@type"" : ""SotW"",
+  ""context"" :  {
+    ""@id"" : ""ex:groups/patients"",
+    ""@type"" : ""odrl:PartyCollection"",
+    ""rdfs:label"" : ""Patients Group"",
+    ""member"" : [ {
+      ""@id"" : ""ex:id/patient/patient1"",
+      ""@type"" : [""odrl:Party"", ""coral:Patient""],
+      ""odrl:partOf"" : {""@id"" : ""ex:groups/patients""},
+      ""rdfs:label"" : ""Helena Cruz""
+    }
+   ] 
+  }
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/formal-semantics/ontology/evaluation_request.json"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""EvaluationRequest"",
+  ""@id"": ""ex:request/P04-1"",
+  ""evaluatedAction"": ""odrl:read"",
+  ""evaluatedParty"": ""ex:id/patient/patient1"",
+  ""evaluatedTarget"": ""db:ClinicalRecords"",
+  ""requestParameters"": [{
+      ""@type"" : ""RequestParameter"",
+      ""@id"" : ""ex:request/P04/param-identity"",
+      ""value"": ""33512354C"",
+      ""rdfs:label"" : ""Personal identity card number"",
+      ""describesFeature"": ""sch:DigitalDocument""
+    },{
+      ""@type"" : ""RequestParameter"",
+      ""@id"" : ""ex:request/P04/param-record"",
+      ""value"": ""XXX-AB"",
+      ""rdfs:label"" : ""Clinical record ID"",
+      ""describesFeature"": ""sch:DigitalDocument""
+    }]
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""odrl:Set"",
+  ""uid"": ""ex:dc851af8-9798-4221-b79b-e0cbf6216d81"",
+  ""rdfs:label"" : ""Policy 04"",
+  ""permission"": [
+    {
+      ""@type"": ""odrl:Permission"",
+      ""assigner"": {
+        ""@type"": [
+          ""odrl:Party"",
+          ""sch:Hospital""
+        ],
+        ""uid"": ""ex:hopital-organization"",
+        ""rdfs:description"" : ""A specific hospital that owns this policy""
+      },
+      ""assignee"": {
+        ""@type"": [
+          ""odrl:PartyCollection"",
+          ""sch:Patient""
+        ],
+        ""uid"": ""ex:groups/patients"",
+        ""rdfs:description"": ""Anyone who is a patient of the hospital""
+      },
+      ""action"": ""read"",
+      ""target"": ""db:ClinicalRecords"",
+      ""constraint"": [
+        {
+          ""@type"": ""odrl:Constraint"",
+          ""leftOperand"": ""ex:request/P04/param-identity"",
+          ""operator"": ""odrl:isAnyOf"",
+          ""rightOperand"": ""db:ClinicalRecords?patient_id""
+        },{
+          ""@type"": ""odrl:Constraint"",
+          ""leftOperand"": ""ex:request/P04/param-record"",
+          ""operator"": ""odrl:isAnyOf"",
+          ""rightOperand"": ""db:ClinicalRecords?record_id""
+        }
+      ]
+    }
+  ]
+}
+"
+P04_Patient_Access_to_Own_Record,ex:dc851af8-9798-4221-b79b-e0cbf6216d81,"{
+  ""@context"" : [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/formal-semantics/ontology/stow.json"",
+     ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"",
+    { ""@context"" : { ""member"" : { ""@id"" : ""odrl:member"", ""@type"" : ""@id"" } }}
+  ],
+  ""@id"" : ""ex:StateP04-1"",
+  ""@type"" : ""SotW"",
+  ""context"" :  {
+    ""@id"" : ""ex:groups/patients"",
+    ""@type"" : ""odrl:PartyCollection"",
+    ""rdfs:label"" : ""Patients Group"",
+    ""member"" : [ {
+      ""@id"" : ""ex:id/patient/patient1"",
+      ""@type"" : [""odrl:Party"", ""coral:Patient""],
+      ""odrl:partOf"" : {""@id"" : ""ex:groups/patients""},
+      ""rdfs:label"" : ""Helena Cruz""
+    }
+   ] 
+  }
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/formal-semantics/ontology/evaluation_request.json"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""EvaluationRequest"",
+  ""@id"": ""ex:request/P04-1"",
+  ""evaluatedAction"": ""odrl:read"",
+  ""evaluatedParty"": ""ex:id/patient/patient1"",
+  ""evaluatedTarget"": ""db:ClinicalRecords"",
+  ""requestParameters"": [{
+      ""@type"" : ""RequestParameter"",
+      ""@id"" : ""ex:request/P04/param-identity"",
+      ""value"": ""33512354C"",
+      ""rdfs:label"" : ""Personal identity card number"",
+      ""describesFeature"": ""sch:DigitalDocument""
+    },{
+      ""@type"" : ""RequestParameter"",
+      ""@id"" : ""ex:request/P04/param-record"",
+      ""value"": ""33X-AF"",
+      ""rdfs:label"" : ""Clinical record ID"",
+      ""describesFeature"": ""sch:DigitalDocument""
+    }]
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""odrl:Set"",
+  ""uid"": ""ex:dc851af8-9798-4221-b79b-e0cbf6216d81"",
+  ""rdfs:label"" : ""Policy 04"",
+  ""permission"": [
+    {
+      ""@type"": ""odrl:Permission"",
+      ""assigner"": {
+        ""@type"": [
+          ""odrl:Party"",
+          ""sch:Hospital""
+        ],
+        ""uid"": ""ex:hopital-organization"",
+        ""rdfs:description"" : ""A specific hospital that owns this policy""
+      },
+      ""assignee"": {
+        ""@type"": [
+          ""odrl:PartyCollection"",
+          ""sch:Patient""
+        ],
+        ""uid"": ""ex:groups/patients"",
+        ""rdfs:description"": ""Anyone who is a patient of the hospital""
+      },
+      ""action"": ""read"",
+      ""target"": ""db:ClinicalRecords"",
+      ""constraint"": [
+        {
+          ""@type"": ""odrl:Constraint"",
+          ""leftOperand"": ""ex:request/P04/param-identity"",
+          ""operator"": ""odrl:isAnyOf"",
+          ""rightOperand"": ""db:ClinicalRecords?patient_id""
+        },{
+          ""@type"": ""odrl:Constraint"",
+          ""leftOperand"": ""ex:request/P04/param-record"",
+          ""operator"": ""odrl:isAnyOf"",
+          ""rightOperand"": ""db:ClinicalRecords?record_id""
+        }
+      ]
+    }
+  ]
+}
+"
+P05_Assigned_Physician_Can_WriteEdit_Notes,ex:e29c824e-7e51-417a-b8a2-f1b2b6cfd1c9,"{
+  ""@context"" : [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/formal-semantics/ontology/stow.json"",
+     ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"",
+    { ""@context"" : { ""member"" : { ""@id"" : ""odrl:member"", ""@type"" : ""@id"" } }}
+  ],
+  ""@id"" : ""ex:StateP05-2"",
+  ""@type"" : ""SotW"",
+  ""context"" :  {
+    ""@id"" : ""ex:groups/medical-staff"",
+    ""@type"" : ""odrl:PartyCollection"",
+    ""rdfs:label"" : ""Medical Staff"",
+    ""member"" : [ {
+      ""@id"" : ""ex:id/staff/physician/doctor1"",
+      ""@type"" : [""odrl:Party"", ""sch:Physician""],
+      ""odrl:partOf"" : {""@id"" : ""ex:groups/medical-staff""},
+      ""rdfs:label"" : ""Dr. Roberto Cheu""
+    },{
+      ""@id"" : ""ex:id/staff/physician/doctor2"",
+      ""@type"" : [""odrl:Party"", ""sch:Physician""],
+      ""odrl:partOf"" : {""@id"" : ""ex:groups/medical-staff""},
+      ""rdfs:label"" : ""Dr. Karina Gessel""
+    }
+   ] 
+  }
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/formal-semantics/ontology/evaluation_request.json"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""EvaluationRequest"",
+  ""@id"": ""ex:request/P05-2"",
+  ""evaluatedAction"": ""odrl:modify"",
+  ""evaluatedParty"": ""ex:id/staff/physician/doctor2"",
+  ""evaluatedTarget"": ""db:ClinicalRecords"",
+  ""requestParameters"": [{
+      ""@type"" : ""RequestParameter"",
+      ""@id"" : ""ex:request/P05/param-physician-identity"",
+      ""value"": ""ex:id/staff/physician/doctor2"",
+      ""rdfs:label"" : ""Doctor URI identification""
+    },{
+      ""@type"" : ""RequestParameter"",
+      ""@id"" : ""ex:request/P05/param-patient-identity"",
+      ""value"": ""33512354C"",
+      ""rdfs:label"" : ""Personal identity card number"",
+      ""describesFeature"": ""sch:DigitalDocument""
+    }
+   ]
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""odrl:Set"",
+  ""uid"": ""ex:e29c824e-7e51-417a-b8a2-f1b2b6cfd1c9"",
+  ""rdfs:label"" : ""Policy 05"",
+  ""permission"": [
+    {
+      ""@type"": ""odrl:Permission"",
+      ""assigner"": {
+        ""@type"": [
+          ""odrl:Party"",
+          ""sch:Hospital""
+        ],
+        ""uid"": ""ex:hopital-organization"",
+        ""rdfs:description"" : ""A specific hospital that owns this policy""
+      },
+      ""assignee"": {
+        ""@type"": [
+          ""odrl:PartyCollection"",
+          ""sch:Physician""
+        ],
+        ""uid"": ""ex:groups/medical-staff"",
+        ""rdfs:description"" : ""Anyone who belongs to the medical staff""
+      },
+      ""action"": ""modify"",
+      ""target"": ""db:ClinicalRecords"",
+      ""constraint"": [
+        {
+          ""@type"": ""odrl:Constraint"",
+          ""leftOperand"": ""ex:request/P05/param-physician-identity"",
+          ""operator"": ""odrl:isAnyOf"",
+          ""rightOperand"": ""db:ClinicalRecords?patient_id""
+        },{
+          ""@type"": ""odrl:Constraint"",
+          ""leftOperand"": ""ex:request/P05/param-patient-identity"",
+          ""operator"": ""odrl:isAnyOf"",
+          ""rightOperand"": ""db:ClinicalRecords?patient_id""
+        }
+      ]
+    }
+  ]
+}
+"
+P05_Assigned_Physician_Can_WriteEdit_Notes,ex:e29c824e-7e51-417a-b8a2-f1b2b6cfd1c9,"{
+  ""@context"" : [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/formal-semantics/ontology/stow.json"",
+     ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"",
+    { ""@context"" : { ""member"" : { ""@id"" : ""odrl:member"", ""@type"" : ""@id"" } }}
+  ],
+  ""@id"" : ""ex:StateP05-1"",
+  ""@type"" : ""SotW"",
+  ""context"" :  {
+    ""@id"" : ""ex:groups/medical-staff"",
+    ""@type"" : ""odrl:PartyCollection"",
+    ""rdfs:label"" : ""Medical Staff"",
+    ""member"" : [ {
+      ""@id"" : ""ex:id/staff/physician/doctor1"",
+      ""@type"" : [""odrl:Party"", ""sch:Physician""],
+      ""odrl:partOf"" : {""@id"" : ""ex:groups/medical-staff""},
+      ""rdfs:label"" : ""Dr. Roberto Cheu""
+    },{
+      ""@id"" : ""ex:id/staff/physician/doctor2"",
+      ""@type"" : [""odrl:Party"", ""sch:Physician""],
+      ""odrl:partOf"" : {""@id"" : ""ex:groups/medical-staff""},
+      ""rdfs:label"" : ""Dr. Karina Gessel""
+    }
+   ] 
+  }
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/formal-semantics/ontology/evaluation_request.json"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""EvaluationRequest"",
+  ""@id"": ""ex:request/P05-1"",
+  ""evaluatedAction"": ""odrl:modify"",
+  ""evaluatedParty"": ""ex:id/staff/physician/doctor1"",
+  ""evaluatedTarget"": ""db:ClinicalRecords"",
+  ""requestParameters"": [{
+      ""@type"" : ""RequestParameter"",
+      ""@id"" : ""ex:request/P05/param-physician-identity"",
+      ""value"": ""ex:id/staff/physician/doctor1"",
+      ""rdfs:label"" : ""Doctor URI identification""
+    },{
+      ""@type"" : ""RequestParameter"",
+      ""@id"" : ""ex:request/P05/param-patient-identity"",
+      ""value"": ""33512354C"",
+      ""rdfs:label"" : ""Personal identity card number"",
+      ""describesFeature"": ""sch:DigitalDocument""
+    }
+   ]
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""odrl:Set"",
+  ""uid"": ""ex:e29c824e-7e51-417a-b8a2-f1b2b6cfd1c9"",
+  ""rdfs:label"" : ""Policy 05"",
+  ""permission"": [
+    {
+      ""@type"": ""odrl:Permission"",
+      ""assigner"": {
+        ""@type"": [
+          ""odrl:Party"",
+          ""sch:Hospital""
+        ],
+        ""uid"": ""ex:hopital-organization"",
+        ""rdfs:description"" : ""A specific hospital that owns this policy""
+      },
+      ""assignee"": {
+        ""@type"": [
+          ""odrl:PartyCollection"",
+          ""sch:Physician""
+        ],
+        ""uid"": ""ex:groups/medical-staff"",
+        ""rdfs:description"" : ""Anyone who belongs to the medical staff""
+      },
+      ""action"": ""modify"",
+      ""target"": ""db:ClinicalRecords"",
+      ""constraint"": [
+        {
+          ""@type"": ""odrl:Constraint"",
+          ""leftOperand"": ""ex:request/P05/param-physician-identity"",
+          ""operator"": ""odrl:isAnyOf"",
+          ""rightOperand"": ""db:ClinicalRecords?patient_id""
+        },{
+          ""@type"": ""odrl:Constraint"",
+          ""leftOperand"": ""ex:request/P05/param-patient-identity"",
+          ""operator"": ""odrl:isAnyOf"",
+          ""rightOperand"": ""db:ClinicalRecords?patient_id""
+        }
+      ]
+    }
+  ]
+}
+"
+P06_Department_Head_Reading_by_Ward_Membership,ex:69b21f5e-b719-4b82-9600-cce78d31243c,"{
+  ""@context"" : [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/formal-semantics/ontology/stow.json"",
+     ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"",
+    { ""@context"" : { ""member"" : { ""@id"" : ""odrl:member"", ""@type"" : ""@id"" } }}
+  ],
+  ""@id"" : ""ex:StateP06-1"",
+  ""@type"" : ""SotW"",
+  ""context"" :  {
+    ""@id"" : ""ex:groups/medical-head-staff"",
+    ""@type"" : ""odrl:PartyCollection"",
+    ""rdfs:label"" : ""Cardiology Department Head"",
+    ""member"" : [ {
+      ""@id"" : ""ex:id/staff/medical-director/head-cardiology1"",
+      ""@type"" : [""odrl:Party"", ""sch:DepartmentPhysicianHead""],
+      ""odrl:partOf"" : {""@id"" : ""ex:groups/medical-head-staff""},
+      ""rdfs:label"" : ""Dr. Collin Lucear""
+    }
+   ] 
+  }
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/formal-semantics/ontology/evaluation_request.json"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""EvaluationRequest"",
+  ""@id"": ""ex:request/P06-1"",
+  ""evaluatedAction"": ""odrl:read"",
+  ""evaluatedParty"": ""ex:id/staff/medical-director/head-cardiology1"",
+  ""evaluatedTarget"": ""db:ClinicalRecords"",
+  ""requestParameters"": [
+    {
+      ""@type"" : ""RequestParameter"",
+      ""@id"" : ""ex:request/P06/param-identity"",
+      ""value"": ""33512354C"",
+      ""rdfs:label"" : ""Patient identity card number"",
+      ""describesFeature"": ""sch:DigitalDocument""
+    },
+    {
+      ""@type"" : ""RequestParameter"",
+      ""@id"" : ""ex:request/P06/param-department"",
+      ""value"": ""CARDIOLOGY"",
+      ""rdfs:label"" : ""Department to which 'ex:id/staff/medical-director/head-cardiology1' belongs""
+    }
+  ]
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""odrl:Set"",
+  ""uid"": ""ex:69b21f5e-b719-4b82-9600-cce78d31243c"",
+  ""rdfs:label"" : ""Policy 06"",
+  ""permission"": [
+    {
+      ""@type"": ""odrl:Permission"",
+      ""assigner"": {
+        ""@type"": [
+          ""odrl:Party"",
+          ""sch:Hospital""
+        ],
+        ""uid"": ""ex:hopital-organization"",
+        ""rdfs:description"" : ""A specific hospital that owns this policy""
+      },
+      ""assignee"": {
+        ""@type"": [
+          ""odrl:PartyCollection"",
+          ""sch:DepartmentPhysicianHead""
+        ],
+        ""uid"": ""ex:groups/medical-head-staff"",
+        ""rdfs:description"" : ""Anyone who has the category head of the department in the hospital regardless their area""
+      },
+      ""action"": ""read"",
+      ""target"": ""db:ClinicalRecords"",
+      ""constraint"": [
+       {
+          ""@type"": ""odrl:Constraint"",
+          ""leftOperand"": ""ex:request/P06/param-identity"",
+          ""operator"": ""odrl:isAnyOf"",
+          ""rightOperand"": ""db:ClinicalRecords?patient_id""
+        },{
+          ""@type"": ""odrl:Constraint"",
+          ""leftOperand"": ""ex:request/P06/param-department"",
+          ""operator"": ""odrl:eq"",
+          ""rightOperand"": ""db:ClinicalRecords?department""
+        }
+      ]
+    }
+  ]
+}
+"
+P06_Department_Head_Reading_by_Ward_Membership,ex:69b21f5e-b719-4b82-9600-cce78d31243c,"{
+  ""@context"" : [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/formal-semantics/ontology/stow.json"",
+     ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"",
+    { ""@context"" : { ""member"" : { ""@id"" : ""odrl:member"", ""@type"" : ""@id"" } }}
+  ],
+  ""@id"" : ""ex:StateP06-2"",
+  ""@type"" : ""SotW"",
+  ""context"" :  {
+    ""@id"" : ""ex:groups/medical-head-staff"",
+    ""@type"" : ""odrl:PartyCollection"",
+    ""rdfs:label"" : ""Cardiology Department Head"",
+    ""member"" : [ {
+      ""@id"" : ""ex:id/staff/medical-director/head-cardiology1"",
+      ""@type"" : [""odrl:Party"", ""sch:DepartmentPhysicianHead""],
+      ""odrl:partOf"" : {""@id"" : ""ex:groups/medical-head-staff""},
+      ""rdfs:label"" : ""Dr. Collin Lucear""
+    }
+   ] 
+  }
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/formal-semantics/ontology/evaluation_request.json"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""EvaluationRequest"",
+  ""@id"": ""ex:request/P06-2"",
+  ""evaluatedAction"": ""odrl:read"",
+  ""evaluatedParty"": ""ex:id/staff/medical-director/head-cardiology1"",
+  ""evaluatedTarget"": ""db:ClinicalRecords"",
+  ""requestParameters"": [
+    {
+      ""@type"" : ""RequestParameter"",
+      ""@id"" : ""ex:request/P06/param-identity"",
+      ""value"": ""33512354C"",
+      ""rdfs:label"" : ""Patient identity card number"",
+      ""describesFeature"": ""sch:DigitalDocument""
+    },
+    {
+      ""@type"" : ""RequestParameter"",
+      ""@id"" : ""ex:request/P06/param-department"",
+      ""value"": ""ONCOLOGY"",
+      ""rdfs:label"" : ""Department to which 'ex:id/staff/medical-director/head-cardiology1' does not belong or the patient is not assigned""
+    }
+  ]
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""odrl:Set"",
+  ""uid"": ""ex:69b21f5e-b719-4b82-9600-cce78d31243c"",
+  ""rdfs:label"" : ""Policy 06"",
+  ""permission"": [
+    {
+      ""@type"": ""odrl:Permission"",
+      ""assigner"": {
+        ""@type"": [
+          ""odrl:Party"",
+          ""sch:Hospital""
+        ],
+        ""uid"": ""ex:hopital-organization"",
+        ""rdfs:description"" : ""A specific hospital that owns this policy""
+      },
+      ""assignee"": {
+        ""@type"": [
+          ""odrl:PartyCollection"",
+          ""sch:DepartmentPhysicianHead""
+        ],
+        ""uid"": ""ex:groups/medical-head-staff"",
+        ""rdfs:description"" : ""Anyone who has the category head of the department in the hospital regardless their area""
+      },
+      ""action"": ""read"",
+      ""target"": ""db:ClinicalRecords"",
+      ""constraint"": [
+       {
+          ""@type"": ""odrl:Constraint"",
+          ""leftOperand"": ""ex:request/P06/param-identity"",
+          ""operator"": ""odrl:isAnyOf"",
+          ""rightOperand"": ""db:ClinicalRecords?patient_id""
+        },{
+          ""@type"": ""odrl:Constraint"",
+          ""leftOperand"": ""ex:request/P06/param-department"",
+          ""operator"": ""odrl:eq"",
+          ""rightOperand"": ""db:ClinicalRecords?department""
+        }
+      ]
+    }
+  ]
+}
+"
+P07_Emergency_Access_by_Emergency_Break-the-Glass,ex:90782d9b-ebfa-4515-8473-ddb51ecbc3c1,"{
+  ""@context"" : [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/formal-semantics/ontology/stow.json"",
+     ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"",
+    { ""@context"" : { ""member"" : { ""@id"" : ""odrl:member"", ""@type"" : ""@id"" } }}
+  ],
+  ""@id"" : ""ex:StateP07-1"",
+  ""@type"" : ""SotW"",
+  ""context"" :  {
+    ""@id"" : ""ex:groups/er-staff"",
+    ""@type"" : ""odrl:PartyCollection"",
+    ""rdfs:label"" : ""Emergency Physicians Staff"",
+    ""member"" : [ {
+      ""@id"" : ""ex:id/staff/physician/emergency_physician"",
+      ""@type"" : [""odrl:Party"", ""coral:EmergencyPhysician ""],
+      ""odrl:partOf"" : {""@id"" : ""ex:groups/er-staff""},
+      ""rdfs:label"" : ""Dr. Bradley Gerard""
+    }
+   ] 
+  }
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/ formal-semantics/ontology/evaluation_request.json"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""EvaluationRequest"",
+  ""@id"": ""ex:request/P07-1"",
+  ""evaluatedAction"": ""odrl:read"",
+  ""evaluatedParty"": ""ex:id/staff/physician/emergency_physician"",
+  ""evaluatedTarget"": ""db:PatientsRegistry"",
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"",
+    {
+      ""ex:patientStatus"": {
+        ""@type"": ""xsd:string""
+      }
+    }
+  ],
+  ""@type"": ""odrl:Set"",
+  ""uid"": ""ex:90782d9b-ebfa-4515-8473-ddb51ecbc3c1"",
+  ""rdfs:label"" : ""Policy 07"",
+  ""permission"": [
+    {
+      ""@type"": ""odrl:Permission"",
+      ""assigner"": {
+        ""@type"": [
+          ""odrl:Party"",
+          ""sch:Hospital""
+        ],
+        ""uid"": ""ex:hopital-organization"",
+        ""rdfs:description"" : ""A specific hospital that owns this policy""
+      },
+      ""assignee"": {
+        ""@type"": [
+          ""odrl:PartyCollection"",
+          ""coral:EmergencyPhysician""
+        ],
+        ""uid"": ""ex:groups/er-staff"",
+        ""rdfs:description"" : ""Anyone who belongs to the medical emergency physician team""
+      },
+      ""action"": ""read"",
+      ""target"": ""db:ClinicalRecords?patient_status='CRITIC'|patient_status='EMERGENCY'""
+    }
+  ]
+}
+"
+P07_Emergency_Access_by_Emergency_Break-the-Glass,ex:90782d9b-ebfa-4515-8473-ddb51ecbc3c1,"{
+  ""@context"" : [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/formal-semantics/ontology/stow.json"",
+     ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"",
+    { ""@context"" : { ""member"" : { ""@id"" : ""odrl:member"", ""@type"" : ""@id"" } }}
+  ],
+  ""@id"" : ""ex:StateP07-2"",
+  ""@type"" : ""SotW"",
+  ""context"" :  {
+    ""@id"" : ""ex:groups/er-staff"",
+    ""@type"" : ""odrl:PartyCollection"",
+    ""rdfs:label"" : ""Emergency Physicians Staff"",
+    ""member"" : [ {
+      ""@id"" : ""ex:id/staff/physician/emergency_physician"",
+      ""@type"" : [""odrl:Party"", ""coral:EmergencyPhysician ""],
+      ""odrl:partOf"" : {""@id"" : ""ex:groups/er-staff""},
+      ""rdfs:label"" : ""Dr. Bradley Gerard""
+    }
+   ] 
+  }
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/ formal-semantics/ontology/evaluation_request.json"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""EvaluationRequest"",
+  ""@id"": ""ex:request/P07-2"",
+  ""evaluatedAction"": ""odrl:modify"",
+  ""evaluatedParty"": ""ex:id/staff/physician/emergency_physician"",
+  ""evaluatedTarget"": ""db:PatientsRegistry""
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"",
+    {
+      ""ex:patientStatus"": {
+        ""@type"": ""xsd:string""
+      }
+    }
+  ],
+  ""@type"": ""odrl:Set"",
+  ""uid"": ""ex:90782d9b-ebfa-4515-8473-ddb51ecbc3c1"",
+  ""rdfs:label"" : ""Policy 07"",
+  ""permission"": [
+    {
+      ""@type"": ""odrl:Permission"",
+      ""assigner"": {
+        ""@type"": [
+          ""odrl:Party"",
+          ""sch:Hospital""
+        ],
+        ""uid"": ""ex:hopital-organization"",
+        ""rdfs:description"" : ""A specific hospital that owns this policy""
+      },
+      ""assignee"": {
+        ""@type"": [
+          ""odrl:PartyCollection"",
+          ""coral:EmergencyPhysician""
+        ],
+        ""uid"": ""ex:groups/er-staff"",
+        ""rdfs:description"" : ""Anyone who belongs to the medical emergency physician team""
+      },
+      ""action"": ""read"",
+      ""target"": ""db:ClinicalRecords?patient_status='CRITIC'|patient_status='EMERGENCY'""
+    }
+  ]
+}
+"
+P08_Research_Anonymized_Data_Only,ex:5b5bf495-f6c4-4511-b94f-87410e55d947,"{
+  ""@context"" : [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/formal-semantics/ontology/stow.json"",
+     ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"",
+    { ""@context"" : { ""member"" : { ""@id"" : ""odrl:member"", ""@type"" : ""@id"" } }}
+  ],
+  ""@id"" : ""ex:StateP08-2"",
+  ""@type"" : ""SotW"",
+  ""context"" :  {
+    ""@id"" : ""ex:groups/researchers"",
+    ""@type"" : ""odrl:PartyCollection"",
+    ""rdfs:label"" : ""Hospital Resercher Team"",
+    ""member"" : [ {
+      ""@id"" : ""ex:id/staff/researcher/researcher1"",
+      ""@type"" : [""odrl:Party"", ""coral:HospitalResearchMember""],
+      ""odrl:partOf"" : {""@id"" : ""ex:groups/researchers""},
+      ""rdfs:label"" : ""Cruz Chance""
+    }
+   ] 
+  }
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/ formal-semantics/ontology/evaluation_request.json"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""EvaluationRequest"",
+  ""@id"": ""ex:request/P08-1"",
+  ""evaluatedAction"": ""odrl:read"",
+  ""evaluatedParty"": ""ex:id/staff/physician/doctor2"",
+  ""evaluatedTarget"": ""db:ClinicalRecords"",
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"",
+    {
+      ""ex:isAnonymized"": {
+        ""@type"": ""xsd:boolean""
+      }
+    }
+  ],
+  ""@type"": ""odrl:Set"",
+  ""uid"": ""ex:5b5bf495-f6c4-4511-b94f-87410e55d947"",
+  ""rdfs:label"" : ""Policy 08"",
+  ""permission"": [
+    {
+      ""@type"": ""odrl:Permission"",
+      ""assigner"": {
+        ""@type"": [
+          ""odrl:Party"",
+          ""sch:Hospital""
+        ],
+        ""uid"": ""ex:hopital-organization"",
+        ""rdfs:description"" : ""A specific hospital that owns this policy""
+      },
+      ""assignee"": {
+        ""@type"": [
+          ""odrl:PartyCollection"",
+          ""coral:HospitalResearchMember""
+        ],
+        ""uid"": ""ex:groups/researchers"",
+        ""rdfs:description"": ""Any person who is part of the hospital research team""
+      },
+      ""action"": ""read"",
+      ""target"": ""db:ClinicalRecords?isAnonymized='True'&records""
+    }
+  ]
+}
+"
+P08_Research_Anonymized_Data_Only,ex:5b5bf495-f6c4-4511-b94f-87410e55d947,"{
+  ""@context"" : [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/formal-semantics/ontology/stow.json"",
+     ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"",
+    { ""@context"" : { ""member"" : { ""@id"" : ""odrl:member"", ""@type"" : ""@id"" } }}
+  ],
+  ""@id"" : ""ex:StateP08-1"",
+  ""@type"" : ""SotW"",
+  ""context"" :  {
+    ""@id"" : ""ex:groups/researchers"",
+    ""@type"" : ""odrl:PartyCollection"",
+    ""rdfs:label"" : ""Hospital Resercher Team"",
+    ""member"" : [ {
+      ""@id"" : ""ex:id/staff/researcher/researcher1"",
+      ""@type"" : [""odrl:Party"", ""coral:HospitalResearchMember""],
+      ""odrl:partOf"" : {""@id"" : ""ex:groups/researchers""},
+      ""rdfs:label"" : ""Cruz Chance""
+    }
+   ] 
+  }
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/ formal-semantics/ontology/evaluation_request.json"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""EvaluationRequest"",
+  ""@id"": ""ex:request/P08-1"",
+  ""evaluatedAction"": ""odrl:read"",
+  ""evaluatedParty"": ""ex:id/staff/researcher/researcher1"",
+  ""evaluatedTarget"": ""db:ClinicalRecords"",
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"",
+    {
+      ""ex:isAnonymized"": {
+        ""@type"": ""xsd:boolean""
+      }
+    }
+  ],
+  ""@type"": ""odrl:Set"",
+  ""uid"": ""ex:5b5bf495-f6c4-4511-b94f-87410e55d947"",
+  ""rdfs:label"" : ""Policy 08"",
+  ""permission"": [
+    {
+      ""@type"": ""odrl:Permission"",
+      ""assigner"": {
+        ""@type"": [
+          ""odrl:Party"",
+          ""sch:Hospital""
+        ],
+        ""uid"": ""ex:hopital-organization"",
+        ""rdfs:description"" : ""A specific hospital that owns this policy""
+      },
+      ""assignee"": {
+        ""@type"": [
+          ""odrl:PartyCollection"",
+          ""coral:HospitalResearchMember""
+        ],
+        ""uid"": ""ex:groups/researchers"",
+        ""rdfs:description"": ""Any person who is part of the hospital research team""
+      },
+      ""action"": ""read"",
+      ""target"": ""db:ClinicalRecords?isAnonymized='True'&records""
+    }
+  ]
+}
+"
+P09_Administrative_Forbidden_to_Create_Appointment_if_Debtor,ex:008509f7-41d1-401c-937e-6ae7a1ff369a,"{
+  ""@context"" : [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/formal-semantics/ontology/stow.json"",
+     ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"",
+    { ""@context"" : { ""member"" : { ""@id"" : ""odrl:member"", ""@type"" : ""@id"" } }}
+  ],
+  ""@id"" : ""ex:StateP09-2"",
+  ""@type"" : ""SotW"",
+  ""context"" :  {
+    ""@id"" : ""ex:groups/admin"",
+    ""@type"" : ""odrl:PartyCollection"",
+    ""rdfs:label"" : ""Administrators Staff"",
+    ""member"" : [ {
+      ""@id"" : ""ex:id/staff/admin/administrator1"",
+      ""@type"" : [""odrl:Party"", ""coral:SystemAdministrator""],
+      ""odrl:partOf"" : {""@id"" : ""ex:groups/admin""},
+      ""rdfs:label"" : ""Daphne Wahlert""
+    },{
+      ""@id"" : ""ex:id/staff/admin/administrator2"",
+      ""@type"" : [""odrl:Party"", ""sch:SystemAdministrator""],
+      ""odrl:partOf"" : {""@id"" : ""ex:groups/admin""},
+      ""rdfs:label"" : ""Nathaniel Waples""
+    }
+   ] 
+  }
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/formal-semantics/ontology/evaluation_request.json"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""EvaluationRequest"",
+  ""@id"": ""ex:request/P09-2"",
+  ""evaluatedAction"": ""odrl:modify"",
+  ""evaluatedParty"": ""ex:id/staff/admin/administrator1"",
+  ""evaluatedTarget"": ""db:AppointmentScheduling"",
+  ""requestParameters"": [ ""requestParameters"": [{
+      ""@type"" : ""RequestParameter"",
+      ""@id"" : ""ex:request/P09/param-identity"",
+      ""value"": ""Y3237068Q"",
+      ""rdfs:label"" : ""Personal identity card number that has debs"",
+      ""describesFeature"": ""sch:DigitalDocument""
+    },{
+      ""@type"" : ""RequestParameter"",
+      ""@id"" : ""ex:request/P09/param-schedule"",
+      ""value"": ""2026-03-12 15:00:03"",
+      ""rdfs:label"" : ""Personal identity card number"",
+      ""describesFeature"": ""sotw:TemporalData""
+    }]
+}
+
+
+
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""odrl:Set"",
+  ""uid"": ""ex:008509f7-41d1-401c-937e-6ae7a1ff369a"",
+  ""rdfs:label"" : ""Policy 09"",
+  ""prohibition"": [
+    {
+      ""@type"": ""odrl:Prohibition"",
+      ""assigner"": {
+        ""@type"": [
+          ""odrl:Party"",
+          ""sch:Hospital""
+        ],
+        ""uid"": ""ex:hopital-organization"",
+        ""rdfs:description"" : ""A specific hospital that owns this policy""
+      },
+      ""assignee"": {
+        ""@type"": [
+          ""odrl:PartyCollection"",
+          ""coral:AdministrativeMember""
+        ],
+        ""uid"": ""ex:groups/admin-staff"",
+        ""rdfs:description"" : ""Anyone who belongs to the administrative staff""
+      },
+      ""action"": ""modify"",
+      ""target"": ""db:AppointmentScheduling"",
+      ""constraint"": [
+        {
+          ""@type"": ""odrl:Constraint"",
+          ""leftOperand"": ""ex:request/P09/param-identity"",
+          ""operator"": ""odrl:eq"",
+          ""rightOperand"": ""db:BillingInformation?patient_id""
+        },{
+          ""@type"": ""odrl:Constraint"",
+          ""leftOperand"": ""db:BillingInformation?status"",
+          ""operator"": ""odrl:eq"",
+          ""rightOperand"": ""DEBTOR""
+        }
+      ]
+    }
+  ]
+}
+"
+P09_Administrative_Forbidden_to_Create_Appointment_if_Debtor,ex:008509f7-41d1-401c-937e-6ae7a1ff369a,"{
+  ""@context"" : [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/formal-semantics/ontology/stow.json"",
+     ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"",
+    { ""@context"" : { ""member"" : { ""@id"" : ""odrl:member"", ""@type"" : ""@id"" } }}
+  ],
+  ""@id"" : ""ex:StateP09-1"",
+  ""@type"" : ""SotW"",
+  ""context"" :  {
+    ""@id"" : ""ex:groups/admin"",
+    ""@type"" : ""odrl:PartyCollection"",
+    ""rdfs:label"" : ""Administrators Staff"",
+    ""member"" : [ {
+      ""@id"" : ""ex:id/staff/admin/administrator1"",
+      ""@type"" : [""odrl:Party"", ""coral:SystemAdministrator""],
+      ""odrl:partOf"" : {""@id"" : ""ex:groups/admin""},
+      ""rdfs:label"" : ""Daphne Wahlert""
+    },{
+      ""@id"" : ""ex:id/staff/admin/administrator2"",
+      ""@type"" : [""odrl:Party"", ""sch:SystemAdministrator""],
+      ""odrl:partOf"" : {""@id"" : ""ex:groups/admin""},
+      ""rdfs:label"" : ""Nathaniel Waples""
+    }
+   ] 
+  }
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/formal-semantics/ontology/evaluation_request.json"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""EvaluationRequest"",
+  ""@id"": ""ex:request/P09-1"",
+  ""evaluatedAction"": ""odrl:modify"",
+  ""evaluatedParty"": ""ex:id/staff/admin/administrator1"",
+  ""evaluatedTarget"": ""db:AppointmentScheduling"",
+   ""requestParameters"": [{
+      ""@type"" : ""RequestParameter"",
+      ""@id"" : ""ex:request/P09/param-identity"",
+      ""value"": ""33512354C"",
+      ""rdfs:label"" : ""Personal identity card number"",
+      ""describesFeature"": ""sch:DigitalDocument""
+    },{
+      ""@type"" : ""RequestParameter"",
+      ""@id"" : ""ex:request/P09/param-schedule"",
+      ""value"": ""2026-03-12 15:00:03"",
+      ""rdfs:label"" : ""Personal identity card number"",
+      ""describesFeature"": ""sotw:TemporalData""
+    }]
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""odrl:Set"",
+  ""uid"": ""ex:008509f7-41d1-401c-937e-6ae7a1ff369a"",
+  ""rdfs:label"" : ""Policy 09"",
+  ""prohibition"": [
+    {
+      ""@type"": ""odrl:Prohibition"",
+      ""assigner"": {
+        ""@type"": [
+          ""odrl:Party"",
+          ""sch:Hospital""
+        ],
+        ""uid"": ""ex:hopital-organization"",
+        ""rdfs:description"" : ""A specific hospital that owns this policy""
+      },
+      ""assignee"": {
+        ""@type"": [
+          ""odrl:PartyCollection"",
+          ""coral:AdministrativeMember""
+        ],
+        ""uid"": ""ex:groups/admin-staff"",
+        ""rdfs:description"" : ""Anyone who belongs to the administrative staff""
+      },
+      ""action"": ""modify"",
+      ""target"": ""db:AppointmentScheduling"",
+      ""constraint"": [
+        {
+          ""@type"": ""odrl:Constraint"",
+          ""leftOperand"": ""ex:request/P09/param-identity"",
+          ""operator"": ""odrl:eq"",
+          ""rightOperand"": ""db:BillingInformation?patient_id""
+        },{
+          ""@type"": ""odrl:Constraint"",
+          ""leftOperand"": ""db:BillingInformation?status"",
+          ""operator"": ""odrl:eq"",
+          ""rightOperand"": ""DEBTOR""
+        }
+      ]
+    }
+  ]
+}
+"
+P10_Nursing_Access_During_Shift_Window,ex:85bc6a9b-1cce-4398-8dd0-859af7390fbb,"{
+  ""@context"" : [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/formal-semantics/ontology/stow.json"",
+     ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"",
+    { ""@context"" : { ""member"" : { ""@id"" : ""odrl:member"", ""@type"" : ""@id"" } }}
+  ],
+  ""@id"" : ""ex:StateP10-1"",
+  ""@type"" : ""SotW"",
+  ""context"" :  {
+    ""@id"" : ""ex:groups/nursing-staff"",
+    ""@type"" : ""odrl:PartyCollection"",
+    ""rdfs:label"" : ""Nursing Staff"",
+    ""member"" : [ {
+      ""@id"" : ""ex:id/staff/nurse/nurse1"",
+      ""@type"" : [""odrl:Party"", ""coral:NurseStaff""],
+      ""odrl:partOf"" : {""@id"" : ""ex:groups/nursing-staff""},
+      ""rdfs:label"" : ""Iker Scrogham""
+    },{
+      ""@id"" : ""ex:id/staff/nurse/nurse2"",
+      ""@type"" : [""odrl:Party"", ""coral:NurseStaff""],
+      ""odrl:partOf"" : {""@id"" : ""ex:groups/nursing-staff""},
+      ""rdfs:label"" : ""Macy Aina""
+    }
+   ] 
+  }
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/formal-semantics/ontology/evaluation_request.json"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""EvaluationRequest"",
+  ""@id"": ""ex:request/P10-1"",
+  ""evaluatedAction"": ""odrl:read"",
+  ""evaluatedParty"": ""ex:id/staff/nurse/nurse1"",
+  ""evaluatedTarget"": ""db:MedicationPrescriptions""
+}","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"",
+    {
+     
+      ""ex:subjectShiftStart"": {
+        ""@type"": ""xsd:time""
+      },
+      ""ex:subjectShiftEnd"": {
+        ""@type"": ""xsd:time""
+      }
+    }
+  ],
+  ""@type"": ""odrl:Set"",
+  ""uid"": ""ex:85bc6a9b-1cce-4398-8dd0-859af7390fbb"",
+  ""rdfs:label"" : ""Policy 10"",
+  ""permission"": [
+    {
+      ""@type"": ""odrl:Permission"",
+      ""assigner"": {
+        ""@type"": [
+          ""odrl:Party"",
+          ""sch:Hospital""
+        ],
+        ""uid"": ""ex:hopital-organization"",
+        ""rdfs:description"" : ""A specific hospital that owns this policy""
+      },
+      ""assignee"": {
+        ""@type"": [
+          ""odrl:PartyCollection"",
+          ""coral:NurseStaff""
+        ],
+        ""uid"": ""ex:groups/nursing-staff"",
+        ""rdfs:description"" : ""Anyone who belongs to the nursing staff""
+      },
+      ""action"": [
+        ""read"",
+        ""modify""
+      ],
+      ""target"": ""db:MedicationPrescriptions"",
+      ""constraint"": [
+        {
+          ""@type"": ""odrl:LogicalConstraint"",
+          ""and"": [
+            {
+              ""@type"": ""odrl:Constraint"",
+              ""leftOperand"": ""dateTime"",
+              ""operator"": ""odrl:gteq"",
+              ""rightOperand"": ""ex:subjectShiftStart""
+            },
+            {
+              ""@type"": ""odrl:Constraint"",
+              ""leftOperand"": ""dateTime"",
+              ""operator"": ""odrl:lteq"",
+              ""rightOperand"": ""ex:subjectShiftEnd""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}"
+P10_Nursing_Access_During_Shift_Window,ex:85bc6a9b-1cce-4398-8dd0-859af7390fbb,"{
+  ""@context"" : [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/formal-semantics/ontology/stow.json"",
+     ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"",
+    { ""@context"" : { ""member"" : { ""@id"" : ""odrl:member"", ""@type"" : ""@id"" } }}
+  ],
+  ""@id"" : ""ex:StateP10-3"",
+  ""@type"" : ""SotW"",
+  ""context"" :  {
+    ""@id"" : ""ex:groups/nursing-staff"",
+    ""@type"" : ""odrl:PartyCollection"",
+    ""rdfs:label"" : ""Nursing Staff"",
+    ""member"" : [ {
+      ""@id"" : ""ex:id/staff/nurse/nurse1"",
+      ""@type"" : [""odrl:Party"", ""coral:NurseStaff""],
+      ""odrl:partOf"" : {""@id"" : ""ex:groups/nursing-staff""},
+      ""rdfs:label"" : ""Iker Scrogham""
+    },{
+      ""@id"" : ""ex:id/staff/nurse/nurse2"",
+      ""@type"" : [""odrl:Party"", ""coral:NurseStaff""],
+      ""odrl:partOf"" : {""@id"" : ""ex:groups/nursing-staff""},
+      ""rdfs:label"" : ""Macy Aina""
+    }
+   ] 
+  }
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/formal-semantics/ontology/evaluation_request.json"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""EvaluationRequest"",
+  ""@id"": ""ex:request/P10-3"",
+  ""evaluatedAction"": ""odrl:modify"",
+  ""evaluatedParty"": ""ex:id/staff/nurse/nurse1"",
+  ""evaluatedTarget"": ""db:MedicationPrescriptions""
+}","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"",
+    {
+     
+      ""ex:subjectShiftStart"": {
+        ""@type"": ""xsd:time""
+      },
+      ""ex:subjectShiftEnd"": {
+        ""@type"": ""xsd:time""
+      }
+    }
+  ],
+  ""@type"": ""odrl:Set"",
+  ""uid"": ""ex:85bc6a9b-1cce-4398-8dd0-859af7390fbb"",
+  ""rdfs:label"" : ""Policy 10"",
+  ""permission"": [
+    {
+      ""@type"": ""odrl:Permission"",
+      ""assigner"": {
+        ""@type"": [
+          ""odrl:Party"",
+          ""sch:Hospital""
+        ],
+        ""uid"": ""ex:hopital-organization"",
+        ""rdfs:description"" : ""A specific hospital that owns this policy""
+      },
+      ""assignee"": {
+        ""@type"": [
+          ""odrl:PartyCollection"",
+          ""coral:NurseStaff""
+        ],
+        ""uid"": ""ex:groups/nursing-staff"",
+        ""rdfs:description"" : ""Anyone who belongs to the nursing staff""
+      },
+      ""action"": [
+        ""read"",
+        ""modify""
+      ],
+      ""target"": ""db:MedicationPrescriptions"",
+      ""constraint"": [
+        {
+          ""@type"": ""odrl:LogicalConstraint"",
+          ""and"": [
+            {
+              ""@type"": ""odrl:Constraint"",
+              ""leftOperand"": ""dateTime"",
+              ""operator"": ""odrl:gteq"",
+              ""rightOperand"": ""ex:subjectShiftStart""
+            },
+            {
+              ""@type"": ""odrl:Constraint"",
+              ""leftOperand"": ""dateTime"",
+              ""operator"": ""odrl:lteq"",
+              ""rightOperand"": ""ex:subjectShiftEnd""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}"
+P10_Nursing_Access_During_Shift_Window,ex:85bc6a9b-1cce-4398-8dd0-859af7390fbb,"{
+  ""@context"" : [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/formal-semantics/ontology/stow.json"",
+     ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"",
+    { ""@context"" : { ""member"" : { ""@id"" : ""odrl:member"", ""@type"" : ""@id"" } }}
+  ],
+  ""@id"" : ""ex:StateP10-1"",
+  ""@type"" : ""SotW"",
+  ""context"" :  {
+    ""@id"" : ""ex:groups/nursing-staff"",
+    ""@type"" : ""odrl:PartyCollection"",
+    ""rdfs:label"" : ""Nursing Staff"",
+    ""member"" : [ {
+      ""@id"" : ""ex:id/staff/nurse/nurse1"",
+      ""@type"" : [""odrl:Party"", ""coral:NurseStaff""],
+      ""odrl:partOf"" : {""@id"" : ""ex:groups/nursing-staff""},
+      ""rdfs:label"" : ""Iker Scrogham""
+    },{
+      ""@id"" : ""ex:id/staff/nurse/nurse2"",
+      ""@type"" : [""odrl:Party"", ""coral:NurseStaff""],
+      ""odrl:partOf"" : {""@id"" : ""ex:groups/nursing-staff""},
+      ""rdfs:label"" : ""Macy Aina""
+    }
+   ] 
+  }
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/formal-semantics/ontology/evaluation_request.json"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""EvaluationRequest"",
+  ""@id"": ""ex:request/P10-2"",
+  ""evaluatedAction"": ""odrl:read"",
+  ""evaluatedParty"": ""ex:id/staff/nurse/nurse1"",
+  ""evaluatedTarget"": ""db:MedicationPrescriptions""
+}","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"",
+    {
+     
+      ""ex:subjectShiftStart"": {
+        ""@type"": ""xsd:time""
+      },
+      ""ex:subjectShiftEnd"": {
+        ""@type"": ""xsd:time""
+      }
+    }
+  ],
+  ""@type"": ""odrl:Set"",
+  ""uid"": ""ex:85bc6a9b-1cce-4398-8dd0-859af7390fbb"",
+  ""rdfs:label"" : ""Policy 10"",
+  ""permission"": [
+    {
+      ""@type"": ""odrl:Permission"",
+      ""assigner"": {
+        ""@type"": [
+          ""odrl:Party"",
+          ""sch:Hospital""
+        ],
+        ""uid"": ""ex:hopital-organization"",
+        ""rdfs:description"" : ""A specific hospital that owns this policy""
+      },
+      ""assignee"": {
+        ""@type"": [
+          ""odrl:PartyCollection"",
+          ""coral:NurseStaff""
+        ],
+        ""uid"": ""ex:groups/nursing-staff"",
+        ""rdfs:description"" : ""Anyone who belongs to the nursing staff""
+      },
+      ""action"": [
+        ""read"",
+        ""modify""
+      ],
+      ""target"": ""db:MedicationPrescriptions"",
+      ""constraint"": [
+        {
+          ""@type"": ""odrl:LogicalConstraint"",
+          ""and"": [
+            {
+              ""@type"": ""odrl:Constraint"",
+              ""leftOperand"": ""dateTime"",
+              ""operator"": ""odrl:gteq"",
+              ""rightOperand"": ""ex:subjectShiftStart""
+            },
+            {
+              ""@type"": ""odrl:Constraint"",
+              ""leftOperand"": ""dateTime"",
+              ""operator"": ""odrl:lteq"",
+              ""rightOperand"": ""ex:subjectShiftEnd""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}"
+P10_Nursing_Access_During_Shift_Window,ex:85bc6a9b-1cce-4398-8dd0-859af7390fbb,"{
+  ""@context"" : [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/formal-semantics/ontology/stow.json"",
+     ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"",
+    { ""@context"" : { ""member"" : { ""@id"" : ""odrl:member"", ""@type"" : ""@id"" } }}
+  ],
+  ""@id"" : ""ex:StateP10-4"",
+  ""@type"" : ""SotW"",
+  ""context"" :  {
+    ""@id"" : ""ex:groups/nursing-staff"",
+    ""@type"" : ""odrl:PartyCollection"",
+    ""rdfs:label"" : ""Nursing Staff"",
+    ""member"" : [ {
+      ""@id"" : ""ex:id/staff/nurse/nurse1"",
+      ""@type"" : [""odrl:Party"", ""coral:NurseStaff""],
+      ""odrl:partOf"" : {""@id"" : ""ex:groups/nursing-staff""},
+      ""rdfs:label"" : ""Iker Scrogham""
+    },{
+      ""@id"" : ""ex:id/staff/nurse/nurse2"",
+      ""@type"" : [""odrl:Party"", ""coral:NurseStaff""],
+      ""odrl:partOf"" : {""@id"" : ""ex:groups/nursing-staff""},
+      ""rdfs:label"" : ""Macy Aina""
+    }
+   ] 
+  }
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/formal-semantics/ontology/evaluation_request.json"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""EvaluationRequest"",
+  ""@id"": ""ex:request/P10-4"",
+  ""evaluatedAction"": ""odrl:modify"",
+  ""evaluatedParty"": ""ex:id/staff/nurse/nurse1"",
+  ""evaluatedTarget"": ""db:MedicationPrescriptions""
+}","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"",
+    {
+     
+      ""ex:subjectShiftStart"": {
+        ""@type"": ""xsd:time""
+      },
+      ""ex:subjectShiftEnd"": {
+        ""@type"": ""xsd:time""
+      }
+    }
+  ],
+  ""@type"": ""odrl:Set"",
+  ""uid"": ""ex:85bc6a9b-1cce-4398-8dd0-859af7390fbb"",
+  ""rdfs:label"" : ""Policy 10"",
+  ""permission"": [
+    {
+      ""@type"": ""odrl:Permission"",
+      ""assigner"": {
+        ""@type"": [
+          ""odrl:Party"",
+          ""sch:Hospital""
+        ],
+        ""uid"": ""ex:hopital-organization"",
+        ""rdfs:description"" : ""A specific hospital that owns this policy""
+      },
+      ""assignee"": {
+        ""@type"": [
+          ""odrl:PartyCollection"",
+          ""coral:NurseStaff""
+        ],
+        ""uid"": ""ex:groups/nursing-staff"",
+        ""rdfs:description"" : ""Anyone who belongs to the nursing staff""
+      },
+      ""action"": [
+        ""read"",
+        ""modify""
+      ],
+      ""target"": ""db:MedicationPrescriptions"",
+      ""constraint"": [
+        {
+          ""@type"": ""odrl:LogicalConstraint"",
+          ""and"": [
+            {
+              ""@type"": ""odrl:Constraint"",
+              ""leftOperand"": ""dateTime"",
+              ""operator"": ""odrl:gteq"",
+              ""rightOperand"": ""ex:subjectShiftStart""
+            },
+            {
+              ""@type"": ""odrl:Constraint"",
+              ""leftOperand"": ""dateTime"",
+              ""operator"": ""odrl:lteq"",
+              ""rightOperand"": ""ex:subjectShiftEnd""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}"
+P11_Prescription_of_Medications,ex:9c8669d7-4403-4cda-8594-6060c9b75c34,"{
+  ""@context"" : [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/formal-semantics/ontology/stow.json"",
+     ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"",
+    { ""@context"" : { ""member"" : { ""@id"" : ""odrl:member"", ""@type"" : ""@id"" } }}
+  ],
+  ""@id"" : ""ex:StateP11-1"",
+  ""@type"" : ""SotW"",
+  ""context"" :  {
+    ""@id"" : ""ex:groups/medical-staff"",
+    ""@type"" : ""odrl:PartyCollection"",
+    ""rdfs:label"" : ""Medical Staff"",
+    ""member"" : [ {
+      ""@id"" : ""ex:id/staff/physician/doctor1"",
+      ""@type"" : [""odrl:Party"", ""sch:Physician""],
+      ""odrl:partOf"" : {""@id"" : ""ex:groups/medical-staff""},
+      ""rdfs:label"" : ""Dr. Roberto Cheu""
+    },{
+      ""@id"" : ""ex:id/staff/physician/doctor2"",
+      ""@type"" : [""odrl:Party"", ""sch:Physician""],
+      ""odrl:partOf"" : {""@id"" : ""ex:groups/medical-staff""},
+      ""rdfs:label"" : ""Dr. Karina Gessel""
+    }
+   ] 
+  }
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/ formal-semantics/ontology/evaluation_request.json"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""EvaluationRequest"",
+  ""@id"": ""ex:request/P11-1"",
+  ""evaluatedAction"": ""odrl:use"",
+  ""evaluatedParty"": ""ex:id/staff/physician/doctor1"",
+  ""evaluatedTarget"": ""db:MedicationPrescriptions""
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""odrl:Set"",
+  ""uid"": ""ex:9c8669d7-4403-4cda-8594-6060c9b75c34"",
+  ""rdfs:label"" : ""Policy 11"",
+  ""permission"": [
+    {
+      ""@type"": ""odrl:Permission"",
+      ""assigner"": {
+        ""@type"": [
+          ""odrl:Party"",
+          ""sch:Hospital""
+        ],
+        ""uid"": ""ex:hopital-organization"",
+        ""rdfs:description"" : ""A specific hospital that owns this policy""
+      },
+      ""assignee"": {
+        ""@type"": [
+          ""odrl:PartyCollection"",
+          ""sch:Physician""
+        ],
+        ""uid"": ""ex:groups/medical-staff"",
+        ""rdfs:description"" : ""Anyone who belongs to the medical staff""
+      },
+      ""action"": [
+        ""use"",
+        ""modify""
+      ],
+      ""target"": ""db:MedicationPrescriptions""
+    }
+  ]
+}"
+P11_Prescription_of_Medications,ex:9c8669d7-4403-4cda-8594-6060c9b75c34,"{
+  ""@context"" : [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/formal-semantics/ontology/stow.json"",
+     ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"",
+    { ""@context"" : { ""member"" : { ""@id"" : ""odrl:member"", ""@type"" : ""@id"" } }}
+  ],
+  ""@id"" : ""ex:StateP11-3"",
+  ""@type"" : ""SotW"",
+  ""context"" :  {
+    ""@id"" : ""ex:groups/medical-staff"",
+    ""@type"" : ""odrl:PartyCollection"",
+    ""rdfs:label"" : ""Medical Staff"",
+    ""member"" : [ {
+      ""@id"" : ""ex:id/staff/physician/doctor1"",
+      ""@type"" : [""odrl:Party"", ""sch:Physician""],
+      ""odrl:partOf"" : {""@id"" : ""ex:groups/medical-staff""},
+      ""rdfs:label"" : ""Dr. Roberto Cheu""
+    },{
+      ""@id"" : ""ex:id/staff/physician/doctor2"",
+      ""@type"" : [""odrl:Party"", ""sch:Physician""],
+      ""odrl:partOf"" : {""@id"" : ""ex:groups/medical-staff""},
+      ""rdfs:label"" : ""Dr. Karina Gessel""
+    }
+   ] 
+  }
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/ formal-semantics/ontology/evaluation_request.json"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+ ],
+  ""@type"": ""EvaluationRequest"",
+  ""@id"": ""ex:request/P11-3"",
+  ""evaluatedAction"": ""odrl:modify"",
+  ""evaluatedParty"": ""ex:id/staff/physician/doctor1"",
+  ""evaluatedTarget"": ""db:MedicationPrescriptions""
+
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""odrl:Set"",
+  ""uid"": ""ex:9c8669d7-4403-4cda-8594-6060c9b75c34"",
+  ""rdfs:label"" : ""Policy 11"",
+  ""permission"": [
+    {
+      ""@type"": ""odrl:Permission"",
+      ""assigner"": {
+        ""@type"": [
+          ""odrl:Party"",
+          ""sch:Hospital""
+        ],
+        ""uid"": ""ex:hopital-organization"",
+        ""rdfs:description"" : ""A specific hospital that owns this policy""
+      },
+      ""assignee"": {
+        ""@type"": [
+          ""odrl:PartyCollection"",
+          ""sch:Physician""
+        ],
+        ""uid"": ""ex:groups/medical-staff"",
+        ""rdfs:description"" : ""Anyone who belongs to the medical staff""
+      },
+      ""action"": [
+        ""use"",
+        ""modify""
+      ],
+      ""target"": ""db:MedicationPrescriptions""
+    }
+  ]
+}"
+P11_Prescription_of_Medications,ex:9c8669d7-4403-4cda-8594-6060c9b75c34,"{
+  ""@context"" : [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/formal-semantics/ontology/stow.json"",
+     ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"",
+    { ""@context"" : { ""member"" : { ""@id"" : ""odrl:member"", ""@type"" : ""@id"" } }}
+  ],
+  ""@id"" : ""ex:StateP11-2"",
+  ""@type"" : ""SotW"",
+  ""context"" :  {
+    ""@id"" : ""ex:groups/medical-staff"",
+    ""@type"" : ""odrl:PartyCollection"",
+    ""rdfs:label"" : ""Medical Staff"",
+    ""member"" : [ {
+      ""@id"" : ""ex:id/staff/physician/doctor1"",
+      ""@type"" : [""odrl:Party"", ""sch:Physician""],
+      ""odrl:partOf"" : {""@id"" : ""ex:groups/medical-staff""},
+      ""rdfs:label"" : ""Dr. Roberto Cheu""
+    },{
+      ""@id"" : ""ex:id/staff/physician/doctor2"",
+      ""@type"" : [""odrl:Party"", ""sch:Physician""],
+      ""odrl:partOf"" : {""@id"" : ""ex:groups/medical-staff""},
+      ""rdfs:label"" : ""Dr. Karina Gessel""
+    }
+   ] 
+  }
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/ formal-semantics/ontology/evaluation_request.json"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""EvaluationRequest"",
+  ""@id"": ""ex:request/P11-2"",
+  ""evaluatedAction"": ""odrl:use"",
+  ""evaluatedParty"": ""ex:id/staff/nurse/nurse1"",
+  ""evaluatedTarget"": ""db:MedicationPrescriptions""
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""odrl:Set"",
+  ""uid"": ""ex:9c8669d7-4403-4cda-8594-6060c9b75c34"",
+  ""rdfs:label"" : ""Policy 11"",
+  ""permission"": [
+    {
+      ""@type"": ""odrl:Permission"",
+      ""assigner"": {
+        ""@type"": [
+          ""odrl:Party"",
+          ""sch:Hospital""
+        ],
+        ""uid"": ""ex:hopital-organization"",
+        ""rdfs:description"" : ""A specific hospital that owns this policy""
+      },
+      ""assignee"": {
+        ""@type"": [
+          ""odrl:PartyCollection"",
+          ""sch:Physician""
+        ],
+        ""uid"": ""ex:groups/medical-staff"",
+        ""rdfs:description"" : ""Anyone who belongs to the medical staff""
+      },
+      ""action"": [
+        ""use"",
+        ""modify""
+      ],
+      ""target"": ""db:MedicationPrescriptions""
+    }
+  ]
+}"
+P11_Prescription_of_Medications,ex:9c8669d7-4403-4cda-8594-6060c9b75c34,"{
+  ""@context"" : [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/formal-semantics/ontology/stow.json"",
+     ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"",
+    { ""@context"" : { ""member"" : { ""@id"" : ""odrl:member"", ""@type"" : ""@id"" } }}
+  ],
+  ""@id"" : ""ex:StateP11-4"",
+  ""@type"" : ""SotW"",
+  ""context"" :  {
+    ""@id"" : ""ex:groups/medical-staff"",
+    ""@type"" : ""odrl:PartyCollection"",
+    ""rdfs:label"" : ""Medical Staff"",
+    ""member"" : [ {
+      ""@id"" : ""ex:id/staff/physician/doctor1"",
+      ""@type"" : [""odrl:Party"", ""sch:Physician""],
+      ""odrl:partOf"" : {""@id"" : ""ex:groups/medical-staff""},
+      ""rdfs:label"" : ""Dr. Roberto Cheu""
+    },{
+      ""@id"" : ""ex:id/staff/physician/doctor2"",
+      ""@type"" : [""odrl:Party"", ""sch:Physician""],
+      ""odrl:partOf"" : {""@id"" : ""ex:groups/medical-staff""},
+      ""rdfs:label"" : ""Dr. Karina Gessel""
+    }
+   ] 
+  }
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/ formal-semantics/ontology/evaluation_request.json"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""EvaluationRequest"",
+  ""@id"": ""ex:request/P11-4"",
+  ""evaluatedAction"": ""odrl:modify"",
+  ""evaluatedParty"": ""ex:id/staff/nurse/nurse1"",
+  ""evaluatedTarget"": ""db:MedicationPrescriptions""
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""odrl:Set"",
+  ""uid"": ""ex:9c8669d7-4403-4cda-8594-6060c9b75c34"",
+  ""rdfs:label"" : ""Policy 11"",
+  ""permission"": [
+    {
+      ""@type"": ""odrl:Permission"",
+      ""assigner"": {
+        ""@type"": [
+          ""odrl:Party"",
+          ""sch:Hospital""
+        ],
+        ""uid"": ""ex:hopital-organization"",
+        ""rdfs:description"" : ""A specific hospital that owns this policy""
+      },
+      ""assignee"": {
+        ""@type"": [
+          ""odrl:PartyCollection"",
+          ""sch:Physician""
+        ],
+        ""uid"": ""ex:groups/medical-staff"",
+        ""rdfs:description"" : ""Anyone who belongs to the medical staff""
+      },
+      ""action"": [
+        ""use"",
+        ""modify""
+      ],
+      ""target"": ""db:MedicationPrescriptions""
+    }
+  ]
+}"
+P12_Pharmaceutical_Dispensing,ex:c325c669-d899-408f-967f-2678dc2d377d,"{
+  ""@context"" : [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/formal-semantics/ontology/stow.json"",
+     ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"",
+    { ""@context"" : { ""member"" : { ""@id"" : ""odrl:member"", ""@type"" : ""@id"" } }}
+  ],
+  ""@id"" : ""ex:StateP12-2"",
+  ""@type"" : ""SotW"",
+  ""context"" :  {
+    ""@id"" : ""ex:groups/pharmacy-staff"",
+    ""@type"" : ""odrl:PartyCollection"",
+    ""rdfs:label"" : ""Pharmacy Staff"",
+    ""member"" : [ {
+      ""@id"" : ""ex:id/staff/pharmacist/pharmacist1"",
+      ""@type"" : [""odrl:Party"", ""coral:Pharmacist""],
+      ""odrl:partOf"" : {""@id"" : ""ex:groups/pharmacy-staff""},
+      ""rdfs:label"" : ""Delaney Steinhaus""
+    },{
+      ""@id"" : ""ex:id/staff/pharmacist/pharmacist2"",
+      ""@type"" : [""odrl:Party"", ""coral:Pharmacist""],
+      ""odrl:partOf"" : {""@id"" : ""ex:groups/pharmacy-staff""},
+      ""rdfs:label"" : ""Ben Zack""
+    }
+   ] 
+  }
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/ formal-semantics/ontology/evaluation_request.json"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""EvaluationRequest"",
+  ""@id"": ""ex:request/P12-2"",
+  ""evaluatedAction"": ""odrl:read"",
+  ""evaluatedParty"": ""ex:id/staff/pharmacist/pharmacist1"",
+  ""evaluatedTarget"": ""db:MedicationPrescriptions"",
+  ""requestParameters"": {
+    ""@type"" : ""RequestParameter"",
+    ""@id"" : ""ex:request/P12/param1"", 
+    ""value"" : ""DELIVERED"",
+    ""describesFeature"" :  ""db:MedicationPrescriptions?status"" 
+  }
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/formal-semantics/ontology/evaluation_request.json""
+  ],
+  ""@type"": ""odrl:Set"",
+  ""uid"": ""ex:c325c669-d899-408f-967f-2678dc2d377d"",
+  ""rdfs:label"" : ""Policy 12"",
+  ""permission"": [
+    {
+      ""@type"": ""odrl:Permission"",
+      ""assigner"": {
+        ""@type"": [
+          ""odrl:Party"",
+          ""sch:Hospital""
+        ],
+        ""uid"": ""ex:hopital-organization"",
+        ""rdfs:description"" : ""A specific hospital that owns this policy""
+      },
+      ""assignee"": {
+        ""@type"": [
+          ""odrl:PartyCollection"",
+          ""coral:Pharmacist""
+        ],
+        ""uid"": ""ex:groups/pharmacy-staff"",
+        ""rdfs:description"" : ""Anyone who belongs to the pharmacy staff""
+      },
+      ""action"": [
+        ""read"",
+        ""modify""
+      ],
+      ""target"": ""db:MedicationPrescriptions"",
+      ""constraint"": [
+        {
+          ""@type"": ""odrl:Constraint"",
+          ""leftOperand"": ""ex:request/P12/param-identity"",
+          ""operator"": ""odrl:eq"",
+          ""rightOperand"": ""db:MedicationPrescriptions?patient_id""
+        }, {
+          ""@type"": ""odrl:Constraint"",
+          ""leftOperand"": ""db:MedicationPrescriptions?status"",
+          ""operator"": ""odrl:eq"",
+          ""rightOperand"": ""PENDING""
+        }
+      ]
+    }
+  ]
+}
+"
+P12_Pharmaceutical_Dispensing,ex:c325c669-d899-408f-967f-2678dc2d377d,"{
+  ""@context"" : [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/formal-semantics/ontology/stow.json"",
+     ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"",
+    { ""@context"" : { ""member"" : { ""@id"" : ""odrl:member"", ""@type"" : ""@id"" } }}
+  ],
+  ""@id"" : ""ex:StateP12-4"",
+  ""@type"" : ""SotW"",
+  ""context"" :  {
+    ""@id"" : ""ex:groups/pharmacy-staff"",
+    ""@type"" : ""odrl:PartyCollection"",
+    ""rdfs:label"" : ""Pharmacy Staff"",
+    ""member"" : [ {
+      ""@id"" : ""ex:id/staff/pharmacist/pharmacist1"",
+      ""@type"" : [""odrl:Party"", ""coral:Pharmacist""],
+      ""odrl:partOf"" : {""@id"" : ""ex:groups/pharmacy-staff""},
+      ""rdfs:label"" : ""Delaney Steinhaus""
+    },{
+      ""@id"" : ""ex:id/staff/pharmacist/pharmacist2"",
+      ""@type"" : [""odrl:Party"", ""coral:Pharmacist""],
+      ""odrl:partOf"" : {""@id"" : ""ex:groups/pharmacy-staff""},
+      ""rdfs:label"" : ""Ben Zack""
+    }
+   ] 
+  }
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/ formal-semantics/ontology/evaluation_request.json"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""EvaluationRequest"",
+  ""@id"": ""ex:request/P12-4"",
+  ""evaluatedAction"": ""odrl:modify"",
+  ""evaluatedParty"": ""ex:id/staff/pharmacist/pharmacist1"",
+  ""evaluatedTarget"": ""db:MedicationPrescriptions"",
+  ""requestParameters"": {
+    ""@type"" : ""RequestParameter"",
+    ""@id"" : ""ex:request/P12/param1"", 
+    ""value"" : ""DELIVERED"",
+    ""describesFeature"" :  ""db:MedicationPrescriptions?status"" 
+  }
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/formal-semantics/ontology/evaluation_request.json""
+  ],
+  ""@type"": ""odrl:Set"",
+  ""uid"": ""ex:c325c669-d899-408f-967f-2678dc2d377d"",
+  ""rdfs:label"" : ""Policy 12"",
+  ""permission"": [
+    {
+      ""@type"": ""odrl:Permission"",
+      ""assigner"": {
+        ""@type"": [
+          ""odrl:Party"",
+          ""sch:Hospital""
+        ],
+        ""uid"": ""ex:hopital-organization"",
+        ""rdfs:description"" : ""A specific hospital that owns this policy""
+      },
+      ""assignee"": {
+        ""@type"": [
+          ""odrl:PartyCollection"",
+          ""coral:Pharmacist""
+        ],
+        ""uid"": ""ex:groups/pharmacy-staff"",
+        ""rdfs:description"" : ""Anyone who belongs to the pharmacy staff""
+      },
+      ""action"": [
+        ""read"",
+        ""modify""
+      ],
+      ""target"": ""db:MedicationPrescriptions"",
+      ""constraint"": [
+        {
+          ""@type"": ""odrl:Constraint"",
+          ""leftOperand"": ""ex:request/P12/param-identity"",
+          ""operator"": ""odrl:eq"",
+          ""rightOperand"": ""db:MedicationPrescriptions?patient_id""
+        }, {
+          ""@type"": ""odrl:Constraint"",
+          ""leftOperand"": ""db:MedicationPrescriptions?status"",
+          ""operator"": ""odrl:eq"",
+          ""rightOperand"": ""PENDING""
+        }
+      ]
+    }
+  ]
+}
+"
+P12_Pharmaceutical_Dispensing,ex:c325c669-d899-408f-967f-2678dc2d377d,"{
+  ""@context"" : [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/formal-semantics/ontology/stow.json"",
+     ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"",
+    { ""@context"" : { ""member"" : { ""@id"" : ""odrl:member"", ""@type"" : ""@id"" } }}
+  ],
+  ""@id"" : ""ex:StateP12-3"",
+  ""@type"" : ""SotW"",
+  ""context"" :  {
+    ""@id"" : ""ex:groups/pharmacy-staff"",
+    ""@type"" : ""odrl:PartyCollection"",
+    ""rdfs:label"" : ""Pharmacy Staff"",
+    ""member"" : [ {
+      ""@id"" : ""ex:id/staff/pharmacist/pharmacist1"",
+      ""@type"" : [""odrl:Party"", ""coral:Pharmacist""],
+      ""odrl:partOf"" : {""@id"" : ""ex:groups/pharmacy-staff""},
+      ""rdfs:label"" : ""Delaney Steinhaus""
+    },{
+      ""@id"" : ""ex:id/staff/pharmacist/pharmacist2"",
+      ""@type"" : [""odrl:Party"", ""coral:Pharmacist""],
+      ""odrl:partOf"" : {""@id"" : ""ex:groups/pharmacy-staff""},
+      ""rdfs:label"" : ""Ben Zack""
+    }
+   ] 
+  }
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/ formal-semantics/ontology/evaluation_request.json"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""EvaluationRequest"",
+  ""@id"": ""ex:request/P12-3"",
+  ""evaluatedAction"": ""odrl:modify"",
+  ""evaluatedParty"": ""ex:id/staff/pharmacist/pharmacist1"",
+  ""evaluatedTarget"": ""db:MedicationPrescriptions"",
+  ""requestParameters"": {
+    ""@type"" : ""RequestParameter"",
+    ""@id"" : ""ex:request/P12/param1"", 
+    ""value"" : ""PENDING"",
+    ""describesFeature"" :  ""db:MedicationPrescriptions?status"" 
+  }
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/formal-semantics/ontology/evaluation_request.json""
+  ],
+  ""@type"": ""odrl:Set"",
+  ""uid"": ""ex:c325c669-d899-408f-967f-2678dc2d377d"",
+  ""rdfs:label"" : ""Policy 12"",
+  ""permission"": [
+    {
+      ""@type"": ""odrl:Permission"",
+      ""assigner"": {
+        ""@type"": [
+          ""odrl:Party"",
+          ""sch:Hospital""
+        ],
+        ""uid"": ""ex:hopital-organization"",
+        ""rdfs:description"" : ""A specific hospital that owns this policy""
+      },
+      ""assignee"": {
+        ""@type"": [
+          ""odrl:PartyCollection"",
+          ""coral:Pharmacist""
+        ],
+        ""uid"": ""ex:groups/pharmacy-staff"",
+        ""rdfs:description"" : ""Anyone who belongs to the pharmacy staff""
+      },
+      ""action"": [
+        ""read"",
+        ""modify""
+      ],
+      ""target"": ""db:MedicationPrescriptions"",
+      ""constraint"": [
+        {
+          ""@type"": ""odrl:Constraint"",
+          ""leftOperand"": ""ex:request/P12/param-identity"",
+          ""operator"": ""odrl:eq"",
+          ""rightOperand"": ""db:MedicationPrescriptions?patient_id""
+        }, {
+          ""@type"": ""odrl:Constraint"",
+          ""leftOperand"": ""db:MedicationPrescriptions?status"",
+          ""operator"": ""odrl:eq"",
+          ""rightOperand"": ""PENDING""
+        }
+      ]
+    }
+  ]
+}
+"
+P12_Pharmaceutical_Dispensing,ex:c325c669-d899-408f-967f-2678dc2d377d,"{
+  ""@context"" : [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/formal-semantics/ontology/stow.json"",
+     ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"",
+    { ""@context"" : { ""member"" : { ""@id"" : ""odrl:member"", ""@type"" : ""@id"" } }}
+  ],
+  ""@id"" : ""ex:StateP12-1"",
+  ""@type"" : ""SotW"",
+  ""context"" :  {
+    ""@id"" : ""ex:groups/pharmacy-staff"",
+    ""@type"" : ""odrl:PartyCollection"",
+    ""rdfs:label"" : ""Pharmacy Staff"",
+    ""member"" : [ {
+      ""@id"" : ""ex:id/staff/pharmacist/pharmacist1"",
+      ""@type"" : [""odrl:Party"", ""coral:Pharmacist""],
+      ""odrl:partOf"" : {""@id"" : ""ex:groups/pharmacy-staff""},
+      ""rdfs:label"" : ""Delaney Steinhaus""
+    },{
+      ""@id"" : ""ex:id/staff/pharmacist/pharmacist2"",
+      ""@type"" : [""odrl:Party"", ""coral:Pharmacist""],
+      ""odrl:partOf"" : {""@id"" : ""ex:groups/pharmacy-staff""},
+      ""rdfs:label"" : ""Ben Zack""
+    }
+   ] 
+  }
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/ formal-semantics/ontology/evaluation_request.json"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""EvaluationRequest"",
+  ""@id"": ""ex:request/P12-1"",
+  ""evaluatedAction"": ""odrl:read"",
+  ""evaluatedParty"": ""ex:id/staff/pharmacist/pharmacist1"",
+  ""evaluatedTarget"": ""db:MedicationPrescriptions"",
+  ""requestParameters"": {
+    ""@type"" : ""RequestParameter"",
+    ""@id"" : ""ex:request/P12/param1"", 
+    ""value"" : ""PENDING"",
+    ""describesFeature"" :  ""db:MedicationPrescriptions?status"" 
+  }
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/formal-semantics/ontology/evaluation_request.json""
+  ],
+  ""@type"": ""odrl:Set"",
+  ""uid"": ""ex:c325c669-d899-408f-967f-2678dc2d377d"",
+  ""rdfs:label"" : ""Policy 12"",
+  ""permission"": [
+    {
+      ""@type"": ""odrl:Permission"",
+      ""assigner"": {
+        ""@type"": [
+          ""odrl:Party"",
+          ""sch:Hospital""
+        ],
+        ""uid"": ""ex:hopital-organization"",
+        ""rdfs:description"" : ""A specific hospital that owns this policy""
+      },
+      ""assignee"": {
+        ""@type"": [
+          ""odrl:PartyCollection"",
+          ""coral:Pharmacist""
+        ],
+        ""uid"": ""ex:groups/pharmacy-staff"",
+        ""rdfs:description"" : ""Anyone who belongs to the pharmacy staff""
+      },
+      ""action"": [
+        ""read"",
+        ""modify""
+      ],
+      ""target"": ""db:MedicationPrescriptions"",
+      ""constraint"": [
+        {
+          ""@type"": ""odrl:Constraint"",
+          ""leftOperand"": ""ex:request/P12/param-identity"",
+          ""operator"": ""odrl:eq"",
+          ""rightOperand"": ""db:MedicationPrescriptions?patient_id""
+        }, {
+          ""@type"": ""odrl:Constraint"",
+          ""leftOperand"": ""db:MedicationPrescriptions?status"",
+          ""operator"": ""odrl:eq"",
+          ""rightOperand"": ""PENDING""
+        }
+      ]
+    }
+  ]
+}
+"
+P13_External_Consultation,ex:3bd86d6b-7786-4228-8609-a96ef9251f7a,"{
+  ""@context"" : [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/formal-semantics/ontology/stow.json"",
+     ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"",
+    { ""@context"" : { ""member"" : { ""@id"" : ""odrl:member"", ""@type"" : ""@id"" } }}
+  ],
+  ""@id"" : ""ex:StateP13-2"",
+  ""@type"" : ""SotW"",
+  ""context"" :  {
+    ""@id"" : ""ex:groups/specialist-staff"",
+    ""@type"" : ""odrl:PartyCollection"",
+    ""rdfs:label"" : ""Specialist Medical Staff"",
+    ""member"" : [ {
+      ""@id"" : ""ex:id/staff/physician/specialist1"",
+      ""@type"" : [""odrl:Party"", ""coral:EmergencyPhysician""],
+      ""odrl:partOf"" : {""@id"" : ""ex:groups/specialist-staff""},
+      ""rdfs:label"" : ""Dr. Roberto Cheu""
+    }
+   ] 
+  }
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/ formal-semantics/ontology/evaluation_request.json"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""EvaluationRequest"",
+  ""@id"": ""ex:request/P13-2"",
+  ""evaluatedAction"": ""odrl:read"",
+  ""evaluatedParty"": ""ex:id/staff/physician/specialist1"",
+  ""evaluatedTarget"": ""db:ClinicalRecords"",
+  ""requestParameters"": {
+    ""@type"" : ""RequestParameter"",
+    ""@id"" : ""ex:request/P13-2/param"", 
+    ""value"" : { ""@value"" : ""2026-08-19T15:00:00"", ""@type"" : ""xsd:dateTime"" },
+    ""describesFeature"" :  ""sotw:CurrentXSDDateTime"" 
+  }
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"",
+    {
+      ""ex:referralTargetId"": {
+        ""@type"": ""@id""
+      },
+      ""ex:subjectId"": {
+        ""@type"": ""@id""
+      },
+      ""ex:referralExpiry"": {
+        ""@type"": ""xsd:dateTime""
+      },
+      ""ex:currentTime"": {
+        ""@type"": ""xsd:dateTime""
+      }
+    }
+  ],
+  ""@type"": ""odrl:Set"",
+  ""uid"": ""ex:3bd86d6b-7786-4228-8609-a96ef9251f7a"",
+  ""rdfs:label"": ""Policy 13"",
+  ""permission"": [
+    {
+      ""@type"": ""odrl:Permission"",
+      ""assigner"": {
+        ""@type"": [
+          ""odrl:Party"",
+          ""sch:Hospital""
+        ],
+        ""uid"": ""ex:hopital-organization"",
+        ""rdfs:description"": ""A specific hospital that owns this policy""
+      },
+      ""assignee"": {
+        ""@type"": [
+          ""odrl:PartyCollection"",
+          ""coral:SpecialistPhysician""
+        ],
+        ""uid"": ""ex:groups/medical-staff"",
+        ""vcard:fn"": ""Anyone who is a specialist physician""
+      },
+      ""action"": ""read"",
+      ""target"": ""db:ClinicalRecords/324145?record_id='AB12'"",
+      ""rdfs:label"": ""The target specifies the patient (324145) and the specific clinical record (AB12) that can be accessed by the specialist"",
+      ""constraint"": [
+        {
+          ""@type"": ""odrl:Constraint"",
+          ""leftOperand"": ""dateTime"",
+          ""operator"": ""odrl:lt"",
+          ""rightOperand"": {
+            ""@value"": ""2026-05-04T13:51:59"",
+            ""@type"": ""xsd:datetime""
+          }
+        }
+      ]
+    }
+  ]
+}
+"
+P13_External_Consultation,ex:3bd86d6b-7786-4228-8609-a96ef9251f7a,"{
+  ""@context"" : [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/formal-semantics/ontology/stow.json"",
+     ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"",
+    { ""@context"" : { ""member"" : { ""@id"" : ""odrl:member"", ""@type"" : ""@id"" } }}
+  ],
+  ""@id"" : ""ex:StateP13-1"",
+  ""@type"" : ""SotW"",
+  ""context"" :  {
+    ""@id"" : ""ex:groups/specialist-staff"",
+    ""@type"" : ""odrl:PartyCollection"",
+    ""rdfs:label"" : ""Specialist Medical Staff"",
+    ""member"" : [ {
+      ""@id"" : ""ex:id/staff/physician/specialist1"",
+      ""@type"" : [""odrl:Party"", ""coral:EmergencyPhysician""],
+      ""odrl:partOf"" : {""@id"" : ""ex:groups/specialist-staff""},
+      ""rdfs:label"" : ""Dr. Roberto Cheu""
+    }
+   ] 
+  }
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/ formal-semantics/ontology/evaluation_request.json"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""EvaluationRequest"",
+  ""@id"": ""ex:request/P13-1"",
+  ""evaluatedAction"": ""odrl:read"",
+  ""evaluatedParty"": ""ex:id/staff/physician/specialist1"",
+  ""evaluatedTarget"": ""db:ClinicalRecords"",
+  ""requestParameters"": {
+    ""@type"" : ""RequestParameter"",
+    ""@id"" : ""ex:request/P13-1/param"", 
+    ""value"" : { ""@value"" : ""2026-01-19T15:00:00"", ""@type"" : ""xsd:dateTime"" },
+    ""describesFeature"" :  ""sotw:CurrentXSDDateTime"" 
+  }
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"",
+    {
+      ""ex:referralTargetId"": {
+        ""@type"": ""@id""
+      },
+      ""ex:subjectId"": {
+        ""@type"": ""@id""
+      },
+      ""ex:referralExpiry"": {
+        ""@type"": ""xsd:dateTime""
+      },
+      ""ex:currentTime"": {
+        ""@type"": ""xsd:dateTime""
+      }
+    }
+  ],
+  ""@type"": ""odrl:Set"",
+  ""uid"": ""ex:3bd86d6b-7786-4228-8609-a96ef9251f7a"",
+  ""rdfs:label"": ""Policy 13"",
+  ""permission"": [
+    {
+      ""@type"": ""odrl:Permission"",
+      ""assigner"": {
+        ""@type"": [
+          ""odrl:Party"",
+          ""sch:Hospital""
+        ],
+        ""uid"": ""ex:hopital-organization"",
+        ""rdfs:description"": ""A specific hospital that owns this policy""
+      },
+      ""assignee"": {
+        ""@type"": [
+          ""odrl:PartyCollection"",
+          ""coral:SpecialistPhysician""
+        ],
+        ""uid"": ""ex:groups/medical-staff"",
+        ""vcard:fn"": ""Anyone who is a specialist physician""
+      },
+      ""action"": ""read"",
+      ""target"": ""db:ClinicalRecords/324145?record_id='AB12'"",
+      ""rdfs:label"": ""The target specifies the patient (324145) and the specific clinical record (AB12) that can be accessed by the specialist"",
+      ""constraint"": [
+        {
+          ""@type"": ""odrl:Constraint"",
+          ""leftOperand"": ""dateTime"",
+          ""operator"": ""odrl:lt"",
+          ""rightOperand"": {
+            ""@value"": ""2026-05-04T13:51:59"",
+            ""@type"": ""xsd:datetime""
+          }
+        }
+      ]
+    }
+  ]
+}
+"
+P14_Legal_Guardian_Parent_Access_to_Minors,ex:b98654ad-1a2a-4f74-9820-f4b260614b71,"{
+  ""@context"" : [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/formal-semantics/ontology/stow.json"",
+     ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"",
+    { ""@context"" : { ""member"" : { ""@id"" : ""odrl:member"", ""@type"" : ""@id"" } }}
+  ],
+  ""@id"" : ""ex:StateP14-2"",
+  ""@type"" : ""SotW"",
+  ""context"" :  {
+    ""@id"" : ""ex:groups/family"",
+    ""@type"" : ""odrl:PartyCollection"",
+    ""rdfs:label"" : ""Family of underage patient"",
+    ""member"" : [ {
+      ""@id"" : ""ex:id/family/familiar1"",
+      ""@type"" : [""odrl:Party"", ""sch:Person""],
+      ""odrl:partOf"" : {""@id"" : ""ex:groups/family""},
+      ""rdfs:label"" : ""Jason Faught""
+    }
+   ] 
+  }
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/formal-semantics/ontology/evaluation_request.json"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""EvaluationRequest"",
+  ""@id"": ""ex:request/P14-2"",
+  ""evaluatedAction"": ""odrl:read"",
+  ""evaluatedParty"": ""ex:id/family/familiar1"",
+  ""evaluatedTarget"": ""db:ClinicalRecords"",
+  ""requestParameters"": [
+    {
+      ""@type"" : ""RequestParameter"",
+      ""@id"" : ""ex:request/P14/param-legal-guardian"",
+      ""value"": ""ex:id/family/familiar1"",
+      ""rdfs:label"" : ""Legal guarding identity, in this case is the same URI as the party""
+    },
+    {
+      ""@type"" : ""RequestParameter"",
+      ""@id"" : ""ex:request/P14/param-underage_patient"",
+      ""value"": ""V28514271"",
+      ""rdfs:label"" : ""The underage identity card, i.e., the identifier""
+    }
+  ]
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""odrl:Set"",
+  ""uid"": ""ex:b98654ad-1a2a-4f74-9820-f4b260614b71"",
+  ""rdfs:label"" : ""Policy 14"",
+  ""permission"": [
+    {
+      ""@type"": ""odrl:Permission"",
+      ""assigner"": {
+        ""@type"": [
+          ""odrl:Party"",
+          ""sch:Hospital""
+        ],
+        ""uid"": ""ex:hopital-organization"",
+        ""rdfs:description"" : ""A specific hospital that owns this policy""
+      },
+      ""assignee"": {
+        ""@type"": [
+          ""odrl:PartyCollection"",
+          ""coral:LegalGuardian""
+        ],
+        ""uid"": ""ex:groups/family"",
+        ""rdfs:description"" : ""One of the legal guardians of an underage patient""
+      },
+      ""action"": ""read"",
+      ""target"": ""db:ClinicalRecords"",
+      ""constraint"": [
+        {
+          ""@type"": ""odrl:LogicalConstraint"",
+          ""and"": [
+            {
+              ""@type"": ""odrl:Constraint"",
+              ""leftOperand"": ""db:ClinicalRecords?age"",
+              ""operator"": ""odrl:lt"",
+              ""rightOperand"": 18
+            },
+            {
+              ""@type"": ""odrl:Constraint"",
+              ""leftOperand"": ""ex:request/P14/param-legal-guardian"",
+              ""operator"": ""odrl:isPartOf"",
+              ""rightOperand"": ""db:ClinicalRecords?legal_guardian""
+            },{
+              ""@type"": ""odrl:Constraint"",
+              ""leftOperand"": ""ex:request/P14/param-underage_patient"",
+              ""operator"": ""odrl:eq"",
+              ""rightOperand"": ""db:ClinicalRecords?patient_id""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+"
+P14_Legal_Guardian_Parent_Access_to_Minors,ex:b98654ad-1a2a-4f74-9820-f4b260614b71,"{
+  ""@context"" : [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/formal-semantics/ontology/stow.json"",
+     ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"",
+    { ""@context"" : { ""member"" : { ""@id"" : ""odrl:member"", ""@type"" : ""@id"" } }}
+  ],
+  ""@id"" : ""ex:StateP14-1"",
+  ""@type"" : ""SotW"",
+  ""context"" :  {
+    ""@id"" : ""ex:groups/family"",
+    ""@type"" : ""odrl:PartyCollection"",
+    ""rdfs:label"" : ""Family of underage patient"",
+    ""member"" : [ {
+      ""@id"" : ""ex:id/family/familiar1"",
+      ""@type"" : [""odrl:Party"", ""sch:Person""],
+      ""odrl:partOf"" : {""@id"" : ""ex:groups/family""},
+      ""rdfs:label"" : ""Jason Faught""
+    }
+   ] 
+  }
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/formal-semantics/ontology/evaluation_request.json"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""EvaluationRequest"",
+  ""@id"": ""ex:request/P14-1"",
+  ""evaluatedAction"": ""odrl:read"",
+  ""evaluatedParty"": ""ex:id/family/familiar1"",
+  ""evaluatedTarget"": ""db:ClinicalRecords"",
+  ""requestParameters"": [
+    {
+      ""@type"" : ""RequestParameter"",
+      ""@id"" : ""ex:request/P14/param-legal-guardian"",
+      ""value"": ""ex:id/family/familiar1"",
+      ""rdfs:label"" : ""Legal guarding identity, in this case is the same URI as the party""
+    },
+    {
+      ""@type"" : ""RequestParameter"",
+      ""@id"" : ""ex:request/P14/param-underage_patient"",
+      ""value"": ""V28514271"",
+      ""rdfs:label"" : ""The underage identity card, i.e., the identifier""
+    }
+  ]
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""odrl:Set"",
+  ""uid"": ""ex:b98654ad-1a2a-4f74-9820-f4b260614b71"",
+  ""rdfs:label"" : ""Policy 14"",
+  ""permission"": [
+    {
+      ""@type"": ""odrl:Permission"",
+      ""assigner"": {
+        ""@type"": [
+          ""odrl:Party"",
+          ""sch:Hospital""
+        ],
+        ""uid"": ""ex:hopital-organization"",
+        ""rdfs:description"" : ""A specific hospital that owns this policy""
+      },
+      ""assignee"": {
+        ""@type"": [
+          ""odrl:PartyCollection"",
+          ""coral:LegalGuardian""
+        ],
+        ""uid"": ""ex:groups/family"",
+        ""rdfs:description"" : ""One of the legal guardians of an underage patient""
+      },
+      ""action"": ""read"",
+      ""target"": ""db:ClinicalRecords"",
+      ""constraint"": [
+        {
+          ""@type"": ""odrl:LogicalConstraint"",
+          ""and"": [
+            {
+              ""@type"": ""odrl:Constraint"",
+              ""leftOperand"": ""db:ClinicalRecords?age"",
+              ""operator"": ""odrl:lt"",
+              ""rightOperand"": 18
+            },
+            {
+              ""@type"": ""odrl:Constraint"",
+              ""leftOperand"": ""ex:request/P14/param-legal-guardian"",
+              ""operator"": ""odrl:isPartOf"",
+              ""rightOperand"": ""db:ClinicalRecords?legal_guardian""
+            },{
+              ""@type"": ""odrl:Constraint"",
+              ""leftOperand"": ""ex:request/P14/param-underage_patient"",
+              ""operator"": ""odrl:eq"",
+              ""rightOperand"": ""db:ClinicalRecords?patient_id""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+"
+P15_Laboratory_Entry_of_Results,ex:531d8717-6655-4be0-8ce5-a689d33e2f84,"{
+  ""@context"" : [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/formal-semantics/ontology/stow.json"",
+     ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"",
+    { ""@context"" : { ""member"" : { ""@id"" : ""odrl:member"", ""@type"" : ""@id"" } }}
+  ],
+  ""@id"" : ""ex:StateP15-2"",
+  ""@type"" : ""SotW"",
+  ""context"" :  {
+    ""@id"" : ""ex:groups/lab-staff"",
+    ""@type"" : ""odrl:PartyCollection"",
+    ""rdfs:label"" : ""Laboratory Technicians Staff"",
+    ""member"" : [ {
+      ""@id"" : ""ex:id/staff/technician/technician1"",
+      ""@type"" : [""odrl:Party"", ""coral:LaboratoryTechnician""],
+      ""odrl:partOf"" : {""@id"" : ""ex:groups/lab-staff""},
+      ""rdfs:label"" : ""Kellen Barto""
+    },{
+      ""@id"" : ""ex:id/staff/technician/technician2"",
+      ""@type"" : [""odrl:Party"", ""coral:LaboratoryTechnician""],
+      ""odrl:partOf"" : {""@id"" : ""ex:groups/lab-staff""},
+      ""rdfs:label"" : ""Harmony Nishida""
+    }
+   ] 
+  }
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/ formal-semantics/ontology/evaluation_request.json"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""EvaluationRequest"",
+  ""@id"": ""ex:request/P15-2"",
+  ""evaluatedAction"": ""odrl:read"",
+  ""evaluatedParty"": ""ex:id/staff/lab-technician/technician1"",
+  ""evaluatedTarget"": ""db:ClinicalRecords""
+}
+
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""odrl:Set"",
+  ""uid"": ""ex:531d8717-6655-4be0-8ce5-a689d33e2f84"",
+  ""rdfs:label"" : ""Policy 15"",
+  ""permission"": [
+    {
+      ""@type"": ""odrl:Permission"",
+      ""assigner"": {
+        ""@type"": [
+          ""odrl:Party"",
+          ""sch:Hospital""
+        ],
+        ""uid"": ""ex:hopital-organization"",
+        ""rdfs:description"" : ""A specific hospital that owns this policy""
+      },
+      ""assignee"": {
+        ""@type"": [
+          ""odrl:PartyCollection"",
+          ""coral:LaboratoryTechnician""
+        ],
+        ""uid"": ""ex:groups/lab-staff"",
+        ""rdfs:description"" : ""Anyone who belongs to the laboratory technical staff""
+      },
+      ""action"": ""modify"",
+      ""target"": ""db:LaboratoryTestResults""
+    }
+  ]
+}"
+P15_Laboratory_Entry_of_Results,ex:531d8717-6655-4be0-8ce5-a689d33e2f84,"{
+  ""@context"" : [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/formal-semantics/ontology/stow.json"",
+     ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"",
+    { ""@context"" : { ""member"" : { ""@id"" : ""odrl:member"", ""@type"" : ""@id"" } }}
+  ],
+  ""@id"" : ""ex:StateP15-1"",
+  ""@type"" : ""SotW"",
+  ""context"" :  {
+    ""@id"" : ""ex:groups/lab-staff"",
+    ""@type"" : ""odrl:PartyCollection"",
+    ""rdfs:label"" : ""Laboratory Technicians Staff"",
+    ""member"" : [ {
+      ""@id"" : ""ex:id/staff/technician/technician1"",
+      ""@type"" : [""odrl:Party"", ""coral:LaboratoryTechnician""],
+      ""odrl:partOf"" : {""@id"" : ""ex:groups/lab-staff""},
+      ""rdfs:label"" : ""Kellen Barto""
+    },{
+      ""@id"" : ""ex:id/staff/technician/technician2"",
+      ""@type"" : [""odrl:Party"", ""coral:LaboratoryTechnician""],
+      ""odrl:partOf"" : {""@id"" : ""ex:groups/lab-staff""},
+      ""rdfs:label"" : ""Harmony Nishida""
+    }
+   ] 
+  }
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/ formal-semantics/ontology/evaluation_request.json"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""EvaluationRequest"",
+  ""@id"": ""ex:request/P15-1"",
+  ""evaluatedAction"": ""odrl:modify"",
+  ""evaluatedParty"": ""ex:id/staff/lab-technician/technician1"",
+  ""evaluatedTarget"": ""db:LaboratoryTestResults""
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""odrl:Set"",
+  ""uid"": ""ex:531d8717-6655-4be0-8ce5-a689d33e2f84"",
+  ""rdfs:label"" : ""Policy 15"",
+  ""permission"": [
+    {
+      ""@type"": ""odrl:Permission"",
+      ""assigner"": {
+        ""@type"": [
+          ""odrl:Party"",
+          ""sch:Hospital""
+        ],
+        ""uid"": ""ex:hopital-organization"",
+        ""rdfs:description"" : ""A specific hospital that owns this policy""
+      },
+      ""assignee"": {
+        ""@type"": [
+          ""odrl:PartyCollection"",
+          ""coral:LaboratoryTechnician""
+        ],
+        ""uid"": ""ex:groups/lab-staff"",
+        ""rdfs:description"" : ""Anyone who belongs to the laboratory technical staff""
+      },
+      ""action"": ""modify"",
+      ""target"": ""db:LaboratoryTestResults""
+    }
+  ]
+}"
