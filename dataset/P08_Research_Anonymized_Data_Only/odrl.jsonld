@@ -31,7 +31,7 @@
         "rdfs:description": "Any person who is part of the hospital research team"
       },
       "action": "read",
-      "target": "db:ClinicalRecords?isAnonymized='True'&records"
+      "target": "db:ClinicalRecords?isAnonymized='True'"
     }
   ]
 }
