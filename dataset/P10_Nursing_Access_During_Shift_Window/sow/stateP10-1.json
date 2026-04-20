@@ -21,6 +21,12 @@
       "@type" : ["odrl:Party", "coral:NurseStaff"],
       "odrl:partOf" : {"@id" : "ex:groups/nursing-staff"},
       "rdfs:label" : "Macy Aina"
+    },{
+      "@id" : "ex:subjectShiftStart",
+      "@type" : "coral:WorkingShift",
+      "coral:starts" : "09:00",
+      "coral:ends" : "18:00",
+      "coral:shiftAppliesTo" : "ex:id/staff/nurse/nurse1"
     }
    ] 
   }
