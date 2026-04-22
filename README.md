@@ -61,6 +61,25 @@ PXX_<Policy_Title>/
 
 ---
 
+## CORAL-AC Ontology concepts
+
+* **sch:Physician** extends **sch:Person**. A medical professional responsible for diagnosing patients, prescribing treatments, and accessing the clinical information required for patient care.
+* **coral:NurseStaff** extends **sch:Person**. Represents nursing personnel responsible for monitoring patients, updating clinical observations, and assisting physicians during treatment.
+* **sch:Patient** extends **sch:Person**. Represents an individual receiving medical care whose personal and clinical information is stored in the hospital information system.
+* **coral:MedicalRecord**. Represents the digital record containing the medical history, diagnoses, treatments, and clinical observations associated with a patient.
+* **coral:SystemAdministrator** extends **sch:Person**. A technical role responsible for maintaining the hospital information system infrastructure, including database management and system configuration.
+* **coral:Auditor** extends **sch:Person**. A role responsible for reviewing and verifying access to medical records and system operations to ensure compliance with regulatory and organisational policies.
+* **coral:DepartmentPhysicianHead** extends **sch:Person**. A senior physician responsible for supervising clinical staff within a department and overseeing medical decisions and operational procedures.
+* **coral:EmergencyPhysician** extends **sch:Physician**. A specialist emergency physician who is authorised to access critical patient information during emergency medical situations.
+* **coral:HospitalResearchMember** extends **sch:Person**. Represents hospital-affiliated researchers who can access anonymised or aggregated clinical data for research purposes.
+* **coral:AdministrativeMember** extends **sch:Person**. Administrative staff responsible for operational tasks such as appointment scheduling, patient registration, and administrative management.
+* **coral:Pharmacist** extends **sch:Person**. Healthcare professional responsible for dispensing medications, verifying prescriptions, and managing pharmaceutical records.
+* **coral:LegalGuardian** extends **sch:Person**. Represents a person legally responsible for a patient, typically in the case of minors or individuals requiring legal representation.
+* **coral:LaboratoryTechnician** extends **sch:Person**. Technical staff responsible for performing laboratory analyses and managing diagnostic test results associated with patients.
+* **coral:SpecialistPhysician** extends **sch:Physician**. A physician with specialised expertise who may be granted temporary access to patient records for consultation or specialised treatment.
+
+
+--- 
 ## Evaluation Setting
 
 Each policy is accompanied by explicitly defined evaluation requests and expected outcomes. The dataset therefore supports:
