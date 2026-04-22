@@ -1,0 +1,14 @@
+{
+  "@context": [
+    "http://www.w3.org/ns/odrl.jsonld",
+    "https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"
+  ],
+  "@type": "EvaluationReport",
+  "@id": "ex:report/P07-2",
+  "evaluationRequest": "ex:request/P07-2",
+  "policy": "ex:90782d9b-ebfa-4515-8473-ddb51ecbc3c1",
+  "policySatisfaction": "not-satisfied",
+  "policyActivation": "inactive",
+  "controlDecision": "deny",
+  "rdfs:comment": "emergency_physician belongs to the er-staff PartyCollection (coral:EmergencyPhysician). However, the target db:ClinicalRecords?patient_status='STABLE' does not satisfy the filtered asset condition (STABLE is not in CRITIC|EMERGENCY). The target condition is not met. Decision: deny."
+}

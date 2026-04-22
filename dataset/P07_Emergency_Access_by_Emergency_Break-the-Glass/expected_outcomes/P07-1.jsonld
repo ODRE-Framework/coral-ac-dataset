@@ -1,0 +1,14 @@
+{
+  "@context": [
+    "http://www.w3.org/ns/odrl.jsonld",
+    "https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"
+  ],
+  "@type": "EvaluationReport",
+  "@id": "ex:report/P07-1",
+  "evaluationRequest": "ex:request/P07-1",
+  "policy": "ex:90782d9b-ebfa-4515-8473-ddb51ecbc3c1",
+  "policySatisfaction": "satisfied",
+  "policyActivation": "active",
+  "controlDecision": "permit",
+  "rdfs:comment": "emergency_physician belongs to the er-staff PartyCollection (coral:EmergencyPhysician). The target db:ClinicalRecords?patient_status='CRITIC' satisfies the filtered asset condition (status is CRITIC, which is included in CRITIC|EMERGENCY). The permission for odrl:read is satisfied and active. Decision: permit."
+}

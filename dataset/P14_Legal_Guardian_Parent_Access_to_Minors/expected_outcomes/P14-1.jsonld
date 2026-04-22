@@ -1,0 +1,14 @@
+{
+  "@context": [
+    "http://www.w3.org/ns/odrl.jsonld",
+    "https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"
+  ],
+  "@type": "EvaluationReport",
+  "@id": "ex:report/P14-1",
+  "evaluationRequest": "ex:request/P14-1",
+  "policy": "ex:policy/P14",
+  "policySatisfaction": "satisfied",
+  "policyActivation": "active",
+  "controlDecision": "permit",
+  "rdfs:comment": "familiar1 belongs to the family PartyCollection (coral:LegalGuardian). The state of the world confirms that the patient identified by V28514271 is a minor (age < 18) AND that familiar1 is their registered legal guardian. Both constraints are satisfied. Decision: permit."
+}

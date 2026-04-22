@@ -1,0 +1,14 @@
+{
+  "@context": [
+    "http://www.w3.org/ns/odrl.jsonld",
+    "https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"
+  ],
+  "@type": "EvaluationReport",
+  "@id": "ex:report/P14-2",
+  "evaluationRequest": "ex:request/P14-2",
+  "policy": "ex:policy/P14",
+  "policySatisfaction": "not-satisfied",
+  "policyActivation": "inactive",
+  "controlDecision": "deny",
+  "rdfs:comment": "familiar1 belongs to the family PartyCollection (coral:LegalGuardian). However, the state of the world confirms that the patient identified by V28514271 is NOT a minor (age >= 18). The age constraint is not satisfied; the policy no longer applies once the patient reaches adulthood. Decision: deny."
+}

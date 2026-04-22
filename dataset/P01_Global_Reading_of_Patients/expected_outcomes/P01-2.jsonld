@@ -1,0 +1,14 @@
+{
+  "@context": [
+    "http://www.w3.org/ns/odrl.jsonld",
+    "https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"
+  ],
+  "@type": "EvaluationReport",
+  "@id": "ex:report/P01-2",
+  "evaluationRequest": "ex:request/P01-2",
+  "policy": "ex:57d3ec9f-3f32-433c-86b2-4b81fcb09540",
+  "policySatisfaction": "not-satisfied",
+  "policyActivation": "inactive",
+  "controlDecision": "deny",
+  "rdfs:comment": "administrative1 does not belong to the medical-staff PartyCollection (sch:Physician). The permission is not satisfied. Decision: deny."
+}

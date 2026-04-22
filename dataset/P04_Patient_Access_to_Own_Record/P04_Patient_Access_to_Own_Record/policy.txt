@@ -1,0 +1,1 @@
+This policy ensures that each patient has exclusive read access to their own medical record. It is based on an identity constraint: the ID of the user requesting access (Assignee) must match the patient ID associated with the resource (Target). This protects the privacy of medical data, ensuring that a patient cannot see others’ records.

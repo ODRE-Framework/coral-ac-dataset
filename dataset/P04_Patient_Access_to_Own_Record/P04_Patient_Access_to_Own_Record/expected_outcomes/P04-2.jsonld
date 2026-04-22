@@ -1,0 +1,14 @@
+{
+  "@context": [
+    "http://www.w3.org/ns/odrl.jsonld",
+    "https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"
+  ],
+  "@type": "EvaluationReport",
+  "@id": "ex:report/P04-2",
+  "evaluationRequest": "ex:request/P04-2",
+  "policy": "ex:dc851af8-9798-4221-b79b-e0cbf6216d81",
+  "policySatisfaction": "not-satisfied",
+  "policyActivation": "inactive",
+  "controlDecision": "deny",
+  "rdfs:comment": "patient1 belongs to the patients PartyCollection (sch:Patient). However, the param-identity value (33512354C) does not match the patient_id of the requested clinical record (param-record: XXX-AB), which belongs to a different patient. The identity constraint is not satisfied. Decision: deny."
+}

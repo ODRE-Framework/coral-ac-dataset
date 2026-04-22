@@ -1,0 +1,14 @@
+{
+  "@context": [
+    "http://www.w3.org/ns/odrl.jsonld",
+    "https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"
+  ],
+  "@type": "EvaluationReport",
+  "@id": "ex:report/P15-1",
+  "evaluationRequest": "ex:request/P15-1",
+  "policy": "ex:policy/P15",
+  "policySatisfaction": "satisfied",
+  "policyActivation": "active",
+  "controlDecision": "permit",
+  "rdfs:comment": "technician1 belongs to the lab-staff PartyCollection (coral:LaboratoryTechnician). The permission for odrl:modify on db:LaboratoryTestResults is satisfied and active. Decision: permit."
+}

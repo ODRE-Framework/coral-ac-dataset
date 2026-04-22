@@ -1,0 +1,14 @@
+{
+  "@context": [
+    "http://www.w3.org/ns/odrl.jsonld",
+    "https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"
+  ],
+  "@type": "EvaluationReport",
+  "@id": "ex:report/P08-1",
+  "evaluationRequest": "ex:request/P08-1",
+  "policy": "ex:policy/P08",
+  "policySatisfaction": "satisfied",
+  "policyActivation": "active",
+  "controlDecision": "permit",
+  "rdfs:comment": "researcher1 belongs to the researchers PartyCollection (coral:HospitalResearchMember). The target db:ClinicalRecords?isAnonymized='True' satisfies the filtered asset condition. The permission for odrl:read is satisfied and active. Decision: permit."
+}

@@ -1,0 +1,14 @@
+{
+  "@context": [
+    "http://www.w3.org/ns/odrl.jsonld",
+    "https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"
+  ],
+  "@type": "EvaluationReport",
+  "@id": "ex:report/P04-1",
+  "evaluationRequest": "ex:request/P04-1",
+  "policy": "ex:dc851af8-9798-4221-b79b-e0cbf6216d81",
+  "policySatisfaction": "satisfied",
+  "policyActivation": "active",
+  "controlDecision": "permit",
+  "rdfs:comment": "patient1 belongs to the patients PartyCollection (sch:Patient). The param-identity value (33512354C) matches the patient_id of the requested clinical record (param-record: 33X-AF). Both constraints are satisfied. Decision: permit."
+}

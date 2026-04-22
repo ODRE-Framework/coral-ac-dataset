@@ -1,0 +1,14 @@
+{
+  "@context": [
+    "http://www.w3.org/ns/odrl.jsonld",
+    "https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"
+  ],
+  "@type": "EvaluationReport",
+  "@id": "ex:report/P02-4",
+  "evaluationRequest": "ex:request/P02-4",
+  "policy": "ex:policy/P02",
+  "policySatisfaction": "not-satisfied",
+  "policyActivation": "inactive",
+  "controlDecision": "deny",
+  "rdfs:comment": "nurse1 does not belong to the admin-staff PartyCollection (coral:SystemAdministrator). The permission for odrl:delete on db:EmployeeRecords is not satisfied. Decision: deny."
+}

@@ -1,0 +1,14 @@
+{
+  "@context": [
+    "http://www.w3.org/ns/odrl.jsonld",
+    "https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"
+  ],
+  "@type": "EvaluationReport",
+  "@id": "ex:report/P13-1",
+  "evaluationRequest": "ex:request/P13-1",
+  "policy": "ex:policy/P13",
+  "policySatisfaction": "satisfied",
+  "policyActivation": "active",
+  "controlDecision": "permit",
+  "rdfs:comment": "specialist1 belongs to the medical-staff PartyCollection (coral:SpecialistPhysician). The current dateTime (2026-01-19T15:00:00) is before the referral expiry date defined in the state of the world. Both constraints (referral target identity match and temporal validity) are satisfied. Decision: permit."
+}

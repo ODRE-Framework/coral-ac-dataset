@@ -1,0 +1,14 @@
+{
+  "@context": [
+    "http://www.w3.org/ns/odrl.jsonld",
+    "https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"
+  ],
+  "@type": "EvaluationReport",
+  "@id": "ex:report/P09-1",
+  "evaluationRequest": "ex:request/P09-1",
+  "policy": "ex:008509f7-41d1-401c-937e-6ae7a1ff369a",
+  "policySatisfaction": "satisfied",
+  "policyActivation": "active",
+  "controlDecision": "forbid",
+  "rdfs:comment": "administrator1 belongs to the admin-staff PartyCollection (coral:AdministrativeMember). The param-identity (33512354C) matches a patient_id in db:BillingInformation whose status is DEBTOR. Both constraints of the prohibition are satisfied. Decision: forbid."
+}

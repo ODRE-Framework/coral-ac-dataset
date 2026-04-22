@@ -1,0 +1,14 @@
+{
+  "@context": [
+    "http://www.w3.org/ns/odrl.jsonld",
+    "https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"
+  ],
+  "@type": "EvaluationReport",
+  "@id": "ex:report/P09-2",
+  "evaluationRequest": "ex:request/P09-2",
+  "policy": "ex:008509f7-41d1-401c-937e-6ae7a1ff369a",
+  "policySatisfaction": "not-satisfied",
+  "policyActivation": "inactive",
+  "controlDecision": "undefined",
+  "rdfs:comment": "administrator1 belongs to the admin-staff PartyCollection (coral:AdministrativeMember). The param-identity (Y3237068Q) matches a patient_id in db:BillingInformation whose status is NOT DEBTOR. The billing status constraint is not satisfied, so the prohibition is not activated. No permission covers this action either. Decision: undefined (the prohibition does not fire; no explicit permit exists)."
+}

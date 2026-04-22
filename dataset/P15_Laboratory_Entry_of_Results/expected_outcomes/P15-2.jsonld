@@ -1,0 +1,14 @@
+{
+  "@context": [
+    "http://www.w3.org/ns/odrl.jsonld",
+    "https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"
+  ],
+  "@type": "EvaluationReport",
+  "@id": "ex:report/P15-2",
+  "evaluationRequest": "ex:request/P15-2",
+  "policy": "ex:policy/P15",
+  "policySatisfaction": "not-satisfied",
+  "policyActivation": "inactive",
+  "controlDecision": "deny",
+  "rdfs:comment": "technician1 belongs to the lab-staff PartyCollection (coral:LaboratoryTechnician). However, the evaluated action is odrl:read on db:ClinicalRecords, which is not covered by any permission in this policy (P15 only grants odrl:modify on db:LaboratoryTestResults). Decision: deny."
+}

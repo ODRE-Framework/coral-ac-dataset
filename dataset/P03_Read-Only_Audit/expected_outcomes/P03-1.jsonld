@@ -1,0 +1,14 @@
+{
+  "@context": [
+    "http://www.w3.org/ns/odrl.jsonld",
+    "https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"
+  ],
+  "@type": "EvaluationReport",
+  "@id": "ex:report/P03-1",
+  "evaluationRequest": "ex:request/P03-1",
+  "policy": "ex:policy/P03",
+  "policySatisfaction": "satisfied",
+  "policyActivation": "active",
+  "controlDecision": "permit",
+  "rdfs:comment": "auditor1 belongs to the auditors PartyCollection (coral:Auditor). The permission for odrl:read on db:ClinicalRecords is satisfied and active. No prohibition is triggered. Decision: permit."
+}

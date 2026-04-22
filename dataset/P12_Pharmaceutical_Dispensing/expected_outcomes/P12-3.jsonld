@@ -1,0 +1,14 @@
+{
+  "@context": [
+    "http://www.w3.org/ns/odrl.jsonld",
+    "https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"
+  ],
+  "@type": "EvaluationReport",
+  "@id": "ex:report/P12-3",
+  "evaluationRequest": "ex:request/P12-3",
+  "policy": "ex:policy/P12",
+  "policySatisfaction": "satisfied",
+  "policyActivation": "active",
+  "controlDecision": "permit",
+  "rdfs:comment": "pharmacist1 belongs to the pharmacy-staff PartyCollection (coral:Pharmacist). The param db:MedicationPrescriptions?status has value PENDING, which matches the constraint. The permission for odrl:modify is satisfied and active. Decision: permit."
+}

@@ -1,0 +1,14 @@
+{
+  "@context": [
+    "http://www.w3.org/ns/odrl.jsonld",
+    "https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"
+  ],
+  "@type": "EvaluationReport",
+  "@id": "ex:report/P03-2",
+  "evaluationRequest": "ex:request/P03-2",
+  "policy": "ex:policy/P03",
+  "policySatisfaction": "not-satisfied",
+  "policyActivation": "inactive",
+  "controlDecision": "deny",
+  "rdfs:comment": "doctor1 does not belong to the auditors PartyCollection (coral:Auditor). Neither the permission nor the prohibition applies to this party. Decision: deny."
+}

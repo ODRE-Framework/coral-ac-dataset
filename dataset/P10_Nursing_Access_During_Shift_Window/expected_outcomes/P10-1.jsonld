@@ -1,0 +1,14 @@
+{
+  "@context": [
+    "http://www.w3.org/ns/odrl.jsonld",
+    "https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"
+  ],
+  "@type": "EvaluationReport",
+  "@id": "ex:report/P10-1",
+  "evaluationRequest": "ex:request/P10-1",
+  "policy": "ex:85bc6a9b-1cce-4398-8dd0-859af7390fbb",
+  "policySatisfaction": "satisfied",
+  "policyActivation": "active",
+  "controlDecision": "permit",
+  "rdfs:comment": "nurse1 belongs to the nursing-staff PartyCollection (coral:NurseStaff). The state of the world confirms that the current dateTime is within the nurse's shift window (dateTime >= subjectShiftStart AND dateTime <= subjectShiftEnd). The temporal constraint for odrl:read is satisfied and active. Decision: permit."
+}

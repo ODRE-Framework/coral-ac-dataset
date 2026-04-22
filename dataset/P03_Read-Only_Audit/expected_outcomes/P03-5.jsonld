@@ -1,0 +1,14 @@
+{
+  "@context": [
+    "http://www.w3.org/ns/odrl.jsonld",
+    "https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"
+  ],
+  "@type": "EvaluationReport",
+  "@id": "ex:report/P03-5",
+  "evaluationRequest": "ex:request/P03-5",
+  "policy": "ex:policy/P03",
+  "policySatisfaction": "satisfied",
+  "policyActivation": "active",
+  "controlDecision": "forbid",
+  "rdfs:comment": "auditor1 belongs to the auditors PartyCollection (coral:Auditor). The prohibition for odrl:delete on db:BillingInformation is satisfied and active. Decision: forbid."
+}

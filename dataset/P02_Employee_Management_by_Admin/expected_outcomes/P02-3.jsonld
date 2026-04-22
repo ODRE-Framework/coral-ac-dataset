@@ -1,0 +1,14 @@
+{
+  "@context": [
+    "http://www.w3.org/ns/odrl.jsonld",
+    "https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"
+  ],
+  "@type": "EvaluationReport",
+  "@id": "ex:report/P02-3",
+  "evaluationRequest": "ex:request/P02-3",
+  "policy": "ex:policy/P02",
+  "policySatisfaction": "satisfied",
+  "policyActivation": "active",
+  "controlDecision": "permit",
+  "rdfs:comment": "administrator1 belongs to the admin-staff PartyCollection (coral:SystemAdministrator). The permission for odrl:delete on db:EmployeeRecords is satisfied and active. Decision: permit."
+}

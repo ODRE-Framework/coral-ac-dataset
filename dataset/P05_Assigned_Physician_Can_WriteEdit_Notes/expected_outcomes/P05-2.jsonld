@@ -1,0 +1,14 @@
+{
+  "@context": [
+    "http://www.w3.org/ns/odrl.jsonld",
+    "https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"
+  ],
+  "@type": "EvaluationReport",
+  "@id": "ex:report/P05-2",
+  "evaluationRequest": "ex:request/P05-2",
+  "policy": "ex:policy/P05",
+  "policySatisfaction": "not-satisfied",
+  "policyActivation": "inactive",
+  "controlDecision": "deny",
+  "rdfs:comment": "doctor2 belongs to the medical-staff PartyCollection (sch:Physician). However, the param-physician-identity (ex:id/staff/physician/doctor2) does not match the assigned_doctor_id of the clinical record associated with patient 33512354C (which is doctor1). The identity constraint is not satisfied. Decision: deny."
+}

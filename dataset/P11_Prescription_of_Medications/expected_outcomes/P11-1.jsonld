@@ -1,0 +1,14 @@
+{
+  "@context": [
+    "http://www.w3.org/ns/odrl.jsonld",
+    "https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"
+  ],
+  "@type": "EvaluationReport",
+  "@id": "ex:report/P11-1",
+  "evaluationRequest": "ex:request/P11-1",
+  "policy": "ex:policy/P11",
+  "policySatisfaction": "satisfied",
+  "policyActivation": "active",
+  "controlDecision": "permit",
+  "rdfs:comment": "doctor1 belongs to the medical-staff PartyCollection (sch:Physician). The permission for odrl:use on db:MedicationPrescriptions is satisfied and active. Decision: permit."
+}

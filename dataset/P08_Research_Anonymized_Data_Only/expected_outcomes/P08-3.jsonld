@@ -1,0 +1,14 @@
+{
+  "@context": [
+    "http://www.w3.org/ns/odrl.jsonld",
+    "https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"
+  ],
+  "@type": "EvaluationReport",
+  "@id": "ex:report/P08-3",
+  "evaluationRequest": "ex:request/P08-3",
+  "policy": "ex:policy/P08",
+  "policySatisfaction": "not-satisfied",
+  "policyActivation": "inactive",
+  "controlDecision": "deny",
+  "rdfs:comment": "doctor2 does not belong to the researchers PartyCollection (coral:HospitalResearchMember). The permission for odrl:read on anonymised clinical records does not apply to this party. Decision: deny."
+}
