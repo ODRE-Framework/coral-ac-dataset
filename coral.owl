@@ -1,1 +1,112 @@
+@prefix coral: <https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/coral.owl#> .
+@prefix sch:   <https://schema.org/> .
+@prefix odrl:  <http://www.w3.org/ns/odrl/2/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
+<https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/coral.owl>
+    a owl:Ontology ;
+    rdfs:label "CORAL Ontology"@en ;
+    dct:title "CORAL Ontology"@en ;
+    rdfs:comment "Ontology defining hospital roles and related concepts for the CORAL-AC dataset, aligned with ODRL Party and Schema.org."@en ;
+    dct:creator "Andrea Cimmino Arriaga, Universidad Politécnica de Madrid"@en ;
+    dct:creator "Nicoletta Fornara, Università della Svizzera italiana"@en ;
+    owl:versionInfo "1.0.0" ;
+    dct:format "text/turtle" ;
+    dct:language "en" .
+
+#################################################################
+# External classes refined in the ontology
+#################################################################
+
+sch:Physician
+    a owl:Class ;
+    rdfs:subClassOf sch:Person , odrl:Party ;
+    rdfs:label "Physician"@en ;
+    skos:definition "A medical professional responsible for diagnosing patients, prescribing treatments, and accessing the clinical information required for patient care."@en .
+
+sch:Patient
+    a owl:Class ;
+    rdfs:subClassOf sch:Person , odrl:Party ;
+    rdfs:label "Patient"@en ;
+    skos:definition "Represents an individual receiving medical care whose personal and clinical information is stored in the hospital information system."@en .
+
+#################################################################
+# CORAL classes
+#################################################################
+
+coral:NurseStaff
+    a owl:Class ;
+    rdfs:subClassOf sch:Person , odrl:Party ;
+    rdfs:label "Nurse Staff"@en ;
+    skos:definition "Represents nursing personnel responsible for monitoring patients, updating clinical observations, and assisting physicians during treatment."@en .
+
+coral:MedicalRecord
+    a owl:Class ;
+    rdfs:subClassOf odrl:Party ;
+    rdfs:label "Medical Record"@en ;
+    skos:definition "Represents the digital record containing the medical history, diagnoses, treatments, and clinical observations associated with a patient."@en .
+
+coral:SystemAdministrator
+    a owl:Class ;
+    rdfs:subClassOf sch:Person , odrl:Party ;
+    rdfs:label "System Administrator"@en ;
+    skos:definition "A technical role responsible for maintaining the hospital information system infrastructure, including database management and system configuration."@en .
+
+coral:Auditor
+    a owl:Class ;
+    rdfs:subClassOf sch:Person , odrl:Party ;
+    rdfs:label "Auditor"@en ;
+    skos:definition "A role responsible for reviewing and verifying access to medical records and system operations to ensure compliance with regulatory and organisational policies."@en .
+
+coral:DepartmentPhysicianHead
+    a owl:Class ;
+    rdfs:subClassOf sch:Person , odrl:Party ;
+    rdfs:label "Department Physician Head"@en ;
+    skos:definition "A senior physician responsible for supervising clinical staff within a department and overseeing medical decisions and operational procedures."@en .
+
+coral:EmergencyPhysician
+    a owl:Class ;
+    rdfs:subClassOf sch:Physician , odrl:Party ;
+    rdfs:label "Emergency Physician"@en ;
+    skos:definition "A specialist emergency physician who is authorised to access critical patient information during emergency medical situations."@en .
+
+coral:HospitalResearchMember
+    a owl:Class ;
+    rdfs:subClassOf sch:Person , odrl:Party ;
+    rdfs:label "Hospital Research Member"@en ;
+    skos:definition "Represents hospital-affiliated researchers who can access anonymised or aggregated clinical data for research purposes."@en .
+
+coral:AdministrativeMember
+    a owl:Class ;
+    rdfs:subClassOf sch:Person , odrl:Party ;
+    rdfs:label "Administrative Member"@en ;
+    skos:definition "Administrative staff responsible for operational tasks such as appointment scheduling, patient registration, and administrative management."@en .
+
+coral:Pharmacist
+    a owl:Class ;
+    rdfs:subClassOf sch:Person , odrl:Party ;
+    rdfs:label "Pharmacist"@en ;
+    skos:definition "Healthcare professional responsible for dispensing medications, verifying prescriptions, and managing pharmaceutical records."@en .
+
+coral:LegalGuardian
+    a owl:Class ;
+    rdfs:subClassOf sch:Person , odrl:Party ;
+    rdfs:label "Legal Guardian"@en ;
+    skos:definition "Represents a person legally responsible for a patient, typically in the case of minors or individuals requiring legal representation."@en .
+
+coral:LaboratoryTechnician
+    a owl:Class ;
+    rdfs:subClassOf sch:Person , odrl:Party ;
+    rdfs:label "Laboratory Technician"@en ;
+    skos:definition "Technical staff responsible for performing laboratory analyses and managing diagnostic test results associated with patients."@en .
+
+coral:SpecialistPhysician
+    a owl:Class ;
+    rdfs:subClassOf sch:Physician , odrl:Party ;
+    rdfs:label "Specialist Physician"@en ;
+    skos:definition "A physician with specialised expertise who may be granted temporary access to patient records for consultation or specialised treatment."@en .
