@@ -8,5 +8,5 @@
   "@id": "ex:request/P08-1",
   "evaluatedAction": "odrl:read",
   "evaluatedParty": "ex:id/staff/researcher/researcher1",
-  "evaluatedTarget": "db:ClinicalRecords",
+  "evaluatedTarget": "db:ClinicalRecords?isAnonymized='True'"
 }

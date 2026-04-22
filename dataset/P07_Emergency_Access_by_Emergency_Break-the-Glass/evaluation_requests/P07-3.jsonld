@@ -5,8 +5,8 @@
     "https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"
   ],
   "@type": "EvaluationRequest",
-  "@id": "ex:request/P07-1",
+  "@id": "ex:request/P07-3",
   "evaluatedAction": "odrl:read",
-  "evaluatedParty": "ex:id/staff/physician/emergency_physician",
+  "evaluatedParty": "ex:id/staff/physician/doctor1",
   "evaluatedTarget": "db:ClinicalRecords?patient_status='CRITIC'"
 }

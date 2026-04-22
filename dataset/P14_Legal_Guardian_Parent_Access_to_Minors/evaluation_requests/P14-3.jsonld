@@ -5,21 +5,22 @@
     "https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"
   ],
   "@type": "EvaluationRequest",
-  "@id": "ex:request/P04-1",
+  "@id": "ex:request/P14-3",
   "evaluatedAction": "odrl:read",
-  "evaluatedParty": "ex:id/patient/patient1",
+  "evaluatedParty": "ex:id/family/familiar2",
   "evaluatedTarget": "db:ClinicalRecords",
-  "requestParameters": [{
+  "requestParameters": [
+    {
       "@type" : "RequestParameter",
-      "@id" : "ex:request/P04/param-identity",
-      "value": "33512354C",
-      "rdfs:label" : "Personal identity card number",
-      "describesFeature": "sch:DigitalDocument"
-    },{
+      "@id" : "ex:request/P14/param-legal-guardian",
+      "value": "ex:id/family/familiar2",
+      "rdfs:label" : "Legal guardian identity — NOT the registered guardian of this patient"
+    },
+    {
       "@type" : "RequestParameter",
-      "@id" : "ex:request/P04/param-record",
-      "value": "XXX-AB",
-      "rdfs:label" : "Clinical record ID",
-      "describesFeature": "sch:DigitalDocument"
-    }]
+      "@id" : "ex:request/P14/param-underage_patient",
+      "value": "V28514271",
+      "rdfs:label" : "The underage patient identity card"
+    }
+  ]
 }

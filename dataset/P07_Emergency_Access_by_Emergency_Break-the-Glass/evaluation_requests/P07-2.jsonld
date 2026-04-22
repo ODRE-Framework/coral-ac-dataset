@@ -6,7 +6,7 @@
   ],
   "@type": "EvaluationRequest",
   "@id": "ex:request/P07-2",
-  "evaluatedAction": "odrl:modify",
+  "evaluatedAction": "odrl:read",
   "evaluatedParty": "ex:id/staff/physician/emergency_physician",
-  "evaluatedTarget": "db:PatientsRegistry"
+  "evaluatedTarget": "db:ClinicalRecords?patient_status='STABLE'"
 }
