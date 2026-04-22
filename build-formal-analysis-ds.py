@@ -148,7 +148,7 @@ def export_dataframe(df, csv_path, xls_path):
 '''
 base_dir = "./dataset"
 files = list_dataset_files(base_dir)
-formal_analysis_df = create_empty_dataframe("Folder", "GlobalID","SoW","EvRequest","ODRL")
+formal_analysis_df = create_empty_dataframe("Folder", "GlobalID","SoW","EvRequest","ODRL", "Output")
 for folder, file_list in files.items():
     print(folder)
     odrl = read_file_to_string(base_dir+"/"+folder+"/odrl.jsonld")
@@ -158,15 +158,25 @@ for folder, file_list in files.items():
     ev_requests = list_files(new_dir)
     ev_request_json = None
     sow_json = None
+    out_json = None
     for ev_request in ev_requests:
         ev_request_dir = new_dir+"/"+ev_request
         ev_request_json = read_file_to_string(ev_request_dir)
+        # SoW
         try:
             sow_die = base_dir+"/"+folder+"/sow/state"+ev_request[:len(ev_request)-2]
             sow_json = read_file_to_string(sow_die)
         except:
             print("No sow for: ", folder)
-        add_row(formal_analysis_df, [folder, global_id, sow_json, ev_request_json, odrl])
+        # Output
+        try:
+            out_dir = base_dir+"/"+folder+"/expected_outcomes/"+ev_request[:len(ev_request)-2]+"ld"
+            out_json = read_file_to_string(out_dir)
+            print("done: ", out_dir, " size: ", len(out_json))
+        except:
+            print("No output for: ", folder)
+
+        add_row(formal_analysis_df, [folder, global_id, sow_json, ev_request_json, odrl, out_json])
    
 
 print(formal_analysis_df)

@@ -1,4 +1,4 @@
-Folder,GlobalID,SoW,EvRequest,ODRL
+Folder,GlobalID,SoW,EvRequest,ODRL,Output
 P01_Global_Reading_of_Patients,ex:57d3ec9f-3f32-433c-86b2-4b81fcb09540,"{
   ""@context"" : [
     ""http://www.w3.org/ns/odrl.jsonld"",
@@ -69,7 +69,21 @@ P01_Global_Reading_of_Patients,ex:57d3ec9f-3f32-433c-86b2-4b81fcb09540,"{
       ""target"": ""db:PatientsRegistry""
     }
   ]
-}"
+}","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""EvaluationReport"",
+  ""@id"": ""ex:report/P01-1"",
+  ""evaluationRequest"": ""ex:request/P01-1"",
+  ""policy"": ""ex:57d3ec9f-3f32-433c-86b2-4b81fcb09540"",
+  ""policySatisfaction"": ""satisfied"",
+  ""policyActivation"": ""active"",
+  ""controlDecision"": ""permit"",
+  ""rdfs:comment"": ""doctor2 belongs to the medical-staff PartyCollection (sch:Physician). The permission is satisfied and active. Decision: permit.""
+}
+"
 P01_Global_Reading_of_Patients,ex:57d3ec9f-3f32-433c-86b2-4b81fcb09540,"{
   ""@context"" : [
     ""http://www.w3.org/ns/odrl.jsonld"",
@@ -140,7 +154,21 @@ P01_Global_Reading_of_Patients,ex:57d3ec9f-3f32-433c-86b2-4b81fcb09540,"{
       ""target"": ""db:PatientsRegistry""
     }
   ]
-}"
+}","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""EvaluationReport"",
+  ""@id"": ""ex:report/P01-2"",
+  ""evaluationRequest"": ""ex:request/P01-2"",
+  ""policy"": ""ex:57d3ec9f-3f32-433c-86b2-4b81fcb09540"",
+  ""policySatisfaction"": ""not-satisfied"",
+  ""policyActivation"": ""inactive"",
+  ""controlDecision"": ""deny"",
+  ""rdfs:comment"": ""administrative1 does not belong to the medical-staff PartyCollection (sch:Physician). The permission is not satisfied. Decision: deny.""
+}
+"
 P02_Employee_Management_by_Admin,ex:c2b7030f-ee5f-43db-b6c2-fd17a673147e,"{
   ""@context"" : [
     ""http://www.w3.org/ns/odrl.jsonld"",
@@ -214,7 +242,21 @@ P02_Employee_Management_by_Admin,ex:c2b7030f-ee5f-43db-b6c2-fd17a673147e,"{
       ""target"": ""db:EmployeeRecords""
     }
   ]
-}"
+}","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""EvaluationReport"",
+  ""@id"": ""ex:report/P02-4"",
+  ""evaluationRequest"": ""ex:request/P02-4"",
+  ""policy"": ""ex:policy/P02"",
+  ""policySatisfaction"": ""not-satisfied"",
+  ""policyActivation"": ""inactive"",
+  ""controlDecision"": ""deny"",
+  ""rdfs:comment"": ""nurse1 does not belong to the admin-staff PartyCollection (coral:SystemAdministrator). The permission for odrl:delete on db:EmployeeRecords is not satisfied. Decision: deny.""
+}
+"
 P02_Employee_Management_by_Admin,ex:c2b7030f-ee5f-43db-b6c2-fd17a673147e,"{
   ""@context"" : [
     ""http://www.w3.org/ns/odrl.jsonld"",
@@ -288,7 +330,21 @@ P02_Employee_Management_by_Admin,ex:c2b7030f-ee5f-43db-b6c2-fd17a673147e,"{
       ""target"": ""db:EmployeeRecords""
     }
   ]
-}"
+}","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""EvaluationReport"",
+  ""@id"": ""ex:report/P02-2"",
+  ""evaluationRequest"": ""ex:request/P02-2"",
+  ""policy"": ""ex:policy/P02"",
+  ""policySatisfaction"": ""not-satisfied"",
+  ""policyActivation"": ""inactive"",
+  ""controlDecision"": ""deny"",
+  ""rdfs:comment"": ""nurse1 does not belong to the admin-staff PartyCollection (coral:SystemAdministrator). The permission for odrl:modify on db:EmployeeRecords is not satisfied. Decision: deny.""
+}
+"
 P02_Employee_Management_by_Admin,ex:c2b7030f-ee5f-43db-b6c2-fd17a673147e,"{
   ""@context"" : [
     ""http://www.w3.org/ns/odrl.jsonld"",
@@ -362,7 +418,21 @@ P02_Employee_Management_by_Admin,ex:c2b7030f-ee5f-43db-b6c2-fd17a673147e,"{
       ""target"": ""db:EmployeeRecords""
     }
   ]
-}"
+}","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""EvaluationReport"",
+  ""@id"": ""ex:report/P02-3"",
+  ""evaluationRequest"": ""ex:request/P02-3"",
+  ""policy"": ""ex:policy/P02"",
+  ""policySatisfaction"": ""satisfied"",
+  ""policyActivation"": ""active"",
+  ""controlDecision"": ""permit"",
+  ""rdfs:comment"": ""administrator1 belongs to the admin-staff PartyCollection (coral:SystemAdministrator). The permission for odrl:delete on db:EmployeeRecords is satisfied and active. Decision: permit.""
+}
+"
 P02_Employee_Management_by_Admin,ex:c2b7030f-ee5f-43db-b6c2-fd17a673147e,"{
   ""@context"" : [
     ""http://www.w3.org/ns/odrl.jsonld"",
@@ -436,7 +506,21 @@ P02_Employee_Management_by_Admin,ex:c2b7030f-ee5f-43db-b6c2-fd17a673147e,"{
       ""target"": ""db:EmployeeRecords""
     }
   ]
-}"
+}","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""EvaluationReport"",
+  ""@id"": ""ex:report/P02-1"",
+  ""evaluationRequest"": ""ex:request/P02-1"",
+  ""policy"": ""ex:policy/P02"",
+  ""policySatisfaction"": ""satisfied"",
+  ""policyActivation"": ""active"",
+  ""controlDecision"": ""permit"",
+  ""rdfs:comment"": ""administrator1 belongs to the admin-staff PartyCollection (coral:SystemAdministrator). The permission for odrl:modify on db:EmployeeRecords is satisfied and active. Decision: permit.""
+}
+"
 P03_Read-Only_Audit,ex:b8d0be91-121b-4c7a-acf9-24aa4e863f05,"{
   ""@context"" : [
     ""http://www.w3.org/ns/odrl.jsonld"",
@@ -539,6 +623,20 @@ P03_Read-Only_Audit,ex:b8d0be91-121b-4c7a-acf9-24aa4e863f05,"{
       ]
     }
   ]
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""EvaluationReport"",
+  ""@id"": ""ex:report/P03-4"",
+  ""evaluationRequest"": ""ex:request/P03-4"",
+  ""policy"": ""ex:policy/P03"",
+  ""policySatisfaction"": ""not-satisfied"",
+  ""policyActivation"": ""inactive"",
+  ""controlDecision"": ""undefined"",
+  ""rdfs:comment"": ""doctor1 does not belong to the auditors PartyCollection (coral:Auditor). The prohibition does not apply to this party. No rule covers this case. Decision: undefined (neither permitted nor explicitly forbidden by this policy).""
 }
 "
 P03_Read-Only_Audit,ex:b8d0be91-121b-4c7a-acf9-24aa4e863f05,"{
@@ -644,6 +742,20 @@ P03_Read-Only_Audit,ex:b8d0be91-121b-4c7a-acf9-24aa4e863f05,"{
     }
   ]
 }
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""EvaluationReport"",
+  ""@id"": ""ex:report/P03-6"",
+  ""evaluationRequest"": ""ex:request/P03-6"",
+  ""policy"": ""ex:policy/P03"",
+  ""policySatisfaction"": ""not-satisfied"",
+  ""policyActivation"": ""inactive"",
+  ""controlDecision"": ""undefined"",
+  ""rdfs:comment"": ""doctor1 does not belong to the auditors PartyCollection (coral:Auditor). The prohibition does not apply to this party. No rule covers this case. Decision: undefined.""
+}
 "
 P03_Read-Only_Audit,ex:b8d0be91-121b-4c7a-acf9-24aa4e863f05,"{
   ""@context"" : [
@@ -747,6 +859,20 @@ P03_Read-Only_Audit,ex:b8d0be91-121b-4c7a-acf9-24aa4e863f05,"{
       ]
     }
   ]
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""EvaluationReport"",
+  ""@id"": ""ex:report/P03-2"",
+  ""evaluationRequest"": ""ex:request/P03-2"",
+  ""policy"": ""ex:policy/P03"",
+  ""policySatisfaction"": ""not-satisfied"",
+  ""policyActivation"": ""inactive"",
+  ""controlDecision"": ""deny"",
+  ""rdfs:comment"": ""doctor1 does not belong to the auditors PartyCollection (coral:Auditor). Neither the permission nor the prohibition applies to this party. Decision: deny.""
 }
 "
 P03_Read-Only_Audit,ex:b8d0be91-121b-4c7a-acf9-24aa4e863f05,"{
@@ -852,6 +978,20 @@ P03_Read-Only_Audit,ex:b8d0be91-121b-4c7a-acf9-24aa4e863f05,"{
     }
   ]
 }
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""EvaluationReport"",
+  ""@id"": ""ex:report/P03-5"",
+  ""evaluationRequest"": ""ex:request/P03-5"",
+  ""policy"": ""ex:policy/P03"",
+  ""policySatisfaction"": ""satisfied"",
+  ""policyActivation"": ""active"",
+  ""controlDecision"": ""forbid"",
+  ""rdfs:comment"": ""auditor1 belongs to the auditors PartyCollection (coral:Auditor). The prohibition for odrl:delete on db:BillingInformation is satisfied and active. Decision: forbid.""
+}
 "
 P03_Read-Only_Audit,ex:b8d0be91-121b-4c7a-acf9-24aa4e863f05,"{
   ""@context"" : [
@@ -955,6 +1095,20 @@ P03_Read-Only_Audit,ex:b8d0be91-121b-4c7a-acf9-24aa4e863f05,"{
       ]
     }
   ]
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""EvaluationReport"",
+  ""@id"": ""ex:report/P03-3"",
+  ""evaluationRequest"": ""ex:request/P03-3"",
+  ""policy"": ""ex:policy/P03"",
+  ""policySatisfaction"": ""satisfied"",
+  ""policyActivation"": ""active"",
+  ""controlDecision"": ""forbid"",
+  ""rdfs:comment"": ""auditor1 belongs to the auditors PartyCollection (coral:Auditor). The prohibition for odrl:modify on db:BillingInformation is satisfied and active. Decision: forbid.""
 }
 "
 P03_Read-Only_Audit,ex:b8d0be91-121b-4c7a-acf9-24aa4e863f05,"{
@@ -1060,6 +1214,20 @@ P03_Read-Only_Audit,ex:b8d0be91-121b-4c7a-acf9-24aa4e863f05,"{
     }
   ]
 }
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""EvaluationReport"",
+  ""@id"": ""ex:report/P03-1"",
+  ""evaluationRequest"": ""ex:request/P03-1"",
+  ""policy"": ""ex:policy/P03"",
+  ""policySatisfaction"": ""satisfied"",
+  ""policyActivation"": ""active"",
+  ""controlDecision"": ""permit"",
+  ""rdfs:comment"": ""auditor1 belongs to the auditors PartyCollection (coral:Auditor). The permission for odrl:read on db:ClinicalRecords is satisfied and active. No prohibition is triggered. Decision: permit.""
+}
 "
 P04_Patient_Access_to_Own_Record,ex:dc851af8-9798-4221-b79b-e0cbf6216d81,"{
   ""@context"" : [
@@ -1153,6 +1321,20 @@ P04_Patient_Access_to_Own_Record,ex:dc851af8-9798-4221-b79b-e0cbf6216d81,"{
     }
   ]
 }
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""EvaluationReport"",
+  ""@id"": ""ex:report/P04-2"",
+  ""evaluationRequest"": ""ex:request/P04-2"",
+  ""policy"": ""ex:dc851af8-9798-4221-b79b-e0cbf6216d81"",
+  ""policySatisfaction"": ""not-satisfied"",
+  ""policyActivation"": ""inactive"",
+  ""controlDecision"": ""deny"",
+  ""rdfs:comment"": ""patient1 belongs to the patients PartyCollection (sch:Patient). However, the param-identity value (33512354C) does not match the patient_id of the requested clinical record (param-record: XXX-AB), which belongs to a different patient. The identity constraint is not satisfied. Decision: deny.""
+}
 "
 P04_Patient_Access_to_Own_Record,ex:dc851af8-9798-4221-b79b-e0cbf6216d81,"{
   ""@context"" : [
@@ -1245,6 +1427,20 @@ P04_Patient_Access_to_Own_Record,ex:dc851af8-9798-4221-b79b-e0cbf6216d81,"{
       ]
     }
   ]
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""EvaluationReport"",
+  ""@id"": ""ex:report/P04-1"",
+  ""evaluationRequest"": ""ex:request/P04-1"",
+  ""policy"": ""ex:dc851af8-9798-4221-b79b-e0cbf6216d81"",
+  ""policySatisfaction"": ""satisfied"",
+  ""policyActivation"": ""active"",
+  ""controlDecision"": ""permit"",
+  ""rdfs:comment"": ""patient1 belongs to the patients PartyCollection (sch:Patient). The param-identity value (33512354C) matches the patient_id of the requested clinical record (param-record: 33X-AF). Both constraints are satisfied. Decision: permit.""
 }
 "
 P05_Assigned_Physician_Can_WriteEdit_Notes,ex:e29c824e-7e51-417a-b8a2-f1b2b6cfd1c9,"{
@@ -1344,6 +1540,20 @@ P05_Assigned_Physician_Can_WriteEdit_Notes,ex:e29c824e-7e51-417a-b8a2-f1b2b6cfd1
     }
   ]
 }
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""EvaluationReport"",
+  ""@id"": ""ex:report/P05-2"",
+  ""evaluationRequest"": ""ex:request/P05-2"",
+  ""policy"": ""ex:policy/P05"",
+  ""policySatisfaction"": ""not-satisfied"",
+  ""policyActivation"": ""inactive"",
+  ""controlDecision"": ""deny"",
+  ""rdfs:comment"": ""doctor2 belongs to the medical-staff PartyCollection (sch:Physician). However, the param-physician-identity (ex:id/staff/physician/doctor2) does not match the assigned_doctor_id of the clinical record associated with patient 33512354C (which is doctor1). The identity constraint is not satisfied. Decision: deny.""
+}
 "
 P05_Assigned_Physician_Can_WriteEdit_Notes,ex:e29c824e-7e51-417a-b8a2-f1b2b6cfd1c9,"{
   ""@context"" : [
@@ -1442,6 +1652,20 @@ P05_Assigned_Physician_Can_WriteEdit_Notes,ex:e29c824e-7e51-417a-b8a2-f1b2b6cfd1
     }
   ]
 }
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""EvaluationReport"",
+  ""@id"": ""ex:report/P05-1"",
+  ""evaluationRequest"": ""ex:request/P05-1"",
+  ""policy"": ""ex:policy/P05"",
+  ""policySatisfaction"": ""satisfied"",
+  ""policyActivation"": ""active"",
+  ""controlDecision"": ""permit"",
+  ""rdfs:comment"": ""doctor1 belongs to the medical-staff PartyCollection (sch:Physician). The param-physician-identity (ex:id/staff/physician/doctor1) matches the assigned_doctor_id of the clinical record associated with patient 33512354C. The identity constraint is satisfied. Decision: permit.""
+}
 "
 P06_Department_Head_Reading_by_Ward_Membership,ex:69b21f5e-b719-4b82-9600-cce78d31243c,"{
   ""@context"" : [
@@ -1536,6 +1760,20 @@ P06_Department_Head_Reading_by_Ward_Membership,ex:69b21f5e-b719-4b82-9600-cce78d
       ]
     }
   ]
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""EvaluationReport"",
+  ""@id"": ""ex:report/P06-1"",
+  ""evaluationRequest"": ""ex:request/P06-1"",
+  ""policy"": ""ex:policy/P06"",
+  ""policySatisfaction"": ""satisfied"",
+  ""policyActivation"": ""active"",
+  ""controlDecision"": ""permit"",
+  ""rdfs:comment"": ""head-cardiology1 belongs to the dept-heads PartyCollection (coral:DepartmentPhysicianHead). The param-department value (CARDIOLOGY) matches the department of the patient identified by 33512354C. The department constraint is satisfied. Decision: permit.""
 }
 "
 P06_Department_Head_Reading_by_Ward_Membership,ex:69b21f5e-b719-4b82-9600-cce78d31243c,"{
@@ -1632,6 +1870,84 @@ P06_Department_Head_Reading_by_Ward_Membership,ex:69b21f5e-b719-4b82-9600-cce78d
     }
   ]
 }
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""EvaluationReport"",
+  ""@id"": ""ex:report/P06-2"",
+  ""evaluationRequest"": ""ex:request/P06-2"",
+  ""policy"": ""ex:policy/P06"",
+  ""policySatisfaction"": ""not-satisfied"",
+  ""policyActivation"": ""inactive"",
+  ""controlDecision"": ""deny"",
+  ""rdfs:comment"": ""head-cardiology1 belongs to the dept-heads PartyCollection (coral:DepartmentPhysicianHead). However, the param-department value (ONCOLOGY) does not match the department of the patient identified by 33512354C (CARDIOLOGY). The department constraint is not satisfied. Decision: deny.""
+}
+"
+P07_Emergency_Access_by_Emergency_Break-the-Glass,ex:90782d9b-ebfa-4515-8473-ddb51ecbc3c1,,"{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/ formal-semantics/ontology/evaluation_request.json"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""EvaluationRequest"",
+  ""@id"": ""ex:request/P07-3"",
+  ""evaluatedAction"": ""odrl:read"",
+  ""evaluatedParty"": ""ex:id/staff/physician/doctor1"",
+  ""evaluatedTarget"": ""db:ClinicalRecords?patient_status='CRITIC'""
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"",
+    {
+      ""ex:patientStatus"": {
+        ""@type"": ""xsd:string""
+      }
+    }
+  ],
+  ""@type"": ""odrl:Set"",
+  ""uid"": ""ex:90782d9b-ebfa-4515-8473-ddb51ecbc3c1"",
+  ""rdfs:label"" : ""Policy 07"",
+  ""permission"": [
+    {
+      ""@type"": ""odrl:Permission"",
+      ""assigner"": {
+        ""@type"": [
+          ""odrl:Party"",
+          ""sch:Hospital""
+        ],
+        ""uid"": ""ex:hopital-organization"",
+        ""rdfs:description"" : ""A specific hospital that owns this policy""
+      },
+      ""assignee"": {
+        ""@type"": [
+          ""odrl:PartyCollection"",
+          ""coral:EmergencyPhysician""
+        ],
+        ""uid"": ""ex:groups/er-staff"",
+        ""rdfs:description"" : ""Anyone who belongs to the medical emergency physician team""
+      },
+      ""action"": ""read"",
+      ""target"": ""db:ClinicalRecords?patient_status='CRITIC'|patient_status='EMERGENCY'""
+    }
+  ]
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""EvaluationReport"",
+  ""@id"": ""ex:report/P07-3"",
+  ""evaluationRequest"": ""ex:request/P07-3"",
+  ""policy"": ""ex:90782d9b-ebfa-4515-8473-ddb51ecbc3c1"",
+  ""policySatisfaction"": ""not-satisfied"",
+  ""policyActivation"": ""inactive"",
+  ""controlDecision"": ""deny"",
+  ""rdfs:comment"": ""doctor1 does not belong to the er-staff PartyCollection (coral:EmergencyPhysician). The permission applies exclusively to emergency physicians. Even though the patient status is CRITIC, the assignee constraint is not satisfied. Decision: deny.""
+}
 "
 P07_Emergency_Access_by_Emergency_Break-the-Glass,ex:90782d9b-ebfa-4515-8473-ddb51ecbc3c1,"{
   ""@context"" : [
@@ -1665,7 +1981,7 @@ P07_Emergency_Access_by_Emergency_Break-the-Glass,ex:90782d9b-ebfa-4515-8473-ddb
   ""@id"": ""ex:request/P07-1"",
   ""evaluatedAction"": ""odrl:read"",
   ""evaluatedParty"": ""ex:id/staff/physician/emergency_physician"",
-  ""evaluatedTarget"": ""db:PatientsRegistry"",
+  ""evaluatedTarget"": ""db:ClinicalRecords?patient_status='CRITIC'""
 }
 ","{
   ""@context"": [
@@ -1703,6 +2019,20 @@ P07_Emergency_Access_by_Emergency_Break-the-Glass,ex:90782d9b-ebfa-4515-8473-ddb
       ""target"": ""db:ClinicalRecords?patient_status='CRITIC'|patient_status='EMERGENCY'""
     }
   ]
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""EvaluationReport"",
+  ""@id"": ""ex:report/P07-1"",
+  ""evaluationRequest"": ""ex:request/P07-1"",
+  ""policy"": ""ex:90782d9b-ebfa-4515-8473-ddb51ecbc3c1"",
+  ""policySatisfaction"": ""satisfied"",
+  ""policyActivation"": ""active"",
+  ""controlDecision"": ""permit"",
+  ""rdfs:comment"": ""emergency_physician belongs to the er-staff PartyCollection (coral:EmergencyPhysician). The target db:ClinicalRecords?patient_status='CRITIC' satisfies the filtered asset condition (status is CRITIC, which is included in CRITIC|EMERGENCY). The permission for odrl:read is satisfied and active. Decision: permit.""
 }
 "
 P07_Emergency_Access_by_Emergency_Break-the-Glass,ex:90782d9b-ebfa-4515-8473-ddb51ecbc3c1,"{
@@ -1735,9 +2065,9 @@ P07_Emergency_Access_by_Emergency_Break-the-Glass,ex:90782d9b-ebfa-4515-8473-ddb
   ],
   ""@type"": ""EvaluationRequest"",
   ""@id"": ""ex:request/P07-2"",
-  ""evaluatedAction"": ""odrl:modify"",
+  ""evaluatedAction"": ""odrl:read"",
   ""evaluatedParty"": ""ex:id/staff/physician/emergency_physician"",
-  ""evaluatedTarget"": ""db:PatientsRegistry""
+  ""evaluatedTarget"": ""db:ClinicalRecords?patient_status='STABLE'""
 }
 ","{
   ""@context"": [
@@ -1776,6 +2106,20 @@ P07_Emergency_Access_by_Emergency_Break-the-Glass,ex:90782d9b-ebfa-4515-8473-ddb
     }
   ]
 }
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""EvaluationReport"",
+  ""@id"": ""ex:report/P07-2"",
+  ""evaluationRequest"": ""ex:request/P07-2"",
+  ""policy"": ""ex:90782d9b-ebfa-4515-8473-ddb51ecbc3c1"",
+  ""policySatisfaction"": ""not-satisfied"",
+  ""policyActivation"": ""inactive"",
+  ""controlDecision"": ""deny"",
+  ""rdfs:comment"": ""emergency_physician belongs to the er-staff PartyCollection (coral:EmergencyPhysician). However, the target db:ClinicalRecords?patient_status='STABLE' does not satisfy the filtered asset condition (STABLE is not in CRITIC|EMERGENCY). The target condition is not met. Decision: deny.""
+}
 "
 P08_Research_Anonymized_Data_Only,ex:5b5bf495-f6c4-4511-b94f-87410e55d947,"{
   ""@context"" : [
@@ -1806,20 +2150,15 @@ P08_Research_Anonymized_Data_Only,ex:5b5bf495-f6c4-4511-b94f-87410e55d947,"{
     ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
   ],
   ""@type"": ""EvaluationRequest"",
-  ""@id"": ""ex:request/P08-1"",
+  ""@id"": ""ex:request/P08-2"",
   ""evaluatedAction"": ""odrl:read"",
-  ""evaluatedParty"": ""ex:id/staff/physician/doctor2"",
-  ""evaluatedTarget"": ""db:ClinicalRecords"",
+  ""evaluatedParty"": ""ex:id/staff/researcher/researcher1"",
+  ""evaluatedTarget"": ""db:ClinicalRecords?isAnonymized='False'""
 }
 ","{
   ""@context"": [
     ""http://www.w3.org/ns/odrl.jsonld"",
-    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"",
-    {
-      ""ex:isAnonymized"": {
-        ""@type"": ""xsd:boolean""
-      }
-    }
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
   ],
   ""@type"": ""odrl:Set"",
   ""uid"": ""ex:5b5bf495-f6c4-4511-b94f-87410e55d947"",
@@ -1844,9 +2183,104 @@ P08_Research_Anonymized_Data_Only,ex:5b5bf495-f6c4-4511-b94f-87410e55d947,"{
         ""rdfs:description"": ""Any person who is part of the hospital research team""
       },
       ""action"": ""read"",
-      ""target"": ""db:ClinicalRecords?isAnonymized='True'&records""
+      ""target"": ""db:ClinicalRecords?isAnonymized='True'""
     }
   ]
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""EvaluationReport"",
+  ""@id"": ""ex:report/P08-2"",
+  ""evaluationRequest"": ""ex:request/P08-2"",
+  ""policy"": ""ex:policy/P08"",
+  ""policySatisfaction"": ""not-satisfied"",
+  ""policyActivation"": ""inactive"",
+  ""controlDecision"": ""deny"",
+  ""rdfs:comment"": ""researcher1 belongs to the researchers PartyCollection (coral:HospitalResearchMember). However, the target db:ClinicalRecords?isAnonymized='False' does not satisfy the filtered asset condition (only anonymised records are permitted). Decision: deny.""
+}
+"
+P08_Research_Anonymized_Data_Only,ex:5b5bf495-f6c4-4511-b94f-87410e55d947,"{
+  ""@context"" : [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/formal-semantics/ontology/stow.json"",
+     ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"",
+    { ""@context"" : { ""member"" : { ""@id"" : ""odrl:member"", ""@type"" : ""@id"" } }}
+  ],
+  ""@id"" : ""ex:StateP08-2"",
+  ""@type"" : ""SotW"",
+  ""context"" :  {
+    ""@id"" : ""ex:groups/researchers"",
+    ""@type"" : ""odrl:PartyCollection"",
+    ""rdfs:label"" : ""Hospital Resercher Team"",
+    ""member"" : [ {
+      ""@id"" : ""ex:id/staff/researcher/researcher1"",
+      ""@type"" : [""odrl:Party"", ""coral:HospitalResearchMember""],
+      ""odrl:partOf"" : {""@id"" : ""ex:groups/researchers""},
+      ""rdfs:label"" : ""Cruz Chance""
+    }
+   ] 
+  }
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/ formal-semantics/ontology/evaluation_request.json"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""EvaluationRequest"",
+  ""@id"": ""ex:request/P08-3"",
+  ""evaluatedAction"": ""odrl:read"",
+  ""evaluatedParty"": ""ex:id/staff/physician/doctor2"",
+  ""evaluatedTarget"": ""db:ClinicalRecords?isAnonymized='True'""
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""odrl:Set"",
+  ""uid"": ""ex:5b5bf495-f6c4-4511-b94f-87410e55d947"",
+  ""rdfs:label"" : ""Policy 08"",
+  ""permission"": [
+    {
+      ""@type"": ""odrl:Permission"",
+      ""assigner"": {
+        ""@type"": [
+          ""odrl:Party"",
+          ""sch:Hospital""
+        ],
+        ""uid"": ""ex:hopital-organization"",
+        ""rdfs:description"" : ""A specific hospital that owns this policy""
+      },
+      ""assignee"": {
+        ""@type"": [
+          ""odrl:PartyCollection"",
+          ""coral:HospitalResearchMember""
+        ],
+        ""uid"": ""ex:groups/researchers"",
+        ""rdfs:description"": ""Any person who is part of the hospital research team""
+      },
+      ""action"": ""read"",
+      ""target"": ""db:ClinicalRecords?isAnonymized='True'""
+    }
+  ]
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""EvaluationReport"",
+  ""@id"": ""ex:report/P08-3"",
+  ""evaluationRequest"": ""ex:request/P08-3"",
+  ""policy"": ""ex:policy/P08"",
+  ""policySatisfaction"": ""not-satisfied"",
+  ""policyActivation"": ""inactive"",
+  ""controlDecision"": ""deny"",
+  ""rdfs:comment"": ""doctor2 does not belong to the researchers PartyCollection (coral:HospitalResearchMember). The permission for odrl:read on anonymised clinical records does not apply to this party. Decision: deny.""
 }
 "
 P08_Research_Anonymized_Data_Only,ex:5b5bf495-f6c4-4511-b94f-87410e55d947,"{
@@ -1881,17 +2315,12 @@ P08_Research_Anonymized_Data_Only,ex:5b5bf495-f6c4-4511-b94f-87410e55d947,"{
   ""@id"": ""ex:request/P08-1"",
   ""evaluatedAction"": ""odrl:read"",
   ""evaluatedParty"": ""ex:id/staff/researcher/researcher1"",
-  ""evaluatedTarget"": ""db:ClinicalRecords"",
+  ""evaluatedTarget"": ""db:ClinicalRecords?isAnonymized='True'""
 }
 ","{
   ""@context"": [
     ""http://www.w3.org/ns/odrl.jsonld"",
-    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"",
-    {
-      ""ex:isAnonymized"": {
-        ""@type"": ""xsd:boolean""
-      }
-    }
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
   ],
   ""@type"": ""odrl:Set"",
   ""uid"": ""ex:5b5bf495-f6c4-4511-b94f-87410e55d947"",
@@ -1916,9 +2345,23 @@ P08_Research_Anonymized_Data_Only,ex:5b5bf495-f6c4-4511-b94f-87410e55d947,"{
         ""rdfs:description"": ""Any person who is part of the hospital research team""
       },
       ""action"": ""read"",
-      ""target"": ""db:ClinicalRecords?isAnonymized='True'&records""
+      ""target"": ""db:ClinicalRecords?isAnonymized='True'""
     }
   ]
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""EvaluationReport"",
+  ""@id"": ""ex:report/P08-1"",
+  ""evaluationRequest"": ""ex:request/P08-1"",
+  ""policy"": ""ex:policy/P08"",
+  ""policySatisfaction"": ""satisfied"",
+  ""policyActivation"": ""active"",
+  ""controlDecision"": ""permit"",
+  ""rdfs:comment"": ""researcher1 belongs to the researchers PartyCollection (coral:HospitalResearchMember). The target db:ClinicalRecords?isAnonymized='True' satisfies the filtered asset condition. The permission for odrl:read is satisfied and active. Decision: permit.""
 }
 "
 P09_Administrative_Forbidden_to_Create_Appointment_if_Debtor,ex:008509f7-41d1-401c-937e-6ae7a1ff369a,"{
@@ -2021,6 +2464,20 @@ P09_Administrative_Forbidden_to_Create_Appointment_if_Debtor,ex:008509f7-41d1-40
     }
   ]
 }
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""EvaluationReport"",
+  ""@id"": ""ex:report/P09-2"",
+  ""evaluationRequest"": ""ex:request/P09-2"",
+  ""policy"": ""ex:008509f7-41d1-401c-937e-6ae7a1ff369a"",
+  ""policySatisfaction"": ""not-satisfied"",
+  ""policyActivation"": ""inactive"",
+  ""controlDecision"": ""undefined"",
+  ""rdfs:comment"": ""administrator1 belongs to the admin-staff PartyCollection (coral:AdministrativeMember). The param-identity (Y3237068Q) matches a patient_id in db:BillingInformation whose status is NOT DEBTOR. The billing status constraint is not satisfied, so the prohibition is not activated. No permission covers this action either. Decision: undefined (the prohibition does not fire; no explicit permit exists).""
+}
 "
 P09_Administrative_Forbidden_to_Create_Appointment_if_Debtor,ex:008509f7-41d1-401c-937e-6ae7a1ff369a,"{
   ""@context"" : [
@@ -2119,6 +2576,20 @@ P09_Administrative_Forbidden_to_Create_Appointment_if_Debtor,ex:008509f7-41d1-40
     }
   ]
 }
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""EvaluationReport"",
+  ""@id"": ""ex:report/P09-1"",
+  ""evaluationRequest"": ""ex:request/P09-1"",
+  ""policy"": ""ex:008509f7-41d1-401c-937e-6ae7a1ff369a"",
+  ""policySatisfaction"": ""satisfied"",
+  ""policyActivation"": ""active"",
+  ""controlDecision"": ""forbid"",
+  ""rdfs:comment"": ""administrator1 belongs to the admin-staff PartyCollection (coral:AdministrativeMember). The param-identity (33512354C) matches a patient_id in db:BillingInformation whose status is DEBTOR. Both constraints of the prohibition are satisfied. Decision: forbid.""
+}
 "
 P10_Nursing_Access_During_Shift_Window,ex:85bc6a9b-1cce-4398-8dd0-859af7390fbb,"{
   ""@context"" : [
@@ -2143,6 +2614,16 @@ P10_Nursing_Access_During_Shift_Window,ex:85bc6a9b-1cce-4398-8dd0-859af7390fbb,"
       ""@type"" : [""odrl:Party"", ""coral:NurseStaff""],
       ""odrl:partOf"" : {""@id"" : ""ex:groups/nursing-staff""},
       ""rdfs:label"" : ""Macy Aina""
+    },{
+      ""@id"" : ""ex:subjectShiftStart"",
+      ""@type"" : ""coral:WorkingShiftStarts"",
+      ""coral:value"" : ""09:00"",
+      ""coral:shiftAppliesTo"" : ""ex:id/staff/nurse/nurse1""
+    },{
+      ""@id"" : ""ex:subjectShiftEnd"",
+      ""@type"" : ""coral:WorkingShiftEnds"",
+      ""coral:value"" : ""18:00"",
+      ""coral:shiftAppliesTo"" : ""ex:id/staff/nurse/nurse1""
     }
    ] 
   }
@@ -2161,20 +2642,11 @@ P10_Nursing_Access_During_Shift_Window,ex:85bc6a9b-1cce-4398-8dd0-859af7390fbb,"
 }","{
   ""@context"": [
     ""http://www.w3.org/ns/odrl.jsonld"",
-    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"",
-    {
-     
-      ""ex:subjectShiftStart"": {
-        ""@type"": ""xsd:time""
-      },
-      ""ex:subjectShiftEnd"": {
-        ""@type"": ""xsd:time""
-      }
-    }
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
   ],
   ""@type"": ""odrl:Set"",
   ""uid"": ""ex:85bc6a9b-1cce-4398-8dd0-859af7390fbb"",
-  ""rdfs:label"" : ""Policy 10"",
+  ""rdfs:label"": ""Policy 10"",
   ""permission"": [
     {
       ""@type"": ""odrl:Permission"",
@@ -2184,7 +2656,7 @@ P10_Nursing_Access_During_Shift_Window,ex:85bc6a9b-1cce-4398-8dd0-859af7390fbb,"
           ""sch:Hospital""
         ],
         ""uid"": ""ex:hopital-organization"",
-        ""rdfs:description"" : ""A specific hospital that owns this policy""
+        ""rdfs:description"": ""A specific hospital that owns this policy""
       },
       ""assignee"": {
         ""@type"": [
@@ -2192,7 +2664,7 @@ P10_Nursing_Access_During_Shift_Window,ex:85bc6a9b-1cce-4398-8dd0-859af7390fbb,"
           ""coral:NurseStaff""
         ],
         ""uid"": ""ex:groups/nursing-staff"",
-        ""rdfs:description"" : ""Anyone who belongs to the nursing staff""
+        ""rdfs:description"": ""Anyone who belongs to the nursing staff""
       },
       ""action"": [
         ""read"",
@@ -2201,26 +2673,36 @@ P10_Nursing_Access_During_Shift_Window,ex:85bc6a9b-1cce-4398-8dd0-859af7390fbb,"
       ""target"": ""db:MedicationPrescriptions"",
       ""constraint"": [
         {
-          ""@type"": ""odrl:LogicalConstraint"",
-          ""and"": [
-            {
-              ""@type"": ""odrl:Constraint"",
-              ""leftOperand"": ""dateTime"",
-              ""operator"": ""odrl:gteq"",
-              ""rightOperand"": ""ex:subjectShiftStart""
-            },
-            {
-              ""@type"": ""odrl:Constraint"",
-              ""leftOperand"": ""dateTime"",
-              ""operator"": ""odrl:lteq"",
-              ""rightOperand"": ""ex:subjectShiftEnd""
-            }
-          ]
+          ""@type"": ""odrl:Constraint"",
+          ""leftOperand"": ""dateTime"",
+          ""operator"": ""odrl:gteq"",
+          ""rightOperand"": ""ex:subjectShiftStart""
+        },
+        {
+          ""@type"": ""odrl:Constraint"",
+          ""leftOperand"": ""dateTime"",
+          ""operator"": ""odrl:lteq"",
+          ""rightOperand"": ""ex:subjectShiftEnd""
         }
       ]
     }
   ]
-}"
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""EvaluationReport"",
+  ""@id"": ""ex:report/P10-1"",
+  ""evaluationRequest"": ""ex:request/P10-1"",
+  ""policy"": ""ex:85bc6a9b-1cce-4398-8dd0-859af7390fbb"",
+  ""policySatisfaction"": ""satisfied"",
+  ""policyActivation"": ""active"",
+  ""controlDecision"": ""permit"",
+  ""rdfs:comment"": ""nurse1 belongs to the nursing-staff PartyCollection (coral:NurseStaff). The state of the world confirms that the current dateTime is within the nurse's shift window (dateTime >= subjectShiftStart AND dateTime <= subjectShiftEnd). The temporal constraint for odrl:read is satisfied and active. Decision: permit.""
+}
+"
 P10_Nursing_Access_During_Shift_Window,ex:85bc6a9b-1cce-4398-8dd0-859af7390fbb,"{
   ""@context"" : [
     ""http://www.w3.org/ns/odrl.jsonld"",
@@ -2262,20 +2744,11 @@ P10_Nursing_Access_During_Shift_Window,ex:85bc6a9b-1cce-4398-8dd0-859af7390fbb,"
 }","{
   ""@context"": [
     ""http://www.w3.org/ns/odrl.jsonld"",
-    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"",
-    {
-     
-      ""ex:subjectShiftStart"": {
-        ""@type"": ""xsd:time""
-      },
-      ""ex:subjectShiftEnd"": {
-        ""@type"": ""xsd:time""
-      }
-    }
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
   ],
   ""@type"": ""odrl:Set"",
   ""uid"": ""ex:85bc6a9b-1cce-4398-8dd0-859af7390fbb"",
-  ""rdfs:label"" : ""Policy 10"",
+  ""rdfs:label"": ""Policy 10"",
   ""permission"": [
     {
       ""@type"": ""odrl:Permission"",
@@ -2285,7 +2758,7 @@ P10_Nursing_Access_During_Shift_Window,ex:85bc6a9b-1cce-4398-8dd0-859af7390fbb,"
           ""sch:Hospital""
         ],
         ""uid"": ""ex:hopital-organization"",
-        ""rdfs:description"" : ""A specific hospital that owns this policy""
+        ""rdfs:description"": ""A specific hospital that owns this policy""
       },
       ""assignee"": {
         ""@type"": [
@@ -2293,7 +2766,7 @@ P10_Nursing_Access_During_Shift_Window,ex:85bc6a9b-1cce-4398-8dd0-859af7390fbb,"
           ""coral:NurseStaff""
         ],
         ""uid"": ""ex:groups/nursing-staff"",
-        ""rdfs:description"" : ""Anyone who belongs to the nursing staff""
+        ""rdfs:description"": ""Anyone who belongs to the nursing staff""
       },
       ""action"": [
         ""read"",
@@ -2302,26 +2775,36 @@ P10_Nursing_Access_During_Shift_Window,ex:85bc6a9b-1cce-4398-8dd0-859af7390fbb,"
       ""target"": ""db:MedicationPrescriptions"",
       ""constraint"": [
         {
-          ""@type"": ""odrl:LogicalConstraint"",
-          ""and"": [
-            {
-              ""@type"": ""odrl:Constraint"",
-              ""leftOperand"": ""dateTime"",
-              ""operator"": ""odrl:gteq"",
-              ""rightOperand"": ""ex:subjectShiftStart""
-            },
-            {
-              ""@type"": ""odrl:Constraint"",
-              ""leftOperand"": ""dateTime"",
-              ""operator"": ""odrl:lteq"",
-              ""rightOperand"": ""ex:subjectShiftEnd""
-            }
-          ]
+          ""@type"": ""odrl:Constraint"",
+          ""leftOperand"": ""dateTime"",
+          ""operator"": ""odrl:gteq"",
+          ""rightOperand"": ""ex:subjectShiftStart""
+        },
+        {
+          ""@type"": ""odrl:Constraint"",
+          ""leftOperand"": ""dateTime"",
+          ""operator"": ""odrl:lteq"",
+          ""rightOperand"": ""ex:subjectShiftEnd""
         }
       ]
     }
   ]
-}"
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""EvaluationReport"",
+  ""@id"": ""ex:report/P10-3"",
+  ""evaluationRequest"": ""ex:request/P10-3"",
+  ""policy"": ""ex:85bc6a9b-1cce-4398-8dd0-859af7390fbb"",
+  ""policySatisfaction"": ""satisfied"",
+  ""policyActivation"": ""active"",
+  ""controlDecision"": ""permit"",
+  ""rdfs:comment"": ""nurse1 belongs to the nursing-staff PartyCollection (coral:NurseStaff). The state of the world confirms that the current dateTime is within the nurse's shift window. The temporal constraint for odrl:modify is satisfied and active. Decision: permit.""
+}
+"
 P10_Nursing_Access_During_Shift_Window,ex:85bc6a9b-1cce-4398-8dd0-859af7390fbb,"{
   ""@context"" : [
     ""http://www.w3.org/ns/odrl.jsonld"",
@@ -2363,20 +2846,11 @@ P10_Nursing_Access_During_Shift_Window,ex:85bc6a9b-1cce-4398-8dd0-859af7390fbb,"
 }","{
   ""@context"": [
     ""http://www.w3.org/ns/odrl.jsonld"",
-    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"",
-    {
-     
-      ""ex:subjectShiftStart"": {
-        ""@type"": ""xsd:time""
-      },
-      ""ex:subjectShiftEnd"": {
-        ""@type"": ""xsd:time""
-      }
-    }
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
   ],
   ""@type"": ""odrl:Set"",
   ""uid"": ""ex:85bc6a9b-1cce-4398-8dd0-859af7390fbb"",
-  ""rdfs:label"" : ""Policy 10"",
+  ""rdfs:label"": ""Policy 10"",
   ""permission"": [
     {
       ""@type"": ""odrl:Permission"",
@@ -2386,7 +2860,7 @@ P10_Nursing_Access_During_Shift_Window,ex:85bc6a9b-1cce-4398-8dd0-859af7390fbb,"
           ""sch:Hospital""
         ],
         ""uid"": ""ex:hopital-organization"",
-        ""rdfs:description"" : ""A specific hospital that owns this policy""
+        ""rdfs:description"": ""A specific hospital that owns this policy""
       },
       ""assignee"": {
         ""@type"": [
@@ -2394,7 +2868,7 @@ P10_Nursing_Access_During_Shift_Window,ex:85bc6a9b-1cce-4398-8dd0-859af7390fbb,"
           ""coral:NurseStaff""
         ],
         ""uid"": ""ex:groups/nursing-staff"",
-        ""rdfs:description"" : ""Anyone who belongs to the nursing staff""
+        ""rdfs:description"": ""Anyone who belongs to the nursing staff""
       },
       ""action"": [
         ""read"",
@@ -2403,26 +2877,36 @@ P10_Nursing_Access_During_Shift_Window,ex:85bc6a9b-1cce-4398-8dd0-859af7390fbb,"
       ""target"": ""db:MedicationPrescriptions"",
       ""constraint"": [
         {
-          ""@type"": ""odrl:LogicalConstraint"",
-          ""and"": [
-            {
-              ""@type"": ""odrl:Constraint"",
-              ""leftOperand"": ""dateTime"",
-              ""operator"": ""odrl:gteq"",
-              ""rightOperand"": ""ex:subjectShiftStart""
-            },
-            {
-              ""@type"": ""odrl:Constraint"",
-              ""leftOperand"": ""dateTime"",
-              ""operator"": ""odrl:lteq"",
-              ""rightOperand"": ""ex:subjectShiftEnd""
-            }
-          ]
+          ""@type"": ""odrl:Constraint"",
+          ""leftOperand"": ""dateTime"",
+          ""operator"": ""odrl:gteq"",
+          ""rightOperand"": ""ex:subjectShiftStart""
+        },
+        {
+          ""@type"": ""odrl:Constraint"",
+          ""leftOperand"": ""dateTime"",
+          ""operator"": ""odrl:lteq"",
+          ""rightOperand"": ""ex:subjectShiftEnd""
         }
       ]
     }
   ]
-}"
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""EvaluationReport"",
+  ""@id"": ""ex:report/P10-2"",
+  ""evaluationRequest"": ""ex:request/P10-2"",
+  ""policy"": ""ex:85bc6a9b-1cce-4398-8dd0-859af7390fbb"",
+  ""policySatisfaction"": ""not-satisfied"",
+  ""policyActivation"": ""inactive"",
+  ""controlDecision"": ""deny"",
+  ""rdfs:comment"": ""nurse1 belongs to the nursing-staff PartyCollection (coral:NurseStaff). However, the state of the world confirms that the current dateTime is outside the nurse's shift window. The temporal constraint is not satisfied. Decision: deny.""
+}
+"
 P10_Nursing_Access_During_Shift_Window,ex:85bc6a9b-1cce-4398-8dd0-859af7390fbb,"{
   ""@context"" : [
     ""http://www.w3.org/ns/odrl.jsonld"",
@@ -2464,20 +2948,11 @@ P10_Nursing_Access_During_Shift_Window,ex:85bc6a9b-1cce-4398-8dd0-859af7390fbb,"
 }","{
   ""@context"": [
     ""http://www.w3.org/ns/odrl.jsonld"",
-    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"",
-    {
-     
-      ""ex:subjectShiftStart"": {
-        ""@type"": ""xsd:time""
-      },
-      ""ex:subjectShiftEnd"": {
-        ""@type"": ""xsd:time""
-      }
-    }
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
   ],
   ""@type"": ""odrl:Set"",
   ""uid"": ""ex:85bc6a9b-1cce-4398-8dd0-859af7390fbb"",
-  ""rdfs:label"" : ""Policy 10"",
+  ""rdfs:label"": ""Policy 10"",
   ""permission"": [
     {
       ""@type"": ""odrl:Permission"",
@@ -2487,7 +2962,7 @@ P10_Nursing_Access_During_Shift_Window,ex:85bc6a9b-1cce-4398-8dd0-859af7390fbb,"
           ""sch:Hospital""
         ],
         ""uid"": ""ex:hopital-organization"",
-        ""rdfs:description"" : ""A specific hospital that owns this policy""
+        ""rdfs:description"": ""A specific hospital that owns this policy""
       },
       ""assignee"": {
         ""@type"": [
@@ -2495,7 +2970,7 @@ P10_Nursing_Access_During_Shift_Window,ex:85bc6a9b-1cce-4398-8dd0-859af7390fbb,"
           ""coral:NurseStaff""
         ],
         ""uid"": ""ex:groups/nursing-staff"",
-        ""rdfs:description"" : ""Anyone who belongs to the nursing staff""
+        ""rdfs:description"": ""Anyone who belongs to the nursing staff""
       },
       ""action"": [
         ""read"",
@@ -2504,26 +2979,36 @@ P10_Nursing_Access_During_Shift_Window,ex:85bc6a9b-1cce-4398-8dd0-859af7390fbb,"
       ""target"": ""db:MedicationPrescriptions"",
       ""constraint"": [
         {
-          ""@type"": ""odrl:LogicalConstraint"",
-          ""and"": [
-            {
-              ""@type"": ""odrl:Constraint"",
-              ""leftOperand"": ""dateTime"",
-              ""operator"": ""odrl:gteq"",
-              ""rightOperand"": ""ex:subjectShiftStart""
-            },
-            {
-              ""@type"": ""odrl:Constraint"",
-              ""leftOperand"": ""dateTime"",
-              ""operator"": ""odrl:lteq"",
-              ""rightOperand"": ""ex:subjectShiftEnd""
-            }
-          ]
+          ""@type"": ""odrl:Constraint"",
+          ""leftOperand"": ""dateTime"",
+          ""operator"": ""odrl:gteq"",
+          ""rightOperand"": ""ex:subjectShiftStart""
+        },
+        {
+          ""@type"": ""odrl:Constraint"",
+          ""leftOperand"": ""dateTime"",
+          ""operator"": ""odrl:lteq"",
+          ""rightOperand"": ""ex:subjectShiftEnd""
         }
       ]
     }
   ]
-}"
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""EvaluationReport"",
+  ""@id"": ""ex:report/P10-4"",
+  ""evaluationRequest"": ""ex:request/P10-4"",
+  ""policy"": ""ex:85bc6a9b-1cce-4398-8dd0-859af7390fbb"",
+  ""policySatisfaction"": ""not-satisfied"",
+  ""policyActivation"": ""inactive"",
+  ""controlDecision"": ""deny"",
+  ""rdfs:comment"": ""nurse1 belongs to the nursing-staff PartyCollection (coral:NurseStaff). However, the state of the world confirms that the current dateTime is outside the nurse's shift window. The temporal constraint for odrl:modify is not satisfied. Decision: deny.""
+}
+"
 P11_Prescription_of_Medications,ex:9c8669d7-4403-4cda-8594-6060c9b75c34,"{
   ""@context"" : [
     ""http://www.w3.org/ns/odrl.jsonld"",
@@ -2597,7 +3082,21 @@ P11_Prescription_of_Medications,ex:9c8669d7-4403-4cda-8594-6060c9b75c34,"{
       ""target"": ""db:MedicationPrescriptions""
     }
   ]
-}"
+}","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""EvaluationReport"",
+  ""@id"": ""ex:report/P11-1"",
+  ""evaluationRequest"": ""ex:request/P11-1"",
+  ""policy"": ""ex:policy/P11"",
+  ""policySatisfaction"": ""satisfied"",
+  ""policyActivation"": ""active"",
+  ""controlDecision"": ""permit"",
+  ""rdfs:comment"": ""doctor1 belongs to the medical-staff PartyCollection (sch:Physician). The permission for odrl:use on db:MedicationPrescriptions is satisfied and active. Decision: permit.""
+}
+"
 P11_Prescription_of_Medications,ex:9c8669d7-4403-4cda-8594-6060c9b75c34,"{
   ""@context"" : [
     ""http://www.w3.org/ns/odrl.jsonld"",
@@ -2672,7 +3171,21 @@ P11_Prescription_of_Medications,ex:9c8669d7-4403-4cda-8594-6060c9b75c34,"{
       ""target"": ""db:MedicationPrescriptions""
     }
   ]
-}"
+}","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""EvaluationReport"",
+  ""@id"": ""ex:report/P11-3"",
+  ""evaluationRequest"": ""ex:request/P11-3"",
+  ""policy"": ""ex:policy/P11"",
+  ""policySatisfaction"": ""satisfied"",
+  ""policyActivation"": ""active"",
+  ""controlDecision"": ""permit"",
+  ""rdfs:comment"": ""doctor1 belongs to the medical-staff PartyCollection (sch:Physician). The permission for odrl:modify on db:MedicationPrescriptions is satisfied and active. Decision: permit.""
+}
+"
 P11_Prescription_of_Medications,ex:9c8669d7-4403-4cda-8594-6060c9b75c34,"{
   ""@context"" : [
     ""http://www.w3.org/ns/odrl.jsonld"",
@@ -2746,7 +3259,21 @@ P11_Prescription_of_Medications,ex:9c8669d7-4403-4cda-8594-6060c9b75c34,"{
       ""target"": ""db:MedicationPrescriptions""
     }
   ]
-}"
+}","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""EvaluationReport"",
+  ""@id"": ""ex:report/P11-2"",
+  ""evaluationRequest"": ""ex:request/P11-2"",
+  ""policy"": ""ex:policy/P11"",
+  ""policySatisfaction"": ""not-satisfied"",
+  ""policyActivation"": ""inactive"",
+  ""controlDecision"": ""deny"",
+  ""rdfs:comment"": ""nurse1 does not belong to the medical-staff PartyCollection (sch:Physician). The permission for odrl:use on db:MedicationPrescriptions does not apply to this party. Decision: deny.""
+}
+"
 P11_Prescription_of_Medications,ex:9c8669d7-4403-4cda-8594-6060c9b75c34,"{
   ""@context"" : [
     ""http://www.w3.org/ns/odrl.jsonld"",
@@ -2820,7 +3347,21 @@ P11_Prescription_of_Medications,ex:9c8669d7-4403-4cda-8594-6060c9b75c34,"{
       ""target"": ""db:MedicationPrescriptions""
     }
   ]
-}"
+}","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""EvaluationReport"",
+  ""@id"": ""ex:report/P11-4"",
+  ""evaluationRequest"": ""ex:request/P11-4"",
+  ""policy"": ""ex:policy/P11"",
+  ""policySatisfaction"": ""not-satisfied"",
+  ""policyActivation"": ""inactive"",
+  ""controlDecision"": ""deny"",
+  ""rdfs:comment"": ""nurse1 does not belong to the medical-staff PartyCollection (sch:Physician). The permission for odrl:modify on db:MedicationPrescriptions does not apply to this party. Decision: deny.""
+}
+"
 P12_Pharmaceutical_Dispensing,ex:c325c669-d899-408f-967f-2678dc2d377d,"{
   ""@context"" : [
     ""http://www.w3.org/ns/odrl.jsonld"",
@@ -2914,6 +3455,20 @@ P12_Pharmaceutical_Dispensing,ex:c325c669-d899-408f-967f-2678dc2d377d,"{
       ]
     }
   ]
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""EvaluationReport"",
+  ""@id"": ""ex:report/P12-2"",
+  ""evaluationRequest"": ""ex:request/P12-2"",
+  ""policy"": ""ex:policy/P12"",
+  ""policySatisfaction"": ""not-satisfied"",
+  ""policyActivation"": ""inactive"",
+  ""controlDecision"": ""deny"",
+  ""rdfs:comment"": ""pharmacist1 belongs to the pharmacy-staff PartyCollection (coral:Pharmacist). However, the param db:MedicationPrescriptions?status has value DELIVERED, which does not match the PENDING constraint. The permission is not satisfied. Decision: deny.""
 }
 "
 P12_Pharmaceutical_Dispensing,ex:c325c669-d899-408f-967f-2678dc2d377d,"{
@@ -3010,6 +3565,20 @@ P12_Pharmaceutical_Dispensing,ex:c325c669-d899-408f-967f-2678dc2d377d,"{
     }
   ]
 }
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""EvaluationReport"",
+  ""@id"": ""ex:report/P12-4"",
+  ""evaluationRequest"": ""ex:request/P12-4"",
+  ""policy"": ""ex:policy/P12"",
+  ""policySatisfaction"": ""not-satisfied"",
+  ""policyActivation"": ""inactive"",
+  ""controlDecision"": ""deny"",
+  ""rdfs:comment"": ""pharmacist1 belongs to the pharmacy-staff PartyCollection (coral:Pharmacist). However, the param db:MedicationPrescriptions?status has value DELIVERED, which does not match the PENDING constraint. The permission for odrl:modify is not satisfied. Decision: deny.""
+}
 "
 P12_Pharmaceutical_Dispensing,ex:c325c669-d899-408f-967f-2678dc2d377d,"{
   ""@context"" : [
@@ -3104,6 +3673,20 @@ P12_Pharmaceutical_Dispensing,ex:c325c669-d899-408f-967f-2678dc2d377d,"{
       ]
     }
   ]
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""EvaluationReport"",
+  ""@id"": ""ex:report/P12-3"",
+  ""evaluationRequest"": ""ex:request/P12-3"",
+  ""policy"": ""ex:policy/P12"",
+  ""policySatisfaction"": ""satisfied"",
+  ""policyActivation"": ""active"",
+  ""controlDecision"": ""permit"",
+  ""rdfs:comment"": ""pharmacist1 belongs to the pharmacy-staff PartyCollection (coral:Pharmacist). The param db:MedicationPrescriptions?status has value PENDING, which matches the constraint. The permission for odrl:modify is satisfied and active. Decision: permit.""
 }
 "
 P12_Pharmaceutical_Dispensing,ex:c325c669-d899-408f-967f-2678dc2d377d,"{
@@ -3200,6 +3783,20 @@ P12_Pharmaceutical_Dispensing,ex:c325c669-d899-408f-967f-2678dc2d377d,"{
     }
   ]
 }
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""EvaluationReport"",
+  ""@id"": ""ex:report/P12-1"",
+  ""evaluationRequest"": ""ex:request/P12-1"",
+  ""policy"": ""ex:policy/P12"",
+  ""policySatisfaction"": ""satisfied"",
+  ""policyActivation"": ""active"",
+  ""controlDecision"": ""permit"",
+  ""rdfs:comment"": ""pharmacist1 belongs to the pharmacy-staff PartyCollection (coral:Pharmacist). The param db:MedicationPrescriptions?status has value PENDING, which matches the constraint. The permission for odrl:read is satisfied and active. Decision: permit.""
+}
 "
 P13_External_Consultation,ex:3bd86d6b-7786-4228-8609-a96ef9251f7a,"{
   ""@context"" : [
@@ -3244,22 +3841,8 @@ P13_External_Consultation,ex:3bd86d6b-7786-4228-8609-a96ef9251f7a,"{
 ","{
   ""@context"": [
     ""http://www.w3.org/ns/odrl.jsonld"",
-    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"",
-    {
-      ""ex:referralTargetId"": {
-        ""@type"": ""@id""
-      },
-      ""ex:subjectId"": {
-        ""@type"": ""@id""
-      },
-      ""ex:referralExpiry"": {
-        ""@type"": ""xsd:dateTime""
-      },
-      ""ex:currentTime"": {
-        ""@type"": ""xsd:dateTime""
-      }
-    }
-  ],
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+    ],
   ""@type"": ""odrl:Set"",
   ""uid"": ""ex:3bd86d6b-7786-4228-8609-a96ef9251f7a"",
   ""rdfs:label"": ""Policy 13"",
@@ -3298,6 +3881,119 @@ P13_External_Consultation,ex:3bd86d6b-7786-4228-8609-a96ef9251f7a,"{
       ]
     }
   ]
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""EvaluationReport"",
+  ""@id"": ""ex:report/P13-2"",
+  ""evaluationRequest"": ""ex:request/P13-2"",
+  ""policy"": ""ex:policy/P13"",
+  ""policySatisfaction"": ""not-satisfied"",
+  ""policyActivation"": ""inactive"",
+  ""controlDecision"": ""deny"",
+  ""rdfs:comment"": ""specialist1 belongs to the medical-staff PartyCollection (coral:SpecialistPhysician). However, the current dateTime (2026-08-19T15:00:00) is after the referral expiry date defined in the state of the world. The temporal constraint is not satisfied (referral expired). Decision: deny.""
+}
+"
+P13_External_Consultation,ex:3bd86d6b-7786-4228-8609-a96ef9251f7a,"{
+  ""@context"" : [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/formal-semantics/ontology/stow.json"",
+     ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"",
+    { ""@context"" : { ""member"" : { ""@id"" : ""odrl:member"", ""@type"" : ""@id"" } }}
+  ],
+  ""@id"" : ""ex:StateP13-2"",
+  ""@type"" : ""SotW"",
+  ""context"" :  {
+    ""@id"" : ""ex:groups/specialist-staff"",
+    ""@type"" : ""odrl:PartyCollection"",
+    ""rdfs:label"" : ""Specialist Medical Staff"",
+    ""member"" : [ {
+      ""@id"" : ""ex:id/staff/physician/specialist1"",
+      ""@type"" : [""odrl:Party"", ""coral:EmergencyPhysician""],
+      ""odrl:partOf"" : {""@id"" : ""ex:groups/specialist-staff""},
+      ""rdfs:label"" : ""Dr. Roberto Cheu""
+    }
+   ] 
+  }
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/formal-semantics/ontology/evaluation_request.json"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""EvaluationRequest"",
+  ""@id"": ""ex:request/P13-3"",
+  ""evaluatedAction"": ""odrl:read"",
+  ""evaluatedParty"": ""ex:id/staff/physician/doctor1"",
+  ""evaluatedTarget"": ""db:ClinicalRecords/324145?record_id='AB12'"",
+  ""requestParameters"": {
+    ""@type"" : ""RequestParameter"",
+    ""@id"" : ""ex:request/P13-3/param"",
+    ""value"" : { ""@value"" : ""2026-01-19T15:00:00"", ""@type"" : ""xsd:dateTime"" },
+    ""describesFeature"" : ""sotw:CurrentXSDDateTime""
+  }
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+    ],
+  ""@type"": ""odrl:Set"",
+  ""uid"": ""ex:3bd86d6b-7786-4228-8609-a96ef9251f7a"",
+  ""rdfs:label"": ""Policy 13"",
+  ""permission"": [
+    {
+      ""@type"": ""odrl:Permission"",
+      ""assigner"": {
+        ""@type"": [
+          ""odrl:Party"",
+          ""sch:Hospital""
+        ],
+        ""uid"": ""ex:hopital-organization"",
+        ""rdfs:description"": ""A specific hospital that owns this policy""
+      },
+      ""assignee"": {
+        ""@type"": [
+          ""odrl:PartyCollection"",
+          ""coral:SpecialistPhysician""
+        ],
+        ""uid"": ""ex:groups/medical-staff"",
+        ""vcard:fn"": ""Anyone who is a specialist physician""
+      },
+      ""action"": ""read"",
+      ""target"": ""db:ClinicalRecords/324145?record_id='AB12'"",
+      ""rdfs:label"": ""The target specifies the patient (324145) and the specific clinical record (AB12) that can be accessed by the specialist"",
+      ""constraint"": [
+        {
+          ""@type"": ""odrl:Constraint"",
+          ""leftOperand"": ""dateTime"",
+          ""operator"": ""odrl:lt"",
+          ""rightOperand"": {
+            ""@value"": ""2026-05-04T13:51:59"",
+            ""@type"": ""xsd:datetime""
+          }
+        }
+      ]
+    }
+  ]
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""EvaluationReport"",
+  ""@id"": ""ex:report/P13-3"",
+  ""evaluationRequest"": ""ex:request/P13-3"",
+  ""policy"": ""ex:3bd86d6b-7786-4228-8609-a96ef9251f7a"",
+  ""policySatisfaction"": ""not-satisfied"",
+  ""policyActivation"": ""inactive"",
+  ""controlDecision"": ""deny"",
+  ""rdfs:comment"": ""doctor1 does not belong to the specialist-staff PartyCollection (coral:SpecialistPhysician). The permission applies exclusively to specialist physicians with an active referral. The assignee constraint is not satisfied. Decision: deny.""
 }
 "
 P13_External_Consultation,ex:3bd86d6b-7786-4228-8609-a96ef9251f7a,"{
@@ -3343,22 +4039,8 @@ P13_External_Consultation,ex:3bd86d6b-7786-4228-8609-a96ef9251f7a,"{
 ","{
   ""@context"": [
     ""http://www.w3.org/ns/odrl.jsonld"",
-    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"",
-    {
-      ""ex:referralTargetId"": {
-        ""@type"": ""@id""
-      },
-      ""ex:subjectId"": {
-        ""@type"": ""@id""
-      },
-      ""ex:referralExpiry"": {
-        ""@type"": ""xsd:dateTime""
-      },
-      ""ex:currentTime"": {
-        ""@type"": ""xsd:dateTime""
-      }
-    }
-  ],
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+    ],
   ""@type"": ""odrl:Set"",
   ""uid"": ""ex:3bd86d6b-7786-4228-8609-a96ef9251f7a"",
   ""rdfs:label"": ""Policy 13"",
@@ -3397,6 +4079,20 @@ P13_External_Consultation,ex:3bd86d6b-7786-4228-8609-a96ef9251f7a,"{
       ]
     }
   ]
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""EvaluationReport"",
+  ""@id"": ""ex:report/P13-1"",
+  ""evaluationRequest"": ""ex:request/P13-1"",
+  ""policy"": ""ex:policy/P13"",
+  ""policySatisfaction"": ""satisfied"",
+  ""policyActivation"": ""active"",
+  ""controlDecision"": ""permit"",
+  ""rdfs:comment"": ""specialist1 belongs to the medical-staff PartyCollection (coral:SpecialistPhysician). The current dateTime (2026-01-19T15:00:00) is before the referral expiry date defined in the state of the world. Both constraints (referral target identity match and temporal validity) are satisfied. Decision: permit.""
 }
 "
 P14_Legal_Guardian_Parent_Access_to_Minors,ex:b98654ad-1a2a-4f74-9820-f4b260614b71,"{
@@ -3503,6 +4199,20 @@ P14_Legal_Guardian_Parent_Access_to_Minors,ex:b98654ad-1a2a-4f74-9820-f4b260614b
     }
   ]
 }
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""EvaluationReport"",
+  ""@id"": ""ex:report/P14-2"",
+  ""evaluationRequest"": ""ex:request/P14-2"",
+  ""policy"": ""ex:policy/P14"",
+  ""policySatisfaction"": ""not-satisfied"",
+  ""policyActivation"": ""inactive"",
+  ""controlDecision"": ""deny"",
+  ""rdfs:comment"": ""familiar1 belongs to the family PartyCollection (coral:LegalGuardian). However, the state of the world confirms that the patient identified by V28514271 is NOT a minor (age >= 18). The age constraint is not satisfied; the policy no longer applies once the patient reaches adulthood. Decision: deny.""
+}
 "
 P14_Legal_Guardian_Parent_Access_to_Minors,ex:b98654ad-1a2a-4f74-9820-f4b260614b71,"{
   ""@context"" : [
@@ -3608,6 +4318,139 @@ P14_Legal_Guardian_Parent_Access_to_Minors,ex:b98654ad-1a2a-4f74-9820-f4b260614b
     }
   ]
 }
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""EvaluationReport"",
+  ""@id"": ""ex:report/P14-1"",
+  ""evaluationRequest"": ""ex:request/P14-1"",
+  ""policy"": ""ex:policy/P14"",
+  ""policySatisfaction"": ""satisfied"",
+  ""policyActivation"": ""active"",
+  ""controlDecision"": ""permit"",
+  ""rdfs:comment"": ""familiar1 belongs to the family PartyCollection (coral:LegalGuardian). The state of the world confirms that the patient identified by V28514271 is a minor (age < 18) AND that familiar1 is their registered legal guardian. Both constraints are satisfied. Decision: permit.""
+}
+"
+P14_Legal_Guardian_Parent_Access_to_Minors,ex:b98654ad-1a2a-4f74-9820-f4b260614b71,"{
+  ""@context"" : [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/formal-semantics/ontology/stow.json"",
+     ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json"",
+    { ""@context"" : { ""member"" : { ""@id"" : ""odrl:member"", ""@type"" : ""@id"" } }}
+  ],
+  ""@id"" : ""ex:StateP14-1"",
+  ""@type"" : ""SotW"",
+  ""context"" :  {
+    ""@id"" : ""ex:groups/family"",
+    ""@type"" : ""odrl:PartyCollection"",
+    ""rdfs:label"" : ""Family of underage patient"",
+    ""member"" : [ {
+      ""@id"" : ""ex:id/family/familiar1"",
+      ""@type"" : [""odrl:Party"", ""sch:Person""],
+      ""odrl:partOf"" : {""@id"" : ""ex:groups/family""},
+      ""rdfs:label"" : ""Jason Faught""
+    }
+   ] 
+  }
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/w3c/odrl/refs/heads/master/formal-semantics/ontology/evaluation_request.json"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""EvaluationRequest"",
+  ""@id"": ""ex:request/P14-3"",
+  ""evaluatedAction"": ""odrl:read"",
+  ""evaluatedParty"": ""ex:id/family/familiar2"",
+  ""evaluatedTarget"": ""db:ClinicalRecords"",
+  ""requestParameters"": [
+    {
+      ""@type"" : ""RequestParameter"",
+      ""@id"" : ""ex:request/P14/param-legal-guardian"",
+      ""value"": ""ex:id/family/familiar2"",
+      ""rdfs:label"" : ""Legal guardian identity — NOT the registered guardian of this patient""
+    },
+    {
+      ""@type"" : ""RequestParameter"",
+      ""@id"" : ""ex:request/P14/param-underage_patient"",
+      ""value"": ""V28514271"",
+      ""rdfs:label"" : ""The underage patient identity card""
+    }
+  ]
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""odrl:Set"",
+  ""uid"": ""ex:b98654ad-1a2a-4f74-9820-f4b260614b71"",
+  ""rdfs:label"" : ""Policy 14"",
+  ""permission"": [
+    {
+      ""@type"": ""odrl:Permission"",
+      ""assigner"": {
+        ""@type"": [
+          ""odrl:Party"",
+          ""sch:Hospital""
+        ],
+        ""uid"": ""ex:hopital-organization"",
+        ""rdfs:description"" : ""A specific hospital that owns this policy""
+      },
+      ""assignee"": {
+        ""@type"": [
+          ""odrl:PartyCollection"",
+          ""coral:LegalGuardian""
+        ],
+        ""uid"": ""ex:groups/family"",
+        ""rdfs:description"" : ""One of the legal guardians of an underage patient""
+      },
+      ""action"": ""read"",
+      ""target"": ""db:ClinicalRecords"",
+      ""constraint"": [
+        {
+          ""@type"": ""odrl:LogicalConstraint"",
+          ""and"": [
+            {
+              ""@type"": ""odrl:Constraint"",
+              ""leftOperand"": ""db:ClinicalRecords?age"",
+              ""operator"": ""odrl:lt"",
+              ""rightOperand"": 18
+            },
+            {
+              ""@type"": ""odrl:Constraint"",
+              ""leftOperand"": ""ex:request/P14/param-legal-guardian"",
+              ""operator"": ""odrl:isPartOf"",
+              ""rightOperand"": ""db:ClinicalRecords?legal_guardian""
+            },{
+              ""@type"": ""odrl:Constraint"",
+              ""leftOperand"": ""ex:request/P14/param-underage_patient"",
+              ""operator"": ""odrl:eq"",
+              ""rightOperand"": ""db:ClinicalRecords?patient_id""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""EvaluationReport"",
+  ""@id"": ""ex:report/P14-3"",
+  ""evaluationRequest"": ""ex:request/P14-3"",
+  ""policy"": ""ex:b98654ad-1a2a-4f74-9820-f4b260614b71"",
+  ""policySatisfaction"": ""not-satisfied"",
+  ""policyActivation"": ""inactive"",
+  ""controlDecision"": ""deny"",
+  ""rdfs:comment"": ""familiar2 belongs to the family PartyCollection (coral:LegalGuardian). However, the param-legal-guardian value (ex:id/family/familiar2) does not match the registered legal_guardian for patient V28514271 in db:ClinicalRecords. The guardian-identity constraint is not satisfied. Decision: deny.""
+}
 "
 P15_Laboratory_Entry_of_Results,ex:531d8717-6655-4be0-8ce5-a689d33e2f84,"{
   ""@context"" : [
@@ -3680,7 +4523,21 @@ P15_Laboratory_Entry_of_Results,ex:531d8717-6655-4be0-8ce5-a689d33e2f84,"{
       ""target"": ""db:LaboratoryTestResults""
     }
   ]
-}"
+}","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""EvaluationReport"",
+  ""@id"": ""ex:report/P15-2"",
+  ""evaluationRequest"": ""ex:request/P15-2"",
+  ""policy"": ""ex:policy/P15"",
+  ""policySatisfaction"": ""not-satisfied"",
+  ""policyActivation"": ""inactive"",
+  ""controlDecision"": ""deny"",
+  ""rdfs:comment"": ""technician1 belongs to the lab-staff PartyCollection (coral:LaboratoryTechnician). However, the evaluated action is odrl:read on db:ClinicalRecords, which is not covered by any permission in this policy (P15 only grants odrl:modify on db:LaboratoryTestResults). Decision: deny.""
+}
+"
 P15_Laboratory_Entry_of_Results,ex:531d8717-6655-4be0-8ce5-a689d33e2f84,"{
   ""@context"" : [
     ""http://www.w3.org/ns/odrl.jsonld"",
@@ -3751,4 +4608,18 @@ P15_Laboratory_Entry_of_Results,ex:531d8717-6655-4be0-8ce5-a689d33e2f84,"{
       ""target"": ""db:LaboratoryTestResults""
     }
   ]
-}"
+}","{
+  ""@context"": [
+    ""http://www.w3.org/ns/odrl.jsonld"",
+    ""https://raw.githubusercontent.com/ODRE-Framework/hospital-rls-dataset/refs/heads/main/context.json""
+  ],
+  ""@type"": ""EvaluationReport"",
+  ""@id"": ""ex:report/P15-1"",
+  ""evaluationRequest"": ""ex:request/P15-1"",
+  ""policy"": ""ex:policy/P15"",
+  ""policySatisfaction"": ""satisfied"",
+  ""policyActivation"": ""active"",
+  ""controlDecision"": ""permit"",
+  ""rdfs:comment"": ""technician1 belongs to the lab-staff PartyCollection (coral:LaboratoryTechnician). The permission for odrl:modify on db:LaboratoryTestResults is satisfied and active. Decision: permit.""
+}
+"
